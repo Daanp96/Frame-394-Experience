@@ -5,6 +5,7 @@
 
 body{
     background-color: #c3c3c3;
+    font-family: 'Teko', sans-serif;
 }
             
 canvas { 
@@ -19,4 +20,8 @@ canvas {
 	z-index: 100;
     display:block;
     color: white;
+}
+
+#c{
+    background-color: red;
 }
