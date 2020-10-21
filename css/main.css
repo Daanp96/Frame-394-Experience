@@ -26,12 +26,12 @@ canvas {
     background-color: black;
     display: block;
     width: 100%;
-
 }
 
 #c{
     width: 100%;
     height: auto;
+    display: block;
 }
 
 #container{
