@@ -12,7 +12,7 @@ canvas {
     display: block;
 }
 
-#info{
+.title{
     position: absolute;
 	top: 10px;
 	width: 100%;
@@ -22,6 +22,19 @@ canvas {
     color: white;
 }
 
+.tools_bar{
+    background-color: black;
+    display: block;
+    width: 100%;
+
+}
+
 #c{
-    background-color: red;
+    width: 100%;
+    height: auto;
+}
+
+#container{
+    width: 100%;
+    margin: 0 25%;
 }
