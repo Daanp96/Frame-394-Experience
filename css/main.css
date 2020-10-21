@@ -1,8 +1,22 @@
-*{
+*, *::before, *::after{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #c3c3c3;
+:root{
+    --bg-color: #202C59;
+    --accent--color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+}
+
+main{
+    background-color: var(--bg-color);
+}
+
+div{
+    height: 100vh;
+    width: 50vw;
+    background-color: var(--accent--color);
 }
