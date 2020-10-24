@@ -4,11 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <title>Frame 394</title>
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/main.js" defer></script>
+        <link rel="stylesheet" href="./css/videoStabilizer.css">
     </head>
     <body>
-        
+        <main>
+            <h1 class="frameCounter" id="js--frameCounter">Frames 0/5</h1>
+            <section class="staticFrame">
+                <p class="staticFrame__text">Drag frame here</p>
+            </section>
+            <section class="movingFrame" id="js--movingFrame">
+                <p class="movingFrame__text" id="js--movingFrame__text">Frame 1</p>
+            </section>
+            <button class="continueButton" id="js--continueButton">Continue</button>
+        </main>
+        <script src="./js/videoStabilizer.js"></script>
     </body>
 </html>
