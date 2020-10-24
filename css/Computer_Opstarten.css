@@ -9,19 +9,111 @@ html {
 }
 
 :root {
-    
+    /* Kleurenpallet */
+    --bg-color: #202C59;
+    --accent-color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+    --shadow-color: #10152b;
 }
 
 body{
     background-color: #c3c3c3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .screenBorder {
+    height: 30rem;
+    width: 52rem;
+    background-color: #2b2b2b;
+    border-top-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+    border: solid black .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.screenOff {
+    height: 28rem;
+    width: 50rem;
+    background-color: black;
+    opacity: 1;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen > img {
+    width: 50rem;
+    object-fit: contain;
+}
+
+.screen__userImage {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    background-color: gray;
+    position: absolute;
+    border-radius: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen__userImage > .fa-user {
+    color: white;
+    font-size: 3rem;
+}
+
+.screen__username {
+    position: absolute;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.screen__password {
+    position: absolute;
+    margin-top: 7rem;
+    border: solid .1rem white;
+}
+
+.screen__password__input {
+    border-style: none;
+    padding: .4rem .4rem;
+    background-color: transparent;
+    color: white;
+    width: 14rem;
+    font-size: 1.4rem;
+}
+
+.screen__password__button {
+    border-style: none;
+    border-left: solid .1rem white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.screen__password__button > i {
+    color: white;
+    font-size: 1.6rem;
+    padding: .5rem .5rem;
+}
+
+.screen__password__button:hover {
+    cursor: pointer;
 }
