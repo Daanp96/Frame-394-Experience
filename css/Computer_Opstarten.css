@@ -45,7 +45,6 @@ main {
     height: 28rem;
     width: 50rem;
     background-color: black;
-    opacity: 1;
 }
 
 .screen {
@@ -56,6 +55,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 .screen > img {
@@ -115,5 +116,18 @@ main {
 }
 
 .screen__password__button:hover {
+    cursor: pointer;
+}
+
+.onOffButton {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+}
+
+.onOffButton:hover {
     cursor: pointer;
 }
