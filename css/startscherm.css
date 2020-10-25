@@ -95,7 +95,7 @@ main{
 }
 
 .overlay {
-    display: none;
+    z-index: -1;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -103,5 +103,5 @@ main{
     left: 0;
     background-color: black;
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 3s;
 }
