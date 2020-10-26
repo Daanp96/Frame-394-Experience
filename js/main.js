@@ -1,8 +1,10 @@
 import * as THREE from './three.module.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { OrbitControls } from './OrbitControls.js'; 
+// import { DragControls } from './DragControls';
 
 const main = () => {
+
     // Hier pak ik de canvas waar ik de 3D objecten op wil gaan renderen.
     const canvas = document.querySelector('#c');
 
@@ -24,13 +26,13 @@ const main = () => {
 
     // Hier maak ik de controls aan.
     const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 2, 0);
+    controls.target.set(0, 0, 0);
     controls.update();
 
     // Hier maak ik de "Scene" aan, de plek waar alles samenkomt en wordt doorgegeven wat gerendered
     // moet worden door de WebGL API.
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color('red');
+    scene.background = new THREE.Color('black');
 
     {
         // Hier maak ik het licht aan.
@@ -49,7 +51,7 @@ const main = () => {
 
     // Hier roep ik de Loader aan, die ervoor zorgt dat ik zelfgemaakte objecten kan inladen.
     const loader = new GLTFLoader();
-    loader.load( 'objects/dummy.glb', ( gltf ) => {
+    loader.load( 'objects/ufo.glb', ( gltf ) => {
         const root = gltf.scene;
         scene.add( root );
         render();
