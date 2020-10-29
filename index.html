@@ -5,27 +5,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://kit.fontawesome.com/a0fb268ae6.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
         <title>Frame 394</title>
         <link rel="stylesheet" href="./css/computerOpstarten.css">
     </head>
     <body>
         <main>
-            <section class="screenBorder">
-                <section class="screenOff">
-                    <section class="screen" id="js--screen">
-                        <img src="./img/screen_background.jpg" alt="Screen Background">
-                        <section class="screen__userImage">
-                            <i class="far fa-user"></i>
-                        </section>
-                        <p class="screen__username">Daniel Voshart</p>
-                        <section class="screen__password">
-                            <input class="screen__password__input" type="password" placeholder="Password">
-                            <button class="screen__password__button"><i class="fas fa-arrow-right"></i></button>
+            <section class="background">
+                <img src="./img/background.jpg" alt="Background">
+            </section>
+            <section class="laptop">
+                <section class="screenBorder">
+                    <section class="screenOff">
+                        <section class="screen" id="js--screen">
+                            <img src="./img/screen_background.jpg" alt="Screen Background" class="screen__background" id="js--screenBackground">
+                            <section class="screen__login" id="js--loginField">
+                                <section class="screen__userImage">
+                                    <i class="far fa-user"></i>
+                                </section>
+                                <p class="screen__username">Daniel Voshart</p>
+                                <section class="screen__password" id="js--passwordField">
+                                    <input class="screen__password__input" id="js--passwordInput" type="password" placeholder="Password">
+                                    <button class="screen__password__button" id="js--passwordButton" type="submit"><i class="fas fa-arrow-right"></i></button>
+                                </section>
+                            </section>
                         </section>
                     </section>
+                    <section class="stickyNote" id="js--stickyNote">
+                        <section class="stickyNote__top" id="js--stickyNote__top">
+                            <p id="js--password"></p>
+                        </section>
+                        <section class="stickyNote__bottom" id="js--stickyNote__bottom"></section>
+                    </section>
+                </section>
+                <section class="keyboard">
+                    <button class="keyboard__onOffButton" id="js--onOffButton" onclick="onOff()"><i class="fas fa-power-off"></i></button>
+                    <section class="keyboard__keys">
+                        <img src="./img/keyboard.png" alt="Keyboard">
+                    </section>
+                    <section class="keyboard__bottomSide"></section>
                 </section>
             </section>
-            <button class="onOffButton" id="js--onOffButton" onclick="onOff()"><i class="fas fa-power-off"></i></button>
+            <section class="desk">
+                <img src="./img/desk.png" alt="Desk">
+            </section>
+            <section class="desktop" id="js--desktop">
+                <button class="desktop__videoPlayer" id="js--videoPlayerIcon" onclick="startVideoPlayer()">
+                    <img src="./img/videoplayer.png" alt="Video Player">
+                    <p>video.mp4</p>
+                </button>
+                <section class="desktop__taskbar">
+                    <img src="./img/taskbar.png" alt="Taskbar">
+                </section>
+            </section>
+            <section class="videoPlayer" id="js--videoPlayer"></section>
         </main>
         <script src="./js/computerOpstarten.js" defer></script>
     </body>
