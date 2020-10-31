@@ -58,24 +58,7 @@ canvas {
     position: relative;
     font-size: 2rem;
     top: 50%;
-}
-
-#tools_bar:hover{
-    width: 15rem;
-}
-
-#tools_bar:hover > h2 {
     transition: all 1s;
-    opacity: 0;
-}
-
-#objects_bar:hover{
-    width: 15rem;
-}
-
-#objects_bar:hover > h2 {
-    transition: all 1s;
-    opacity: 0;
 }
 
 .obj_title{
@@ -83,4 +66,21 @@ canvas {
     position: relative;
     font-size: 2rem;
     top: 50%;
+    transition: all 1s;
+}
+
+#tools_bar:hover{
+    width: 15rem;
+}
+
+#tools_bar:hover > .tool_title {
+    opacity: 0;
+}
+
+#objects_bar:hover{
+    width: 15rem;
+}
+
+#objects_bar:hover > .obj_title {
+    opacity: 0;
 }
