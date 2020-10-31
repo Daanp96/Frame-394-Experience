@@ -5,6 +5,8 @@ import { OrbitControls } from './OrbitControls.js';
 
 const main = () => {
 
+    const objects = [];
+
     // Hier pak ik de canvas waar ik de 3D objecten op wil gaan renderen.
     const canvas = document.querySelector('#c');
 
@@ -17,11 +19,11 @@ const main = () => {
     const fov = 75;
     const aspect = window.innerWidth / window.innerHeight;
     const near = 0.1;
-    const far = 100;
+    const far = 50;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
     // Hier geef ik de positie aan voor de camera.
-    camera.position.z = 15;
+    camera.position.z = 10;
     camera.position.y = 3;
 
     // Hier maak ik de controls aan.

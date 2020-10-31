@@ -22,19 +22,65 @@ canvas {
     color: white;
 }
 
-.tools_bar{
-    background-color: black;
+#tools_bar{
+    background-color: red;
     display: block;
-    width: 100%;
+    width: 80px;
+    position: absolute;
+    height: 100vh;
+    transition: all 1s;
+}
+
+#objects_bar{
+    background-color: red;
+    display: block;
+    width: 80px;
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    transition: all 1s;
 }
 
 #c{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 100vh;
     display: block;
+    margin: 0 auto;
 }
 
 #container{
     width: 100%;
     margin: 0 25%;
+}
+
+.tool_title{
+    transform: rotate(0.75turn);
+    position: relative;
+    font-size: 2rem;
+    top: 50%;
+}
+
+#tools_bar:hover{
+    width: 15rem;
+}
+
+#tools_bar:hover > h2 {
+    transition: all 1s;
+    opacity: 0;
+}
+
+#objects_bar:hover{
+    width: 15rem;
+}
+
+#objects_bar:hover > h2 {
+    transition: all 1s;
+    opacity: 0;
+}
+
+.obj_title{
+    transform: rotate(0.25turn);
+    position: relative;
+    font-size: 2rem;
+    top: 50%;
 }
