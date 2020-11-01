@@ -4,5 +4,22 @@
 }
 
 body{
-    background-color: #c3c3c3;
+    background-color: #030303;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.header_reddit{
+    width: 100vw;
+}
+
+.reddit_post{
+    color: white;
+}
+
+.reddit_post > h2 {
+    font-weight: 700;
+}
+
+.reddit_post__community{
+    width: 90vw;
 }
