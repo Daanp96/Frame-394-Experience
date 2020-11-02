@@ -10,7 +10,7 @@
         <script src="./js/main.js" defer></script>
     </head>
     <body>
-        <section class="reddit_page">
+        <main id="js--reddit_page" class="reddit_page">
             <header>
                 <img class="header_reddit" src="img/header_reddit.png" alt="reddit_header">
             </header>
@@ -20,22 +20,24 @@
                 <section class="reddit_post__inputs">
                     <input id="js--title" class="reddit_post__inputs__title" placeholder="Title">
                     <section class="reddit_post__inputs__gif">
-                        <h3 class="reddit_post__inputss__gif__text">Drag and drop images or </h3> 
-                        <button id="js--gif_input" class="reddit_post__inputs__gif__button">UPLOAD</button>
-                        <!-- <img src="/img/taser_plant.gif" alt="taser_gif"> -->
+                        <section id="js--upload_group" class="reddit_post__inputs__group">
+                            <h3 class="reddit_post__inputss__gif__text">Drag and drop images or </h3> 
+                            <button id="js--gif_input" class="reddit_post__inputs__gif__button">UPLOAD</button>
+                        </section>
+                        <img id="js--gif" class="reddit_post__inputs__gif__img" src="/img/taser_plant.gif" alt="taser_gif">
                     </section>
-                    <section class="">
+                    <section class="buttons">
                         <button id="js--cancel" class="reddit_post__inputs__cancel">CANCEL</button>
-                        <button ïd="js--post" class="reddit_post__inputs__post">POST</button>
+                        <button id="js--post" class="reddit_post__inputs__post">POST</button>
                     </section>
                 </section>
             </section>
             <footer>
                 <p>THIS IS A SCHOOL PROJECT</p>
             </footer>
-        </section>
-        <section id="js--popup" class="upload_popup scale-in-center ">
-            <section class="upload_popup__group">
+        </main>
+        <section id="js--popup" class="upload_popup scale-in-center">
+            <section id="js--gif_file" class="upload_popup__group">
                 <img class="upload_gif" src="/img/gif.png" alt="upload_gif">
                 <h2 class="gif_title">taser.gif</h2>
             </section>
