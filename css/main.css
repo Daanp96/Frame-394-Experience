@@ -8,6 +8,18 @@ body{
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+button{
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+:root{
+    --reddit_white: #D7DADC;
+    --reddit_background: #1A1A1B;
+    --reddit_input_border:  #343536;
+}
+
 .header_reddit{
     width: 100vw;
 }
@@ -16,10 +28,83 @@ body{
     color: white;
 }
 
-.reddit_post > h2 {
+.reddit_post__create {
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .reddit_post__community{
     width: 90vw;
+}
+
+.reddit_post__inputs{
+    background-color: #1A1A1B;
+    height: 100vh;
+}
+
+.reddit_post__inputs__title{
+    font-family: "Verdana", sans-serif;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_input_border);
+    color: var(--reddit_white);
+    font-size: 1rem;
+    margin: 10px 25px;
+}
+
+.reddit_post__inputs__title:focus{
+    border: 1px solid var(--reddit_white);
+}
+
+.reddit_post__inputs__gif{
+    height: 300px;
+    border: 1px dashed var(--reddit_input_border);
+    background-color: var(--reddit_background);
+    text-align: center;
+    margin: 10px 25px 25px;
+}
+
+.reddit_post__inputs__gif__button{
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_white);
+    color: var(--reddit_white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.reddit_post__inputs__gif__button:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+.reddit_post__inputss__gif__text{
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.reddit_post__inputs__cancel{
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_white);
+    color: var(--reddit_white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.reddit_post__inputs__cancel:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+.reddit_post__inputs__post{
+    cursor: not-allowed;
+    background-color: var(--reddit_white);
+    border: 1px solid var(--redit_white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.reddit_post__inputs__post{
+    background-color: white;
 }
