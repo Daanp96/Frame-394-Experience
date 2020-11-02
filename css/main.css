@@ -13,10 +13,21 @@
 
 main{
     background-color: var(--bg-color);
+    display: grid;
 }
 
-div{
+section{
     height: 100vh;
     width: 50vw;
-    background-color: var(--accent--color);
+    background-color: var(--font-color);
+    align-content: center;
+}
+
+.posts--container{
+    background-color: #A4A4A4;
+    display: inline-grid;
+}
+
+.post{
+    background-color: var(--font-color);
 }
