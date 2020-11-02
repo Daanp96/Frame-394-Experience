@@ -2,14 +2,22 @@ console.log("Hello world");
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     //do work
+  console.log("doc loaded");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
 
-  document.getElementsByClassName("prev").addEventListener("click", showSlides);
-  const next = getElementsByClassName("next");
 
-  document.addEventListener
+  prev.addEventListener("click", function(){
+    console.log("test click event prev");   
+    showPreviousSlide()
+  });
+  next.addEventListener("click", function(){
+    console.log("test click event next")
+  });
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+  //Create an array of the images
+  
+
 
   // Next/previous controls
   function plusSlides(n) {
@@ -21,16 +29,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     showSlides(slideIndex = n);
   }
 
-  let slides = document.getElementsByClassName("mySlides");
+  
   
 
   function showNextSlide(){
-
+    showSlides(slideIndex -= n);
   }
 
   function showSlides(n) {
     var i;
-    
+    var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     console.log("in function showSLides")
     if (n > slides.length) {slideIndex = 1}
@@ -44,4 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slides[slideIndex-1].style.display = "block";
     
   }
+  let slideIndex = 1;
+  showSlides(slideIndex);
+ 
 });
