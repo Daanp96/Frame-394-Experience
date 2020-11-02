@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // maak de terugknop klikbaar
   prev.addEventListener("click", function(){
     console.log("test click event prev");   
-    showPreviousSlide(-1)
+    showNextSlides(-1);
   });
 
   // maak de doorknop klikbaaar
@@ -24,20 +24,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
 
   function showSlides(n) {
-    var i;
+    let i;
     const slides = document.getElementsByClassName("mySlides");
     //var dots = document.getElementsByClassName("dot");
     console.log("in function showSLides")
-    for (var i=0;i<slides.length;i+=1){
+    if(n < slides.length){
       slides[n].style.display = 'block';
       slides[n-1].style.display = "none";
-    }    
+    } else{
+      reset()
+    }
+    console.log(n);
+    if (n < 0) {
+      slides[slides.length].style.display = 'block';
+    }
+    
+    
+    //for (i=0;i<slides.length;i+=1){
+    //  slides[n].style.display = 'block';
+    //  slides[n-1].style.display = "none";
+    //} 
+    
+    //for (let i = 0; i > slides.length; i++) {
+    //  slides[0].style.display = 'block';
+    //  slides[n].style.display = 'none';
+//
+//    //  console.log("nested for statement test");
+    //  }
+      
+    }
 
+  
+
+  
+  let slideIndex = 0;
+  showSlides(slideIndex);
+
+  function reset(){
+    slideIndex = 0;
+    showSlides(slideIndex);
   }
 
-
-  let slideIndex = 1;
-  showSlides(slideIndex);
 
 
   // De doorknop zegt toon dia(1 verder dan nu)
@@ -45,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slideIndex = slideIndex + n;
     console.log(slideIndex);
     showSlides(slideIndex);
+    if (slideIndex < 0) {
+      slideIndex = slides.length;
+    }
+    
    // if (slideIndex > slides.length) {
    //   n = 0;
    // }
