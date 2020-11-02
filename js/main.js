@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // maak de terugknop klikbaar
   prev.addEventListener("click", function(){
     console.log("test click event prev");   
-    showNextSlides(-1);
+    showPreviousSlide(1);
   });
 
   // maak de doorknop klikbaaar
@@ -28,29 +28,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const slides = document.getElementsByClassName("mySlides");
     //var dots = document.getElementsByClassName("dot");
     console.log("in function showSLides")
-    if(n < slides.length){
+    if( n < slides.length){
       slides[n].style.display = 'block';
       slides[n-1].style.display = "none";
+      slides[n+1].style.display = "none";
     } else{
-      reset()
+      reset(); 
     }
-    console.log(n);
-    if (n < 0) {
-      slides[slides.length].style.display = 'block';
-    }
-    
-    
-    //for (i=0;i<slides.length;i+=1){
-    //  slides[n].style.display = 'block';
-    //  slides[n-1].style.display = "none";
-    //} 
-    
-    //for (let i = 0; i > slides.length; i++) {
-    //  slides[0].style.display = 'block';
-    //  slides[n].style.display = 'none';
-//
-//    //  console.log("nested for statement test");
-    //  }
       
     }
 
@@ -63,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function reset(){
     slideIndex = 0;
     showSlides(slideIndex);
+    console.log("in reset function");
+    slides[(slideIndex.length-1)].style.display = 'none';
   }
 
 
@@ -72,22 +58,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slideIndex = slideIndex + n;
     console.log(slideIndex);
     showSlides(slideIndex);
-    if (slideIndex < 0) {
-      slideIndex = slides.length;
-    }
-    
-   // if (slideIndex > slides.length) {
-   //   n = 0;
-   // }
+  
   }
 
+  function showSlidesReversed(n){
+  const slides = document.getElementsByClassName("mySlides");
+    //var dots = document.getElementsByClassName("dot");
+    console.log("in function showSLidesReversed");
+    if( n < 0){
+      slideIndex = (slides.length-1);
+      showSlides(slideIndex);
+      //slides[n+1].style.display = "none";
+    } else{
+      
+    }
+      
+  }
 
-
-
+  function reset2(){
+    const slides = document.getElementsByClassName("mySlides");
+    slideIndex = (slides.length -1);
+    console.log(slideIndex);
+    showSlides(slideIndex);
+  }
 
   
   function showPreviousSlide(n){
-    showSlides(slideIndex - n)
+    const slides = document.getElementsByClassName("mySlides");
+    slideIndex = slideIndex - n;
+    console.log(slideIndex);
+    if (slideIndex < 0) {
+      slides[0].style.display = 'none';
+      reset2();
+    } else {
+      showSlides(slideIndex);
+    }
+    
   }
   
   
