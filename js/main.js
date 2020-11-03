@@ -1,7 +1,7 @@
 import * as THREE from './three.module.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { OrbitControls } from './OrbitControls.js'; 
-// import { DragControls } from './DragControls';
+import { DragControls } from './DragControls.js';
 
 const main = () => {
 
@@ -12,7 +12,7 @@ const main = () => {
 
     // Hier roep ik de renderer aan, die ervooor zorgt dat je alle
     // 3D objecten op je webpagina kunt renderen.
-    const renderer = new THREE.WebGLRenderer({canvas});
+    const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
     
     // Hier geef ik alle specificaties mee aan de camera, zoals de "field of view",
     // en vanaf welke plekken er gerendered moet worden.
@@ -55,6 +55,7 @@ const main = () => {
     const loader = new GLTFLoader();
     loader.load( 'objects/ufo.glb', ( gltf ) => {
         const root = gltf.scene;
+        objects.push( root );
         scene.add( root );
         render();
     }, (xhr) => {
@@ -91,6 +92,22 @@ const main = () => {
     };
 
     requestAnimationFrame(render);
+
+    // const geometry = new THREE.BoxGeometry(1,1,1);
+    // const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+    // const cube = new THREE.Mesh(geometry, material);
+    // objects.push(cube);
+    // scene.add(cube);
+
+    // const geometry2 = new THREE.BoxGeometry(1,1,1);
+    // const material2 = new THREE.MeshBasicMaterial({color: 0x0fff00});
+    // const cube2 = new THREE.Mesh(geometry2, material2);
+    // objects.push(cube2);
+    // scene.add(cube2);
+
+    const dragControls = new DragControls(objects, camera, renderer.domElement);
+
+    dragControls.addEventListener('drag', render);;
 };
 
 main();
