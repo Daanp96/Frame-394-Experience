@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -45,7 +46,7 @@ button{
 
 .reddit_post__inputs{
     background-color: #1A1A1B;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     display: block;
     width: 100%;
@@ -162,6 +163,14 @@ button{
 
 #js--gif{
     display: none;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.buttons > button {
+    margin: 0 15px 25px;
 }
 
 .scale-in-center {
