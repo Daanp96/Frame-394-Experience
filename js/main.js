@@ -23,13 +23,13 @@ const main = () => {
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
     // Hier geef ik de positie aan voor de camera.
-    camera.position.z = 10;
-    camera.position.y = 3;
+    camera.position.z = 15;
+    camera.position.y = 5;
 
     // Hier maak ik de controls aan.
-    const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 0, 0);
-    controls.update();
+    // const controls = new OrbitControls(camera, canvas);
+    // controls.target.set(0, 0, 0);
+    // controls.update();
 
     // Hier maak ik de "Scene" aan, de plek waar alles samenkomt en wordt doorgegeven wat gerendered
     // moet worden door de WebGL API.
@@ -93,21 +93,9 @@ const main = () => {
 
     requestAnimationFrame(render);
 
-    // const geometry = new THREE.BoxGeometry(1,1,1);
-    // const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-    // const cube = new THREE.Mesh(geometry, material);
-    // objects.push(cube);
-    // scene.add(cube);
-
-    // const geometry2 = new THREE.BoxGeometry(1,1,1);
-    // const material2 = new THREE.MeshBasicMaterial({color: 0x0fff00});
-    // const cube2 = new THREE.Mesh(geometry2, material2);
-    // objects.push(cube2);
-    // scene.add(cube2);
-
     const dragControls = new DragControls(objects, camera, renderer.domElement);
 
-    dragControls.addEventListener('drag', render);;
+    dragControls.addEventListener('drag', render);
 };
 
 main();
