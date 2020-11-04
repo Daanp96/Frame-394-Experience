@@ -239,3 +239,8 @@ function random(number){
 }
 
 checkState();
+
+//Pagina transitie
+const overlay = document.getElementById("js--overlay");
+
+window.onload
