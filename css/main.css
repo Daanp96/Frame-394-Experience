@@ -84,3 +84,7 @@ canvas {
 #objects_bar:hover > .obj_title {
     opacity: 0;
 }
+
+.fa-male{
+    color: white;
+}

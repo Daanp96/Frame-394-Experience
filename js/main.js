@@ -46,14 +46,14 @@ const main = () => {
     }
 
     // Hier maak ik het grid aan.
-    const size = 10;
-    const divisions =  10;
+    const size = 12;
+    const divisions =  12;
     const gridHelper = new THREE.GridHelper(size, divisions);
     scene.add(gridHelper);
 
     // Hier roep ik de Loader aan, die ervoor zorgt dat ik zelfgemaakte objecten kan inladen.
     const loader = new GLTFLoader();
-    loader.load( 'objects/ufo.glb', ( gltf ) => {
+    loader.load( 'objects/dummy.glb', ( gltf ) => {
         const root = gltf.scene;
         objects.push( root );
         scene.add( root );
