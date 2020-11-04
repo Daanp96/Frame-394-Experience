@@ -16,6 +16,8 @@ const desktop = document.getElementById("js--desktop");
 const videoPlayerIcon = document.getElementById("js--videoPlayerIcon");
 const videoPlayer = document.getElementById("js--videoPlayer");
 
+const overlay = document.getElementById("js--overlay");
+
 function onOff() {
     if(screen.style.opacity > .5) {
         screen.style.opacity = "0";
@@ -68,6 +70,8 @@ passwordButton.onclick = function() {
 }
 
 window.onload = function() {
+    overlay.style.opacity = "0";
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 5000);
     setTimeout(function(){
         if (screen.style.opacity < .5) {
             onOffButton.style.animation = "blink .5s alternate infinite";
