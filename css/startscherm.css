@@ -105,3 +105,18 @@ main{
     opacity: 0;
     transition: opacity 3s;
 }
+
+@media (min-width: 1200px) {
+    .title__h1 {
+        font-size: 6.4rem;
+    }
+
+    .title__h2 {
+        font-size: 4.8rem;
+    }
+
+    .title__button {
+        font-size: 4.8rem;
+        padding: .5rem 5rem;
+    }
+}
