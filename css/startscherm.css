@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Kleurenpallet */
+    --bg-color: #202C59;
+    --accent-color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+    --shadow-color: #10152b;
+}
+
+main{
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+}
+
+.background > img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.background__shade {
+    position: absolute;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
+.title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title__h1 {
+    color: var(--font-color);
+    font-size: 4.8rem;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.title__h2 {
+    color: var(--font-color);
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.title__button {
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    font-size: 3.2rem;
+    background-color: var(--font-color);
+    border: none;
+    padding: .5rem 2.5rem;
+    margin-top: 3rem;
+    border-radius: .3rem;
+}
+
+.title__button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2pt var(--accent-color);
+}
+
+.title__button:active {
+    background-color: var(--highlight-color);
+    outline: none;
+}
+
+.title__button:focus {
+    box-shadow: 0 0 0 2pt var(--accent-color);
+    outline: none;
+}
+
+.overlay {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+@media (min-width: 1200px) {
+    .title__h1 {
+        font-size: 6.4rem;
+    }
+
+    .title__h2 {
+        font-size: 4.8rem;
+    }
+
+    .title__button {
+        font-size: 4.8rem;
+        padding: .5rem 5rem;
+    }
+}
