@@ -26,10 +26,20 @@ main{
     font-family: 'Open Sans', sans-serif;
 }
 
+.title {
+    position: absolute;
+    top: 0rem;
+    color: var(--accent-color);
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    z-index: 2;
+    text-shadow: 0 .2rem .4rem var(--shadow-color);
+}
+
 .frameCounter {
     position: absolute;
-    top: 0;
-    left: 1rem;
+    top: 5rem;
     color: var(--highlight-color);
     font-family: 'Teko', sans-serif;
     font-weight: 400;
@@ -68,6 +78,14 @@ main{
     align-items: center;
 }
 
+.movingFrame:hover {
+    cursor: grab;
+}
+
+.movingFrame:active {
+    cursor: grabbing;
+}
+
 .movingFrame__text {
     color: var(--font-color);
     font-family: 'Teko', sans-serif;
@@ -85,7 +103,7 @@ main{
     color: var(--font-color);
     background-color: var(--accent-color);
     box-shadow: 0 .4rem 1rem var(--shadow-color);
-    top: 30rem;
+    bottom: 5rem;
     display: none;
 }
 
@@ -106,4 +124,23 @@ main{
     padding: .5rem 2rem;
     box-shadow: 0 .4rem 1rem var(--shadow-color) inset;
     text-shadow: 0rem .2rem .4rem var(--shadow-color);
+}
+
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+@media (min-width: 1024px) {
+    .staticFrame {
+        width: 50rem;
+        height: 28rem;
+    }
+
+    .movingFrame {
+        width: 50rem;
+        height: 28rem;
+    }
 }

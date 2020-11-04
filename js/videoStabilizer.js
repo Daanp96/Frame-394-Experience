@@ -21,6 +21,7 @@ var restrictionY = vh - frameSizeY;
 //status van het object
 var frameState = 'floating';
 
+//MOBILE
 //touchstart event zorgt ervoor dat animaties worden gestopt
 movingFrame.addEventListener('touchstart', function(e){
     //zet status naar vasthouden
@@ -30,6 +31,10 @@ movingFrame.addEventListener('touchstart', function(e){
     movingFrame.style.WebkitTransition = 'none';
     movingFrame.style.MozTransition = 'none';
 })
+
+movingFrame.ondragstart = function() {
+    return false;
+};
 
 //touchmove event zorgt ervoor dat wanneer de gebruiker het object pakt, deze kijkt voor de locatie van het object
 movingFrame.addEventListener('touchmove', function(e){
@@ -98,6 +103,102 @@ movingFrame.addEventListener('touchend', function(e){
     movingFrame.style.WebkitTransition = '1.5s';
     movingFrame.style.MozTransition = '1.5s';
 })
+//EINDE MOBILE
+
+//DESKTOP
+movingFrame.onmousedown = function(event) {
+    // (1) prepare to moving: make absolute and on top by z-index
+    movingFrame.style.position = 'absolute';
+    movingFrame.style.zIndex = 1000;
+    frameState = 'holding';
+    movingFrame.style.WebkitTransition = 'none';
+    movingFrame.style.MozTransition = 'none';
+  
+    // move it out of any current parents directly into body
+    // to make it positioned relative to the body
+    document.body.append(movingFrame);
+  
+    // centers the movingFrame at (pageX, pageY) coordinates
+    function moveAt(pageX, pageY) {
+        movingFrame.style.left = pageX - movingFrame.offsetWidth / 2 + 'px';
+        movingFrame.style.top = pageY - movingFrame.offsetHeight / 2 + 'px';
+    }
+  
+    // move our absolutely positioned movingFrame under the pointer
+    moveAt(event.pageX, event.pageY);
+  
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+        // RESTRICTIES 
+
+        //huidige locatie van het object
+        var x = parseInt(movingFrame.style.left);
+        var y = parseInt(movingFrame.style.top);
+
+        //verplaats object binnen het scherm, zodra de gebruiker deze buiten het scherm sleept
+        if (x < 0 && y < 0) {
+            movingFrame.style.left = 0;
+            movingFrame.style.top = 0;
+        }
+        else if (x < 0) {
+            movingFrame.style.left = 0;
+        }
+        else if (y < 0) {
+            movingFrame.style.top = 0;
+        }
+        else if (x > restrictionX && y > restrictionY) {
+            movingFrame.style.left = restrictionX.toString() + 'px';
+            movingFrame.style.top = restrictionY.toString() + 'px';
+        }
+        else if (x > restrictionX) {
+            movingFrame.style.left = restrictionX.toString() + 'px';
+        }
+        else if (y > restrictionY) {
+            movingFrame.style.top = restrictionY.toString() + 'px';
+        }
+
+        if(x < 0 && y > restrictionY) {
+            movingFrame.style.left = 0;
+            movingFrame.style.top = restrictionY.toString() + 'px';
+        }
+        else if(x > restrictionX && y < 0) {
+            movingFrame.style.left = restrictionX.toString() + 'px';
+            movingFrame.style.top = 0;
+        }
+    }
+  
+    // (2) move the movingFrame on mousemove
+    document.addEventListener('mousemove', onMouseMove);
+  
+    // (3) drop the movingFrame, remove unneeded handlers
+    movingFrame.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        movingFrame.onmouseup = null;
+        //huidige locatie van object
+        var x = parseInt(movingFrame.style.left);
+        var y = parseInt(movingFrame.style.top);
+
+        //object naar midden plaatsen als het dichtbij wordt losgelaten
+        if (x > (vw/2 - frameSizeX/2 - 30) && x < (vw/2 - frameSizeX/2 + 30) && y > (vh/2 - frameSizeY/2 - 30) && y < (vh/2 - frameSizeY/2 + 30)) {
+            movingFrame.style.left = vw/2 - frameSizeX/2 + 'px';
+            movingFrame.style.top = vh/2 - frameSizeY/2 + 'px';
+            frameState = "placed";
+            setTimeout(function(){checkState();}, 1500);
+        } else {
+            frameState = "floating";
+        }
+
+        //Zet transities weer aan
+        movingFrame.style.WebkitTransition = '1.5s';
+        movingFrame.style.MozTransition = '1.5s';
+    };
+  
+};
+
+movingFrame.ondragstart = function() {
+    return false;
+};
+//EINDE DESKTOP
 
 function checkState(){
     if (frameState == "placed") {
