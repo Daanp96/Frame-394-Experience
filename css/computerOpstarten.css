@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Kleurenpallet */
+    --bg-color: #202C59;
+    --accent-color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+    --shadow-color: #10152b;
+    --sticky-note: #FFFF88;
+}
+
+body{
+    background-color: #c3c3c3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateY(-7rem);
+}
+
+.background > img {
+    width: 100%;
+    filter: blur(4px);
+}
+
+.laptop {
+    margin-top: 30rem;
+}
+
+.screenBorder {
+    height: 30rem;
+    width: 52rem;
+    background-color: #2b2b2b;
+    border-top-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+    border: solid black .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenOff {
+    height: 28rem;
+    width: 50rem;
+    background-color: black;
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.screen__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: none;
+}
+
+@keyframes zoom-in {
+    0% {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+    }
+}
+
+.screen__login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+@keyframes slide-out-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-75px);
+              transform: translateY(-75px);
+      opacity: 0;
+    }
+  }
+  
+
+.screen__userImage {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    background-color: gray;
+    position: absolute;
+    border-radius: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen__userImage > .fa-user {
+    color: white;
+    font-size: 3rem;
+}
+
+.screen__username {
+    position: absolute;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.screen__password {
+    position: absolute;
+    margin-top: 7rem;
+    border: solid .1rem white;
+    animation: none;
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(8px);
+    }
+    90% {
+        transform: translateX(-8px);
+    }
+  }
+  
+
+.screen__password__input {
+    border-style: none;
+    padding: .4rem .4rem;
+    background-color: transparent;
+    color: white;
+    width: 14rem;
+    font-size: 1.4rem;
+}
+
+.screen__password__button {
+    border-style: none;
+    border-left: solid .1rem white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.screen__password__button > i {
+    color: white;
+    font-size: 1.6rem;
+    padding: .5rem .5rem;
+}
+
+.screen__password__button:hover {
+    cursor: pointer;
+}
+
+.screen__taskbar > img {
+    width: 100%;
+}
+
+.stickyNote {
+    position: absolute;
+    height: 5.3rem;
+    width: 10rem;
+    transform: rotateY(20deg);
+    transform-style: preserve-3d;
+    margin-left: 45rem;
+    margin-bottom: 25rem;
+}
+
+.stickyNote:hover {
+    cursor: pointer;
+}
+
+.stickyNote__top {
+    width: 100%;
+    height: 5.3rem;
+    background-color: var(--sticky-note);
+    outline: solid .1rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stickyNote__top > p {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.6rem;
+    color: #16264C;
+}
+
+.stickyNote__bottom {
+    width: 100%;
+    height: 4.7rem;
+    background-color: var(--sticky-note);
+    outline: solid .1rem black;
+    transform-origin: top;
+    transform: rotateX(160deg);
+    transform-style: preserve-3d;
+    box-shadow: -2px 2px 4px black;
+}
+
+@keyframes slight-fold-out {
+    from {
+        transform: rotateX(160deg);
+    }
+    to {
+        transform: rotateX(145deg);
+    }
+}
+
+@keyframes slight-fold-in {
+    from {
+        transform: rotateX(145deg);
+    }
+    to {
+        transform: rotateX(160deg);
+    }
+}
+
+@keyframes fold-out {
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 52rem;
+    background-color: #2b2b2b;
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    border: solid black .2rem;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transform: perspective(100rem) rotateX(70deg);
+}
+
+.keyboard__onOffButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    transform: translate3d(21.5rem, -12rem, 0);
+    animation: none;
+}
+
+@keyframes blink {
+    from {
+        outline: none;
+    }
+
+    to {
+        outline: solid 3px red;
+    }
+}
+
+.keyboard__onOffButton:hover {
+    cursor: pointer;
+}
+
+.keyboard__keys {
+    position: absolute;
+    height: 20rem;
+    width: 48rem;    
+}
+
+.keyboard__keys > img {
+    width: 48rem;
+}
+
+.keyboard__bottomSide {
+    position: absolute;
+    height: 1.5rem;   
+    width: 52rem;
+    margin-top: 30.5rem;
+    background-color: #2b2b2b;
+    border: solid black .2rem;
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transform: perspective(100rem) rotateX(-45deg);
+    
+}
+
+.desk {
+    position: absolute;
+    z-index: -5;
+    overflow: hidden;
+    height: 10rem;
+    width: 100vw;
+    bottom: 0;
+}
+
+.desk > img {
+    width: 100%;
+    height: 10rem;
+}
+
+.desktop {
+    z-index: 5;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.desktop__videoPlayer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 1rem;
+    left: 1rem;
+    border: none;
+    background-color: transparent;
+    padding: .4rem .2rem;
+}
+
+.desktop__videoPlayer:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+.desktop__videoPlayer:focus {
+    background-color: royalblue;
+    outline: none;
+}
+
+.desktop__videoPlayer > img {
+    width: 3rem;
+    z-index: 2;
+}
+
+.desktop__videoPlayer > p {
+    color: white;
+}
+
+.desktop__taskbar > img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.videoPlayer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    transform: scale(0);
+}
+
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  @media (min-height: 470px) {
+      .desk {
+        height: 15rem;
+      }
+
+      .desk > img {
+          height: 15rem;
+      }
+  }
+
+  @media (min-height: 590px) {
+    .laptop {
+        margin-top: 40rem;
+    }
+
+    .desk {
+      height: 15rem;
+    }
+
+    .desk > img {
+        height: 15rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -24rem;
+        }
+    }
+}
+
+@media (min-height: 660px) {
+    .laptop {
+        margin-top: 50rem;
+    }
+
+    .desk {
+      height: 15rem;
+    }
+
+    .desk > img {
+        height: 15rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -30.8rem;
+        }
+    }
+}
+
+@media (min-height: 697px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -34.5rem;
+        }
+    }
+}
+
+@media (min-height: 770px) {
+    .laptop {
+        margin-top: 50rem;
+    }
+
+    .desk {
+      height: 20rem;
+    }
+
+    .desk > img {
+        height: 20rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -35.8rem;
+        }
+    }
+}
+
+@media (min-height: 797px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -39.5rem;
+        }
+    }
+}
+
+@media (min-height: 870px) {
+    .laptop {
+        margin-top: 60rem;
+    }
+
+    .desk {
+        height: 20rem;
+    }
+
+    .desk > img {
+        height: 20rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -50rem;
+        }
+    }
+}
+
+@media (min-height: 908px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -51.2rem;
+        }
+    }
+}
