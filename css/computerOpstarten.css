@@ -349,6 +349,7 @@ main {
 
 .desk > img {
     width: 100%;
+    height: 10rem;
 }
 
 .desktop {
@@ -417,3 +418,179 @@ main {
     }
   }
   
+  @media (min-height: 470px) {
+      .desk {
+        height: 15rem;
+      }
+
+      .desk > img {
+          height: 15rem;
+      }
+  }
+
+  @media (min-height: 590px) {
+    .laptop {
+        margin-top: 40rem;
+    }
+
+    .desk {
+      height: 15rem;
+    }
+
+    .desk > img {
+        height: 15rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -24rem;
+        }
+    }
+}
+
+@media (min-height: 660px) {
+    .laptop {
+        margin-top: 50rem;
+    }
+
+    .desk {
+      height: 15rem;
+    }
+
+    .desk > img {
+        height: 15rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -30.8rem;
+        }
+    }
+}
+
+@media (min-height: 697px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -34.5rem;
+        }
+    }
+}
+
+@media (min-height: 770px) {
+    .laptop {
+        margin-top: 50rem;
+    }
+
+    .desk {
+      height: 20rem;
+    }
+
+    .desk > img {
+        height: 20rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -35.8rem;
+        }
+    }
+}
+
+@media (min-height: 797px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -39.5rem;
+        }
+    }
+}
+
+@media (min-height: 870px) {
+    .laptop {
+        margin-top: 60rem;
+    }
+
+    .desk {
+        height: 20rem;
+    }
+
+    .desk > img {
+        height: 20rem;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -50rem;
+        }
+    }
+}
+
+@media (min-height: 908px) {
+    @keyframes zoom-in {
+        0% {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            top: -51.2rem;
+        }
+    }
+}
