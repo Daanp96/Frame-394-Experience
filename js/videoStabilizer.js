@@ -203,9 +203,11 @@ movingFrame.ondragstart = function() {
 function checkState(){
     if (frameState == "placed") {
         if (frameCount < (totalFrames - 1)){
+            movingFrame.style.pointerEvents = "none";
             frameCount++;
             movingFrameText.innerHTML = "Frame " + (frameCount + 1);
             setTimeout(function(){frameState = "floating";}, 500);
+            setTimeout(function(){movingFrame.style.pointerEvents = "all";}, 2000);
         }
         else{
             frameCount++;
@@ -243,4 +245,13 @@ checkState();
 //Pagina transitie
 const overlay = document.getElementById("js--overlay");
 
-window.onload
+window.onload = function() {
+    overlay.style.opacity = "0";
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
+}
+
+function continueToNextPage() {
+    setTimeout(function(){movingFrame.style.display = "none";}, 1000);
+    overlay.style.opacity = "1";
+    overlay.style.zIndex = "10";
+}

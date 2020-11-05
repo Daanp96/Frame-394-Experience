@@ -135,7 +135,7 @@ main{
     left: 0;
     background-color: black;
     opacity: 1;
-    transition: opacity 5s;
+    transition: opacity 3s;
 }
 
 .disable-select {
