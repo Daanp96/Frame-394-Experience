@@ -76,6 +76,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .movingFrame:hover {
@@ -143,6 +144,48 @@ main{
     -moz-user-select: none;    
     -ms-user-select: none;      
     user-select: none;
+}
+
+.turnScreen {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.turnScreen__bg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+}
+
+.turnScreen > p {
+    color: var(--font-color);
+    font-size: 3.2rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.turnScreen > svg {
+    fill: var(--font-color);
+    width: 12rem;
+    height: 12rem;
+    margin: 5rem 0;
+    z-index: 1;
+}
+
+@media (orientation: portrait) {
+    .turnScreen {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (min-width: 1024px) {
