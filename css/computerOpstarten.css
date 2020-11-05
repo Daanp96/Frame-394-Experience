@@ -391,6 +391,7 @@ main {
 
 .desktop__videoPlayer > p {
     color: white;
+    text-shadow: .1rem .1rem .2rem black;
 }
 
 .desktop__taskbar > img {
@@ -460,7 +461,7 @@ main {
     }
 
     .turnScreen {
-        z-index: 2;
+        z-index: 100;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -651,5 +652,14 @@ main {
             z-index: 5;
             top: -51.2rem;
         }
+    }
+
+    .desktop__videoPlayer > img {
+        width: 5rem;
+    }
+    
+    .desktop__videoPlayer > p {
+        margin-top: .2rem;
+        font-size: 1.6rem;
     }
 }
