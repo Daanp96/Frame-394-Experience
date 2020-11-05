@@ -254,4 +254,5 @@ function continueToNextPage() {
     setTimeout(function(){movingFrame.style.display = "none";}, 1000);
     overlay.style.opacity = "1";
     overlay.style.zIndex = "10";
+    setTimeout(function(){window.location.href = "volgende webpagina";}, 3000);
 }
