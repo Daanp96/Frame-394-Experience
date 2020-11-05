@@ -221,6 +221,10 @@ main {
 }
 
 @media (orientation: portrait) {
+    .viewDiscr {
+        display: none;
+    }
+    
     .turnScreen {
         z-index: 2;
         display: flex;
