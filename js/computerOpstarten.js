@@ -81,4 +81,5 @@ window.onload = function() {
 
 function startVideoPlayer() {
     setTimeout(function(){videoPlayer.style.animation = "scale-in-center .3s ease-in both"}, 500);
+    setTimeout(function(){window.location.href = "videoPlayer.html"}, 1500);
 }

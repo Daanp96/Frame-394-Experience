@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Kleurenpallet */
+    --bg-color: #202C59;
+    --accent-color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+    --shadow-color: #10152b;
+}
+
+body {
+    background-color: black;
+    font-family: 'Teko', sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewDiscr-bg {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    transition: opacity 1s;
+}
+
+.viewDiscr {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--bg-color);
+    width: 60rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    animation: none;
+    box-shadow: .2rem .2rem .4rem black;
+}
+
+@keyframes slide-out-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+  }
+
+.viewDiscr > h1 {
+    color: var(--accent-color);
+    font-size: 6rem;
+}
+
+.viewDiscr > p {
+    color: var(--highlight-color);
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.viewDiscr__buttons {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 50rem;
+    column-gap: 10rem;
+}
+
+.viewDiscr__buttons > button {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.6rem;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .4rem black;
+    box-sizing: content-box;
+    margin: .2rem;
+    padding: .5rem;
+}
+
+.viewDiscr__buttons > button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    margin: 0;
+    border: solid .2rem var(--highlight-color);
+}
+
+.viewDiscr__buttons > button:focus {
+    box-shadow: none;
+    margin: 0;
+    border: solid .2rem var(--highlight-color);
+    outline: none;
+}
+
+.viewDiscr__buttons > button:active {
+    padding: .7rem;
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+}
+
+.videoPlayer {
+    width: 90vw;
+    height: 90vh;
+}
+
+.continue {
+    position: absolute;
+    font-family: 'Teko', sans-serif;
+    font-size: 2.6rem;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .4rem black;
+    box-sizing: content-box;
+    padding: .5rem 1rem .1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 1rem;
+    opacity: 0;
+    display: none;
+    animation: none;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        bottom: 30vh;
+        opacity: 0;
+    }
+    100% {
+        bottom: 45vh;
+        opacity: 1;
+    }
+  }
+
+.continue:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+}
+
+.continue:focus {
+    box-shadow: none;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+    outline: none;
+}
+
+.continue:active {
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+}
+
+.overlay {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.turnScreen {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.turnScreen__bg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+}
+
+.turnScreen > p {
+    color: var(--font-color);
+    font-size: 3.2rem;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+}
+
+.turnScreen > svg {
+    fill: var(--font-color);
+    width: 12rem;
+    height: 12rem;
+    margin: 5rem 0;
+    z-index: 1;
+}
+
+@media (orientation: portrait) {
+    .viewDiscr {
+        display: none;
+    }
+    
+    .turnScreen {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .videoPlayer {
+        width: 95vw;
+        height: 95vh;
+    }
+}
