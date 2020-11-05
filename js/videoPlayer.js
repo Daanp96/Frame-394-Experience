@@ -1,6 +1,7 @@
 const viewDiscr = document.getElementById("js--viewDiscr");
 const viewDiscrBg = document.getElementById("js--viewDiscr-bg");
 const continueButton = document.getElementById("js--continue");
+const videoStabilizer = document.getElementById("js--videoStabilizer");
 const overlay = document.getElementById("js--overlay");
 
 function playVideo() {
@@ -10,10 +11,17 @@ function playVideo() {
     setTimeout(function(){
         continueButton.style.display = "block";
         continueButton.style.animation = "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
-    }, 60000);
+    }, 1000);
 }
 
 function skipVideo() {
+    viewDiscr.style.animation = "slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
+    videoStabilizer.style.display = "flex";
+    videoStabilizer.style.animation = "slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+    continueButton.style.display = "none";
+}
+
+function nextPage() {
     overlay.style.zIndex = "10"
     overlay.style.opacity = "1";
     setTimeout(function(){window.location.href = "volgende webpagina"}, 3000);
