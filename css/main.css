@@ -1,11 +1,11 @@
-*, *::before, *::after{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #030303;
+    background-color: pink; 
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -15,33 +15,76 @@ button{
     letter-spacing: 1px;
 }
 
+
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+}
+
+
+.page-wrapper{
+    background-color: green;
+    position: relative;
+}
+
+.posts--container{
+    background-color: var(--reddit_background);
+}
+
+.post--items{
+    
+    background-color: var(--reddit_white);
+    align-content: center;
+    
+}
+
+
 :root{
-    --bg-color: #202C59;
-    --accent--color: #FB0378;
-    --highlight-color: #FFE05D;
-    --font-color: #F9F9F9;
     --reddit_white: #D7DADC;
     --reddit_background: #1A1A1B;
     --reddit_input_border:  #343536;
 }
 
-main{
-    background-color: var(--bg-color);
-    display: grid;
-}
-
-section{
-    height: 100vh;
+.header_reddit{
     width: 100vw;
-    background-color: var(--reddit_background);
-    align-content: center;
 }
 
-.posts--container{
-    background-color: #A4A4A4;
-    display: inline-grid;
+#post-gif{
+    max-height: 60vh;
+    width: 70vw;
+    
 }
 
-.post{
-    background-color: var(--reddit_background);
+
+
+.comments--container{
+    padding: 2rem 0rem;
+    
+    background-color: blue;
+    position: relative;
+}
+
+.comments--item{
+    font-size: 0.8;
+    padding: 1rem;
+    background-color: darkgrey;
+    border: solid black 0.2rem;
+}
+
+
+
+
+#js--like-button-0{
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
+}
+
+#js--like-button-1{
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
 }
