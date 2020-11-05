@@ -1,4 +1,4 @@
-*{
+*, *:before, *:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -46,10 +46,11 @@ button{
 
 .reddit_post__inputs{
     background-color: #1A1A1B;
-    /* height: 100vh; */
     position: relative;
-    display: block;
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .reddit_post__inputs__title{
@@ -60,8 +61,8 @@ button{
     border: 1px solid var(--reddit_input_border);
     color: var(--reddit_white);
     font-size: 1rem;
-    margin: 10px;
-    width: 100%;
+    margin: 10px 0;
+    width: 90%;
 }
 
 .reddit_post__inputs__title:focus{
@@ -69,7 +70,6 @@ button{
 }
 
 .reddit_post__inputs__gif{
-    height: 300px;
     border: 1px dashed var(--reddit_input_border);
     background-color: var(--reddit_background);
     text-align: center;
@@ -91,7 +91,7 @@ button{
 
 .reddit_post__inputs__group{
     position: relative;
-    top: 150px;
+    padding: 120px 15px;
 }
 
 .reddit_post__inputss__gif__text{
@@ -125,13 +125,8 @@ button{
     background-color: white;
 }
 
-.upload_gif{
-    width: 50px;
-}
-
-.gif_title{
-    color: black;
-    display: inline-block;
+.reddit_page{
+    transition: all 0.5s;
 }
 
 .upload_popup{
@@ -140,25 +135,31 @@ button{
     top: 50px;
     left: 30px;
     width: 80vw;
-    height: 50vh;
+    height: 40vh;
     display: none;
-}
-
-.reddit_page{
-    /* filter: blur(3px); */
-    transition: all 0.5s;
 }
 
 .upload_popup__group{
     position: relative;
     cursor: pointer;
     display: inline-block;
-    transform: translate(50%, 50%);
+}
+
+.upload_popup__group__gif{
+    width: 50px;
+    vertical-align: middle;
+}
+
+.upload_popup__group__title{
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .reddit_post__inputs__gif__img{
     display: none;
-    width: 300px;
+    width: 100%;
+    padding: 15px;
 }
 
 #js--gif{
@@ -171,6 +172,41 @@ button{
 
 .buttons > button {
     margin: 0 15px 25px;
+}
+
+.school_project{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media(min-width: 400px) and (max-width: 700px){
+    .reddit_post__inputs__group{
+        padding: 20px 0;
+        margin: 0 20vw;
+    }
+
+    .reddit_post__community{
+        width: 50vw;
+    }
+
+    .reddit_post__create{
+        font-size: 1rem;
+    }
+
+    .reddit_post__inputs__title{
+        width: 83%;
+    }
+
+    .reddit_post__inputs__gif{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reddit_post__inputs__gif__img{
+        width: 60%;
+    }
 }
 
 .scale-in-center {

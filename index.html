@@ -6,13 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Frame 394</title>
         <link rel="stylesheet" href="./css/main.css">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
         <script src="./js/main.js" defer></script>
     </head>
     <body>
         <main id="js--reddit_page" class="reddit_page">
             <header>
-                <img class="header_reddit" src="img/header_reddit.png" alt="reddit_header">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="img/header_reddit_mobile.png">
+                    <source media="(max-width: 501px)" srcset="img/header_reddit_desktop.png">
+                    <img class="header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
+                </picture>
             </header>
             <section class="reddit_post">
                 <h2 class="reddit_post__create">Create post</h2>
@@ -33,13 +37,13 @@
                 </section>
             </section>
             <footer>
-                <p>THIS IS A SCHOOL PROJECT</p>
+                <p class="school_project">THIS IS A SCHOOL PROJECT</p>
             </footer>
         </main>
         <section id="js--popup" class="upload_popup scale-in-center">
             <section id="js--gif_file" class="upload_popup__group">
-                <img class="upload_gif" src="/img/gif.png" alt="upload_gif">
-                <h2 class="gif_title">taser.gif</h2>
+                <img class="upload_popup__group__gif" src="/img/gif.png" alt="upload_gif">
+                <h2 class="upload_popup__group__title">taser.gif</h2>
             </section>
         </section>
     </body>
