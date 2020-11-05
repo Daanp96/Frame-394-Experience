@@ -10,7 +10,7 @@ function playVideo() {
     setTimeout(function(){
         continueButton.style.display = "block";
         continueButton.style.animation = "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
-    }, 5000);
+    }, 60000);
 }
 
 function skipVideo() {
