@@ -4,11 +4,25 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #030303;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+button{
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
 :root{
     --bg-color: #202C59;
     --accent--color: #FB0378;
     --highlight-color: #FFE05D;
     --font-color: #F9F9F9;
+    --reddit_white: #D7DADC;
+    --reddit_background: #1A1A1B;
+    --reddit_input_border:  #343536;
 }
 
 main{
