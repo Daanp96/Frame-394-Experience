@@ -1,4 +1,5 @@
 const movingFrame = document.getElementById('js--movingFrame');
+const movingFrameFrame = document.getElementById('js--movingFrame__frame');
 const movingFrameText = document.getElementById('js--movingFrame__text');
 const frameCounter = document.getElementById('js--frameCounter');
 const continueButton = document.getElementById('js--continueButton');
@@ -89,12 +90,16 @@ movingFrame.addEventListener('touchend', function(e){
     var x = parseInt(movingFrame.style.left);
     var y = parseInt(movingFrame.style.top);
 
+    //korte timout zodat gebruiker niet het frame te snel pakt
+    movingFrame.style.pointerEvents = "none";
+    setTimeout(function(){movingFrame.style.pointerEvents = "all";}, 2000);
+
     //object naar midden plaatsen als het dichtbij wordt losgelaten
     if (x > (vw/2 - frameSizeX/2 - 30) && x < (vw/2 - frameSizeX/2 + 30) && y > (vh/2 - frameSizeY/2 - 30) && y < (vh/2 - frameSizeY/2 + 30)) {
         movingFrame.style.left = vw/2 - frameSizeX/2 + 'px';
         movingFrame.style.top = vh/2 - frameSizeY/2 + 'px';
         frameState = "placed";
-        setTimeout(function(){checkState();}, 1500);
+        setTimeout(function(){checkState();}, 2000);
     } else {
         frameState = "floating";
     }
@@ -178,12 +183,16 @@ movingFrame.onmousedown = function(event) {
         var x = parseInt(movingFrame.style.left);
         var y = parseInt(movingFrame.style.top);
 
+        //korte timout zodat gebruiker niet het frame te snel pakt
+        movingFrame.style.pointerEvents = "none";
+        setTimeout(function(){movingFrame.style.pointerEvents = "all";}, 2000);
+
         //object naar midden plaatsen als het dichtbij wordt losgelaten
         if (x > (vw/2 - frameSizeX/2 - 30) && x < (vw/2 - frameSizeX/2 + 30) && y > (vh/2 - frameSizeY/2 - 30) && y < (vh/2 - frameSizeY/2 + 30)) {
             movingFrame.style.left = vw/2 - frameSizeX/2 + 'px';
             movingFrame.style.top = vh/2 - frameSizeY/2 + 'px';
             frameState = "placed";
-            setTimeout(function(){checkState();}, 1500);
+            setTimeout(function(){checkState();}, 2000);
         } else {
             frameState = "floating";
         }
@@ -205,6 +214,7 @@ function checkState(){
         if (frameCount < (totalFrames - 1)){
             movingFrame.style.pointerEvents = "none";
             frameCount++;
+            movingFrameFrame.setAttribute("src", "./img/frame_" + (frameCount + 1) + ".png")
             movingFrameText.innerHTML = "Frame " + (frameCount + 1);
             setTimeout(function(){frameState = "floating";}, 500);
             setTimeout(function(){movingFrame.style.pointerEvents = "all";}, 2000);
