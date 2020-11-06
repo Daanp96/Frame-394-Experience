@@ -1,10 +1,13 @@
 import * as THREE from './three.js/three.module.js';
 import { OrbitControls } from './three.js/OrbitControls.js'; 
 import { DragControls } from './three.js/DragControls.js';
+import { CSS2DRenderer, CSS2DObject } from "./three.js/CSS2DRenderer.js";
 
 const main = () => {
 
     const objects = [];
+
+    const toolObject = document.getElementsByClassName("tool_object");
 
     // Hier pak ik de canvas waar ik de 3D objecten op wil gaan renderen.
     const canvas = document.querySelector('#c');
@@ -50,18 +53,38 @@ const main = () => {
     const gridHelper = new THREE.GridHelper(size, divisions);
     scene.add(gridHelper);
 
-    const geometry = new THREE.SphereGeometry( 0.5, 32, 32 );
-    const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-    const sphere = new THREE.Mesh( geometry, material );
-    objects.push(sphere);
-    // scene.add( sphere );
+    const addObject = (object) => {
+        objects.push( object );
+        scene.add( object );
+    }
 
-    const geometryCube = new THREE.CubeGeometry(0.5,0.25,1);
-    const materialCube = new THREE.MeshBasicMaterial({color: 0xffff00});
-    const cube = new THREE.Mesh(geometryCube, materialCube);
-    objects.push( cube );
-    // scene.add( cube );
-
+    const getClickedObject = () => {
+        for(let i = 0; i < toolObject.length; i++){
+            toolObject[i].addEventListener('click', (e) => {
+                if(toolObject[i].dataset.object === "walter"){
+                    const geometryWalter = new THREE.SphereGeometry( 0.5, 32, 32 );
+                    const materialWalter = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+                    const walterObject = new THREE.Mesh( geometryWalter, materialWalter );
+                    addObject(walterObject);
+                } else if (toolObject[i].dataset.object === "michael") {
+                    const geometryMichael = new THREE.SphereGeometry( 0.5, 32, 32 );
+                    const materialMichael = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
+                    const michaelObject = new THREE.Mesh( geometryMichael, materialMichael );
+                    addObject(michaelObject);
+                } else if (toolObject[i].dataset.object === "taser"){
+                    const geometryTaser = new THREE.CubeGeometry(0.5,0.25,1);
+                    const materialTaser = new THREE.MeshBasicMaterial({color: 0xff00ff});
+                    const taserObject = new THREE.Mesh(geometryTaser, materialTaser);
+                    addObject(taserObject);
+                } else if (toolObject[i].dataset.object === "fence") {
+                    const geometry = new THREE.BoxGeometry( 0.25, 4, 10 );
+                    const material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
+                    const fence = new THREE.Mesh( geometry, material );
+                    addObject(fence);
+                }
+            });
+        }
+    }
 
     // Een functie die ervoor zorgt dat het canvas responsive is.
     const resizeRendererToDisplaySize = (renderer) => {
@@ -76,6 +99,8 @@ const main = () => {
 
         return needResize;
     };
+
+    getClickedObject();
 
     // Een aparte render functie die ervoor zorgt dat alles naar het canvas 
     // gerendered wordt.
@@ -93,8 +118,10 @@ const main = () => {
 
     requestAnimationFrame(render);
 
+
     const dragControls = new DragControls(objects, camera, renderer.domElement);
     dragControls.addEventListener('drag', render);
+
 };
 
 export {

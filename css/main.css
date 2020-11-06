@@ -71,16 +71,16 @@ canvas {
     transition: all 1s;
 }
 
-#js--walter, #js--scott{
+#js--walter, #js--michael{
     display: block;
     opacity: 0;
     color: black;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     transition: 1s all;
 }
 
-.walter_name, .scott_name{
+.walter_name, .michael_name{
     display: block;
     text-align: center;
     opacity: 0;
@@ -89,15 +89,41 @@ canvas {
 
 .object{
     cursor: pointer;
+    margin: 10px auto;
+}
+
+.objectBar{
+    cursor: pointer;
 }
 
 .taser{
     width: 40px;
     transform: scaleX(-1);
     display: block;
-    margin: 0 auto;
+    opacity: 0;
+    transition: 1s all;
 }
 
 .taser_title{
     text-align: center;
+    opacity: 0;
+}
+
+.fence{
+    width: 50px;
+    display: block;
+    /* opacity: 0; */
+    transition: 1s all;
+}
+
+.fence_title{
+    text-align: center;
+    /* opacity: 0; */
+}
+
+.walter_label{
+    color: #FFF;
+    font-family: sans-serif;
+    padding: 2px;
+    background: rgba( 0, 0, 0, .6 );
 }

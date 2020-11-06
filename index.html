@@ -11,24 +11,27 @@
         <script src="/js/font-awesome/font-awesome.js"></script>
     </head>
     <body>
-        <div class="title">
+        <section class="title">
             <h1>3D Analyse</h1>
-        </div>
-        <div id="js--tools_bar" class="object">
+        </section>
+        <section id="js--tools_bar" class="objectBar">
             <h2 id="js--tools_title" class="tool_title">Tools</h2>
-        </div>
-        <div id="js--objects_bar" class="object">
+        </section>
+        <section id="js--objects_bar" class="objectBar">
             <h2 id="js--obj_title" class="obj_title">Objects</h2>
 
-            <i id="js--walter" class="fas fa-male object"></i>
+            <i id="js--walter" class="fas fa-male object tool_object" data-object="walter"></i>
             <h3 id="js--walter_title" class="walter_name">Walter Scott</h3>
 
-            <i id="js--scott" class="fas fa-male object"></i>
-            <h3 id="js--scott_title" class="scott_name">Michael Slager</h3>
+            <i id="js--michael" class="fas fa-male object tool_object" data-object="michael"></i>
+            <h3 id="js--michael_title" class="michael_name">Michael Slager</h3>
 
-            <img class="taser" src="taser.png" alt="taser">
-            <h3 class="taser_title">Taser</h3>
-        </div>
+            <img id="js--taser" class="taser object tool_object" src="taser.png" alt="taser" data-object="taser">
+            <h3 id="js--taser_title" class="taser_title">Taser</h3>
+
+            <img id="js--fence" class="fence object tool_object" src="fence.png" alt="fence" data-object="fence">
+            <h3 id="js--fence_title" class="fence_title">Fence</h3>
+        </section>
         <canvas id="c"></canvas>
     </body>
     <script type="module" src="./js/main.js"></script>
