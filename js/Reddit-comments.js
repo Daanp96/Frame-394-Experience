@@ -1,10 +1,8 @@
-console.log("Hello world");
-
 const gif = document.getElementById("js--gif");
+let titleReddit = document.getElementById("js--title_post");
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
-    console.log(p);
     let form = document.getElementById("js--form-"+n);
     form.style.display='block';
     
@@ -14,7 +12,6 @@ function enableComment(n){
     let input = document.getElementById("input-comment-"+n).value;
     let result = document.getElementById("result-"+n);
     let form = document.getElementById("js--form-"+n);
-    console.log("enableComment lol")
 
     if (input.length < 1) {
         result.textContent = 'Your answer is empty';
@@ -26,16 +23,21 @@ function enableComment(n){
 
 
 
-
 function changeColor(n){
     let m = document.getElementById("js--like-button-"+n);
-    console.log(m);
     if (m.getAttribute('src') == "/img/heart-grey.png"){
         m.src = "/img/heart-red.png";
     }else{
         m.src = "/img/heart-grey.png";
     }
 }
+
+function getTitle(){
+    let title = localStorage.getItem("postTitle");
+    titleReddit.innerHTML = title;
+}
+
+getTitle();
 
 
 //gif_file.addEventListener("click", (e) => {

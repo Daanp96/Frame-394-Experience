@@ -9,12 +9,6 @@ const gif = document.getElementById("js--gif");
 const upload_group = document.getElementById("js--upload_group");
 let post_title = "";
 
-const postTitle = () => {
-    if(post_title){
-        console.log(post_title);
-    }
-}
-
 const openGifWindow = () => {
     gif_upload.addEventListener("click", (e) => {
         popup.style.display = "block";
@@ -41,23 +35,23 @@ const postToReddit = () => {
         } else if (!reddit_title.value) {
           alert("I'll have to add a title!");
         } else {
-          alert(`The gif named ${post_title} has been uploaded!`);
-          postTitle();
+          let input = post_title;
+          localStorage.setItem("postTitle",input);
+          location.href = "Reddit-comments.html";
         }
       });
 }
 
 const cancelPost = () => {
-    cancel.addEventListener("click", () => {
-        alert("Wait, that is not what I want, I want to upload the gif!");
-      });
+  cancel.addEventListener("click", () => {
+    alert("Wait, that is not what I want, I want to upload the gif!");
+  });
 }
-
 
 export {
     openGifWindow,
     closeGifWindow,
     postToReddit,
-    cancelPost,
-    postTitle
+    cancelPost
 };
+
