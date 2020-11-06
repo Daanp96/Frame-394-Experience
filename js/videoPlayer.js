@@ -24,5 +24,5 @@ function skipVideo() {
 function nextPage() {
     overlay.style.zIndex = "10"
     overlay.style.opacity = "1";
-    setTimeout(function(){window.location.href = "videoStabilizer.html"}, 3000);
+    setTimeout(function(){window.location.href = "eersteUitspraak.html"}, 3000);
 }
