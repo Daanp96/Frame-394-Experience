@@ -107,8 +107,9 @@ to {opacity: 1}
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    font-size: 1.5rem;
-    
+    font-size: 2rem;
+    border: none;
+    font-family: 'Teko', sans-serif;
 }
 
 #end-button:hover{
@@ -118,4 +119,16 @@ to {opacity: 1}
 #end-button:active{
     background-color: var(--highlight-color);
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.overlay {
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+    transition: opacity 3s;
 }

@@ -49,5 +49,5 @@ window.onload = function() {
 function nextPage() {
     overlay.style.opacity = "1";
     overlay.style.zIndex = "10";
-    setTimeout(function(){window.location.href = "3D analyse";}, 2000);
+    setTimeout(function(){window.location.href = "Frames-doorlopen.html";}, 2000);
 }

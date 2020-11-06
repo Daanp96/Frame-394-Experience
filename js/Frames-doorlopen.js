@@ -1,8 +1,5 @@
-console.log("Hello world");
-
 document.addEventListener("DOMContentLoaded", function(event) { 
     //maak de door en terug knop aan
-  console.log("doc loaded");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
   const button = document.getElementById("end-button");
@@ -12,13 +9,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // maak de terugknop klikbaar
   prev.addEventListener("click", function(){
-    console.log("test click event prev");   
     showPreviousSlide(1);
   });
 
   // maak de doorknop klikbaaar
   next.addEventListener("click", function(){
-    console.log("test click event next");
     showNextSlides(1);
   });
 
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (n > 13) {
      button.style.display = "flex";
     }
-    console.log("in function showSLides")
     if( n < slides.length){
       slides[n].style.display = 'block';
       slides[l].style.display = "none";
@@ -54,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // De doorknop zegt toon dia(1 terug)
   function showPreviousSlide(n){
     slideIndex = slideIndex - n;
-    console.log(slideIndex);
     showSlidesReversed(slideIndex);
     
     
@@ -63,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // De doorknop zegt toon dia(1 verder dan nu)
   function showNextSlides(n) {
     slideIndex = slideIndex + n;
-    console.log(slideIndex);
     showSlides(slideIndex);
   
   }
@@ -75,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let z = (0)
     
     //var dots = document.getElementsByClassName("dot");
-    console.log("in function showSLidesReversed");
     if( n < 0){
       reset2(); 
     } else{
@@ -92,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let z = (slides.length - 1)
     slides[z].style.display = 'none';
     showSlides(slideIndex);
-    console.log("in reset function");
     
   }
 
@@ -101,49 +91,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let z = 0;
     slides[z].style.display = 'none';
     slideIndex = (slides.length -1);
-    console.log("in reser2 ");
     showSlidesReversed(slideIndex);
   }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
- 
 });
+
+const overlay = document.getElementById("js--overlay");
+
+window.onload = function() {
+    overlay.style.opacity = "0";
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
+}
+
+function nextPage() {
+  overlay.style.opacity = "1";
+  overlay.style.zIndex = "10";
+  setTimeout(function(){window.location.href = "3D analyse";}, 3000);
+}
