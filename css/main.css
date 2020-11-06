@@ -1,6 +1,7 @@
-*{
+*, *:before, *:after{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -19,10 +20,11 @@ canvas {
 	text-align: center;
 	z-index: 100;
     display:block;
+    opacity: 1;
     color: white;
 }
 
-#tools_bar{
+#js--tools_bar{
     background-color: red;
     display: block;
     width: 80px;
@@ -31,7 +33,7 @@ canvas {
     transition: all 1s;
 }
 
-#objects_bar{
+#js--objects_bar{
     background-color: red;
     display: block;
     width: 80px;
@@ -69,22 +71,33 @@ canvas {
     transition: all 1s;
 }
 
-#tools_bar:hover{
-    width: 15rem;
-}
-
-#tools_bar:hover > .tool_title {
+#js--walter, #js--scott{
+    display: block;
     opacity: 0;
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+    transition: 1s all;
 }
 
-#objects_bar:hover{
-    width: 15rem;
-}
-
-#objects_bar:hover > .obj_title {
+.walter_name, .scott_name{
+    display: block;
+    text-align: center;
     opacity: 0;
+    transition: 1s all;
 }
 
-.fa-male{
-    color: white;
+.object{
+    cursor: pointer;
+}
+
+.taser{
+    width: 40px;
+    transform: scaleX(-1);
+    display: block;
+    margin: 0 auto;
+}
+
+.taser_title{
+    text-align: center;
 }

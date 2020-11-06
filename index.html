@@ -8,18 +8,26 @@
         <title>Frame 394</title>
         <link rel="stylesheet" href="./css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-        <script src="https://kit.fontawesome.com/a0fb268ae6.js"></script>
+        <script src="/js/font-awesome/font-awesome.js"></script>
     </head>
     <body>
-        <i class="fas fa-male"></i>
         <div class="title">
             <h1>3D Analyse</h1>
         </div>
-        <div id="tools_bar">
-            <h2 class="tool_title">Tools</h2>
+        <div id="js--tools_bar" class="object">
+            <h2 id="js--tools_title" class="tool_title">Tools</h2>
         </div>
-        <div id="objects_bar">
-            <h2 class="obj_title">Objects</h2>
+        <div id="js--objects_bar" class="object">
+            <h2 id="js--obj_title" class="obj_title">Objects</h2>
+
+            <i id="js--walter" class="fas fa-male object"></i>
+            <h3 id="js--walter_title" class="walter_name">Walter Scott</h3>
+
+            <i id="js--scott" class="fas fa-male object"></i>
+            <h3 id="js--scott_title" class="scott_name">Michael Slager</h3>
+
+            <img class="taser" src="taser.png" alt="taser">
+            <h3 class="taser_title">Taser</h3>
         </div>
         <canvas id="c"></canvas>
     </body>
