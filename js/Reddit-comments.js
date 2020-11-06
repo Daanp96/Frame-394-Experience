@@ -1,5 +1,6 @@
 const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
+const button = document.getElementById("next-page");
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
@@ -39,7 +40,6 @@ function getTitle(){
 
 getTitle();
 
-
-//gif_file.addEventListener("click", (e) => {
-//    gif.style.display = "block";
-//  });
+function Continue(){
+    location.href = "tweede-uitspraak.html"
+}

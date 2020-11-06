@@ -35,6 +35,10 @@ label{
 }
 .page-wrapper{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .posts--container{
@@ -51,10 +55,15 @@ label{
 .answer{
     padding-left: 1.5rem;
 }
+
 :root{
     --reddit_white: #D7DADC;
     --reddit_background: #1A1A1B;
     --reddit_input_border:  #343536;
+    --bg-color: #202C59;
+    --accent--color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
 }
 
 .header_reddit{
@@ -72,6 +81,26 @@ label{
     padding: 2rem 0rem;
     background-color: var(--reddit_background);
     position: relative;
+    
+}
+
+#next-page{
+    width: 20rem;
+    height: 4rem;
+    
+    color: var(--font-color);
+    background-color: var(--accent--color);
+    border-radius: 15px;
+    
+}
+
+#next-page:hover{
+    border: solid var(--highlight-color) 3px;
+}
+
+#next-page:active{
+    background-color: var(--highlight-color);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .comments--item{
