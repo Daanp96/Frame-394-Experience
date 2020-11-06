@@ -209,6 +209,7 @@ main {
     background-color: #a5a4a4;
     border-radius: .2rem;
     transform: translate(-1rem, 0rem);
+    box-shadow: -.4rem 1rem 1rem var(--shadow-color);
 }
 
 .newspaper__middle1 {
