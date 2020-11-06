@@ -18,7 +18,7 @@ const fenceTitle = document.getElementById("js--fence_title");
 
 const handleTools = () => {
     toolsBar.addEventListener('click', (e) => {
-        console.log(e);
+        // doet helaas niets :(
     });
 }
 

@@ -127,3 +127,11 @@ canvas {
     padding: 2px;
     background: rgba( 0, 0, 0, .6 );
 }
+
+.continue_button{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}

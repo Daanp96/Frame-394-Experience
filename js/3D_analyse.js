@@ -1,7 +1,6 @@
 import * as THREE from './three.js/three.module.js';
 import { OrbitControls } from './three.js/OrbitControls.js'; 
 import { DragControls } from './three.js/DragControls.js';
-import { CSS2DRenderer, CSS2DObject } from "./three.js/CSS2DRenderer.js";
 
 const main = () => {
 
@@ -59,29 +58,38 @@ const main = () => {
     }
 
     const getClickedObject = () => {
+        let michaelOn = false;
+        let walterOn = false;
+        let taserOn = false;
+        let fenceOn = false;
         for(let i = 0; i < toolObject.length; i++){
             toolObject[i].addEventListener('click', (e) => {
                 if(toolObject[i].dataset.object === "walter"){
+                    walterOn = true;
                     const geometryWalter = new THREE.SphereGeometry( 0.5, 32, 32 );
                     const materialWalter = new THREE.MeshBasicMaterial( {color: 0xff0000} );
                     const walterObject = new THREE.Mesh( geometryWalter, materialWalter );
                     addObject(walterObject);
                 } else if (toolObject[i].dataset.object === "michael") {
+                    michaelOn = true;
                     const geometryMichael = new THREE.SphereGeometry( 0.5, 32, 32 );
                     const materialMichael = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
                     const michaelObject = new THREE.Mesh( geometryMichael, materialMichael );
                     addObject(michaelObject);
                 } else if (toolObject[i].dataset.object === "taser"){
+                    taserOn = true;
                     const geometryTaser = new THREE.CubeGeometry(0.5,0.25,1);
                     const materialTaser = new THREE.MeshBasicMaterial({color: 0xff00ff});
                     const taserObject = new THREE.Mesh(geometryTaser, materialTaser);
                     addObject(taserObject);
                 } else if (toolObject[i].dataset.object === "fence") {
+                    fenceOn = true;
                     const geometry = new THREE.BoxGeometry( 0.25, 4, 10 );
                     const material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
                     const fence = new THREE.Mesh( geometry, material );
                     addObject(fence);
                 }
+
             });
         }
     }
