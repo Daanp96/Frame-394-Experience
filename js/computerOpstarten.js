@@ -71,7 +71,7 @@ passwordButton.onclick = function() {
 
 window.onload = function() {
     overlay.style.opacity = "0";
-    setTimeout(function(){overlay.style.zIndex = "-10";}, 5000);
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
     setTimeout(function(){
         if (screen.style.opacity < .5) {
             onOffButton.style.animation = "blink .5s alternate infinite";

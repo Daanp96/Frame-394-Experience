@@ -214,7 +214,7 @@ function checkState(){
         if (frameCount < (totalFrames - 1)){
             movingFrame.style.pointerEvents = "none";
             frameCount++;
-            movingFrameFrame.setAttribute("src", "./img/frame_" + (frameCount + 1) + ".png")
+            movingFrameFrame.setAttribute("src", "./img/frame_" + (frameCount + 1) + ".webp")
             movingFrameText.innerHTML = "Frame " + (frameCount + 1);
             setTimeout(function(){frameState = "floating";}, 500);
             setTimeout(function(){movingFrame.style.pointerEvents = "all";}, 2000);
