@@ -182,6 +182,18 @@ button{
     margin-top: 15px;
 }
 
+.overlay {
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+    transition: opacity 3s;
+}
+
 @media(min-width: 300px) and (max-width: 700px){
     .reddit_post__inputs__group{
         padding: 20px 0;

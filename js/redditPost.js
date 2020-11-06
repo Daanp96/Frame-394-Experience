@@ -55,3 +55,11 @@ export {
     cancelPost
 };
 
+
+const overlay = document.getElementById("js--overlay");
+
+window.onload = function() {
+    overlay.style.opacity = "0";
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
+}
+

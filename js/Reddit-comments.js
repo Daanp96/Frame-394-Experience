@@ -41,5 +41,5 @@ function getTitle(){
 getTitle();
 
 function Continue(){
-    location.href = "tweede-uitspraak.html"
+    window.location.href = "tweedeUitspraak.html"
 }
