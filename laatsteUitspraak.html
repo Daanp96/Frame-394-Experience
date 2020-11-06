@@ -13,7 +13,7 @@
     <body>
         <main>
             <h1 class="title">Who was in the wrong?</h1>
-            <section class="choices">
+            <section class="choices" id="js--choices">
                 <label for="js--checkbox-1">
                     <section class="choices__choice choice-1 disable-select">
                         <h2>Option 1</h2>
@@ -39,7 +39,30 @@
                     </section>
                 </label>
             </section>
-            <button class="continueButton" id="js--continueButton" onclick="nextPage()">Continue</button>
+            <button class="continueButton" id="js--continueButton" onclick="result()">Continue</button>
+            <section class="news-wrapper disable-select" id="js--newspaper-wrapper">
+                <section class="news" id="js--newspaper">
+                    <section class="newspaper">
+                        <section class="newspaper__bottom"></section>
+                        <section class="newspaper__middle1"></section>
+                        <section class="newspaper__middle2"></section>
+                        <section class="newspaper__main">
+                            <h2>The New York Times</h2>
+                            <h3>BREAKING NEWS</h3>
+                            <hr>
+                            <h4 id="js--newspaper-title">Michael Slager sentenced to death penalty</h4>
+                            <section class="newspaper__main__article">
+                                <p id="js--newspaper-article">Today, December 7, new information has been revealed about the incident with Walter Scott. U.S. District Judge David C. Norton sentenced officer Michael Slager with the death penalty for manslaughter. Although prosecutors had argued for voluntary manslaughter, the judge agreed with attorneys that the "inappropriate underlying offense" was aggravated first-degree murder. An appeal for reduction of sentence has been denied</p>
+                                <section>
+                                    <img src="./img/mugshot.jpg" alt="Mugshot of Michael Slager">
+                                    <p>[Sentenced: M. Slager]</p>
+                                    <p>Michael Thomas Slager, 33 years old at the time of the incident, served in the North Charleston Police Department (NCPD) for over five years.</p>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
             <section class="overlay" id="js--overlay"></section>
             <section class="turnScreen">
                 <section class="turnScreen__bg"></section>
