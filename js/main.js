@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log("doc loaded");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
+  const button = document.getElementById("end-button");
   
 
 
@@ -28,8 +29,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let l = (n - 1);
     let m = (n + 1);
     let z = (slides.length - 1)
-    
-    //var dots = document.getElementsByClassName("dot");
+    if (n > 13) {
+     button.style.display = "flex";
+    }
     console.log("in function showSLides")
     if( n < slides.length){
       slides[n].style.display = 'block';
