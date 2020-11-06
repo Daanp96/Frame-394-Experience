@@ -12,8 +12,9 @@
         <main>
             <header>
                 <picture>
-                    <source srcset="img/header-reddit.webp">
-                    <img class="header_reddit" src="img/header_reddit.png" alt="reddit_header">
+                    <source media="(max-width: 500px)" srcset="img/header_reddit_mobile.webp">
+                    <source media="(max-width: 501px)" srcset="img/header_reddit_desktop.webp">
+                    <img class="header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
                 </picture>
             </header>
             <section class="grid-container">
