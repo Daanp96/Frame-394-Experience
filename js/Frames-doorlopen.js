@@ -106,5 +106,5 @@ window.onload = function() {
 function nextPage() {
   overlay.style.opacity = "1";
   overlay.style.zIndex = "10";
-  setTimeout(function(){window.location.href = "3D analyse";}, 3000);
+  setTimeout(function(){window.location.href = "3DMain.html";}, 3000);
 }

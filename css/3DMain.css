@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Kleurenpallet */
+    --bg-color: #202C59;
+    --accent-color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+    --shadow-color: #10152b;
+}
+
 body{
     background-color: #c3c3c3;
     font-family: 'Teko', sans-serif;
@@ -134,4 +143,34 @@ canvas {
     display: block;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.continue_button {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.4rem;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.continue_button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+}
+
+.continue_button:focus {
+    box-shadow: none;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+    outline: none;
+}
+
+.continue_button:active {
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
 }

@@ -52,3 +52,9 @@ const objectsTools = () => {
 
 handleTools();
 objectsTools();
+
+const continueButton = document.getElementById("continue_button");
+
+continueButton.addEventListener('click', () => {
+    window.location.href = "laatsteUitspraak.html";
+});
