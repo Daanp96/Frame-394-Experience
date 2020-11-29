@@ -45,12 +45,12 @@ const objectsTools = () => {
         taserTitle.style.opacity = "0";
         fence.style.opacity = "0";
         fenceTitle.style.opacity = "0";
-        objectsBar.style.width = "80px";
+        objectsBar.style.width = "100px";
         objectsTitle.style.display = "block";
     });
 }
 
-handleTools();
+// handleTools();
 objectsTools();
 
 const continueButton = document.getElementById("continue_button");

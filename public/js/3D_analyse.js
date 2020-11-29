@@ -35,7 +35,7 @@ const main = () => {
     // Hier maak ik de "Scene" aan, de plek waar alles samenkomt en wordt doorgegeven wat gerendered
     // moet worden door de WebGL API.
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color('black');
+    scene.background = new THREE.Color('rgb(32, 44, 89)');
 
     {
         // Hier maak ik het licht aan.
@@ -47,9 +47,11 @@ const main = () => {
     }
 
     // Hier maak ik het grid aan.
+    // const gridColor = 'rgb(251, 3, 120)';
+    const gridColor = 0xffffff;
     const size = 12;
     const divisions =  12;
-    const gridHelper = new THREE.GridHelper(size, divisions);
+    const gridHelper = new THREE.GridHelper(size, divisions, gridColor, gridColor);
     scene.add(gridHelper);
 
     const addObject = (object) => {
@@ -58,32 +60,32 @@ const main = () => {
     }
 
     const getClickedObject = () => {
-        let michaelOn = false;
-        let walterOn = false;
-        let taserOn = false;
-        let fenceOn = false;
+        // let michaelOn = false;
+        // let walterOn = false;
+        // let taserOn = false;
+        // let fenceOn = false;
         for(let i = 0; i < toolObject.length; i++){
             toolObject[i].addEventListener('click', (e) => {
                 if(toolObject[i].dataset.object === "walter"){
-                    walterOn = true;
+                    // walterOn = true;
                     const geometryWalter = new THREE.SphereGeometry( 0.5, 32, 32 );
                     const materialWalter = new THREE.MeshBasicMaterial( {color: 0xff0000} );
                     const walterObject = new THREE.Mesh( geometryWalter, materialWalter );
                     addObject(walterObject);
                 } else if (toolObject[i].dataset.object === "michael") {
-                    michaelOn = true;
+                    // michaelOn = true;
                     const geometryMichael = new THREE.SphereGeometry( 0.5, 32, 32 );
                     const materialMichael = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
                     const michaelObject = new THREE.Mesh( geometryMichael, materialMichael );
                     addObject(michaelObject);
                 } else if (toolObject[i].dataset.object === "taser"){
-                    taserOn = true;
+                    // taserOn = true;
                     const geometryTaser = new THREE.CubeGeometry(0.5,0.25,1);
                     const materialTaser = new THREE.MeshBasicMaterial({color: 0xff00ff});
                     const taserObject = new THREE.Mesh(geometryTaser, materialTaser);
                     addObject(taserObject);
                 } else if (toolObject[i].dataset.object === "fence") {
-                    fenceOn = true;
+                    // fenceOn = true;
                     const geometry = new THREE.BoxGeometry( 0.25, 4, 10 );
                     const material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
                     const fence = new THREE.Mesh( geometry, material );

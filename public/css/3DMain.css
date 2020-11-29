@@ -31,21 +31,22 @@ canvas {
     display:block;
     opacity: 1;
     color: white;
+    font-size: 2rem;
 }
 
 #js--tools_bar{
-    background-color: red;
+    background-color: var(--accent-color);
     display: block;
-    width: 80px;
+    width: 100px;
     position: absolute;
     height: 100vh;
     transition: all 1s;
 }
 
 #js--objects_bar{
-    background-color: red;
+    background-color: var(--accent-color);
     display: block;
-    width: 80px;
+    width: 100px;
     position: absolute;
     height: 100vh;
     right: 0;
@@ -70,6 +71,7 @@ canvas {
     font-size: 2rem;
     top: 50%;
     transition: all 1s;
+    color: white;
 }
 
 .obj_title{
@@ -78,6 +80,7 @@ canvas {
     font-size: 2rem;
     top: 50%;
     transition: all 1s;
+    color: white;
 }
 
 #js--walter, #js--michael{
@@ -121,13 +124,13 @@ canvas {
 .fence{
     width: 50px;
     display: block;
-    /* opacity: 0; */
+    opacity: 0;
     transition: 1s all;
 }
 
 .fence_title{
     text-align: center;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .walter_label{

@@ -7,7 +7,6 @@
         <title>Frame 394</title>
         <link rel="stylesheet" href="./css/redditPost.css">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-        <script type="module" src="./js/redditMain.js" defer></script>
     </head>
     <body>
         <main id="js--reddit_page" class="reddit_page">
@@ -28,9 +27,9 @@
                             <h3 class="reddit_post__inputss__gif__text">Drag and drop images or </h3> 
                             <button id="js--gif_input" class="reddit_post__inputs__gif__button">UPLOAD</button>
                         </section>
-                        <img id="js--gif" class="reddit_post__inputs__gif__img" src="/img/taser_plant.gif" alt="taser_gif">
+                        <img id="js--gif" class="reddit_post__inputs__gif__img" src="./img/taser_plant.gif" alt="taser_gif">
                     </section>
-                    <section class="buttons">
+                    <section class="reddit_post__buttons">
                         <button id="js--cancel" class="reddit_post__inputs__cancel">CANCEL</button>
                         <button id="js--post" class="reddit_post__inputs__post">POST</button>
                     </section>
@@ -42,10 +41,11 @@
         </main>
         <section id="js--popup" class="upload_popup scale-in-center">
             <section id="js--gif_file" class="upload_popup__group">
-                <img class="upload_popup__group__gif" src="/img/gif.png" alt="upload_gif">
+                <img class="upload_popup__group__gif" src="./img/gif.png" alt="upload_gif">
                 <h2 class="upload_popup__group__title">taser.gif</h2>
             </section>
         </section>
         <section class="overlay" id="js--overlay"></section>
+        <script type="module" src="./js/redditMain.js"></script>
     </body>
 </html>

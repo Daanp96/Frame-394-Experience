@@ -372,6 +372,8 @@ main {
     border: none;
     background-color: transparent;
     padding: .4rem .2rem;
+    color: white;
+    text-shadow: .1rem .1rem .2rem black;
 }
 
 .desktop__videoPlayer:hover {
@@ -387,11 +389,6 @@ main {
 .desktop__videoPlayer > img {
     width: 3rem;
     z-index: 2;
-}
-
-.desktop__videoPlayer > p {
-    color: white;
-    text-shadow: .1rem .1rem .2rem black;
 }
 
 .desktop__taskbar > img {
