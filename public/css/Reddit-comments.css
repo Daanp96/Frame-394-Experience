@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+:root{
+    --reddit_white: #D7DADC;
+    --reddit_background: #1A1A1B;
+    --reddit_input_border:  #343536;
+    --bg-color: #202C59;
+    --accent--color: #FB0378;
+    --highlight-color: #FFE05D;
+    --font-color: #F9F9F9;
+}
+
 body{
     background-color: #030303; 
     font-family: 'IBM Plex Sans', sans-serif;
@@ -23,17 +33,23 @@ h3{
 p{
     color: var(--reddit_white);
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
-    background-color: #030303;
-}
 
 label{
     color: var(--reddit_white);
     font-size: 0.7rem;
 }
-.page-wrapper{
+
+.header_reddit{
+    width: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 15vw 70vw;
+    background-color: #030303;
+}
+
+.grid-container__page-wrapper{
     position: relative;
     display: flex;
     justify-content: center;
@@ -41,74 +57,53 @@ label{
     flex-direction: column;
 }
 
-.posts--container{
+.grid-container__page-wrapper__posts-container{
     background-color: var(--reddit_background);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.post--items{
+.grid-container__page-wrapper__posts-container__post-items{
     background-color: var(--reddit_input_border);
 }
 
-.answer{
+.grid-container__page-wrapper__posts-container__post-items__gif{
+    max-height: 60vh;
+    width: 55vw;
+}
+
+.grid-container__page-wrapper__comments-container__comments-item__answer{
     padding-left: 1.5rem;
 }
 
-:root{
-    --reddit_white: #D7DADC;
-    --reddit_background: #1A1A1B;
-    --reddit_input_border:  #343536;
-    --bg-color: #202C59;
-    --accent--color: #FB0378;
-    --highlight-color: #FFE05D;
-    --font-color: #F9F9F9;
-}
-
-.header_reddit{
-    width: 100vw;
-}
-
-#post-gif{
-    max-height: 60vh;
-    width: 65vw;
-}
-
-.post--items-gif{
-    max-height: 60vh;
-    width: 65vw;
-}
-
-
-.comments--container{
+.grid-container__page-wrapper__comments-container{
     padding: 2rem 0rem;
     background-color: var(--reddit_background);
     position: relative;
     
 }
 
-#next-page{
+.grid-container__page-wrapper__next-page{
     width: 20rem;
     height: 4rem;
-    
     color: var(--font-color);
     background-color: var(--accent--color);
     border-radius: 15px;
     
 }
 
-#next-page:hover{
+.grid-container__page-wrapper__next-page:hover{
     border: solid var(--highlight-color) 3px;
 }
 
-#next-page:active{
+.grid-container__page-wrapper__next-page:active{
     background-color: var(--highlight-color);
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.comments--item{
-    font-size: 0.8;
+.grid-container__page-wrapper__comments-container__comments-item{
+    font-size: 0.8rem;
     padding: 1rem;
     background-color: var(--reddit_input_border);
     border-top: solid lightgray 0.01rem;
@@ -116,170 +111,18 @@ label{
 }
 
 
-
-
-#js--like-button-0{
+.grid-container__page-wrapper__comments-container__comments-item__like-button{
     height: 5vh;
     width: 5vw;
     cursor: pointer;
 }
 
-#js--like-button-1{
+.grid-container__page-wrapper__comments-container__comments-item__respond{
     height: 5vh;
     width: 5vw;
     cursor: pointer;
 }
 
-#js--like-button-2{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-3{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-4{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-5{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-6{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-7{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-8{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-9{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--like-button-10{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-0{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-1{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-2{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-3{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-4{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-5{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-6{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-7{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-8{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-9{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--respond-10{
-    height: 5vh;
-    width: 5vw;
-    cursor: pointer;
-}
-
-#js--form-0{
-    display: none;
-}
-#js--form-1{
-    display: none;
-}
-#js--form-2{
-    display: none;
-}
-#js--form-3{
-    display: none;
-}
-#js--form-4{
-    display: none;
-}
-#js--form-5{
-    display: none;
-}
-#js--form-6{
-    display: none;
-}
-#js--form-7{
-    display: none;
-}
-#js--form-8{
-    display: none;
-}
-#js--form-9{
-    display: none;
-}
-#js--form-10{
+.grid-container__page-wrapper__comments-container__comments-item__form{
     display: none;
 }

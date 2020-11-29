@@ -1,6 +1,6 @@
 const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
-const button = document.getElementById("next-page");
+const button = document.getElementById("js--next-page");
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
