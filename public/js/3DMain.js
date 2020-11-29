@@ -25,8 +25,10 @@ const handleTools = () => {
 const objectsTools = () => {
     objectsBar.addEventListener('click', () => {
         walterScott.style.opacity = "1";
+        walterScott.style.display = "block";
         walterTitle.style.opacity = "1";
         michealSlager.style.opacity = "1";
+        michealSlager.style.display = "block";
         michaelTitle.style.opacity = "1";
         taser.style.opacity = "1";
         taserTitle.style.opacity = "1";
