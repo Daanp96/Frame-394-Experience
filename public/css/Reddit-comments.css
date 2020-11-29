@@ -75,6 +75,10 @@ label{
     width: 65vw;
 }
 
+.post--items-gif{
+    max-height: 60vh;
+    width: 65vw;
+}
 
 
 .comments--container{
@@ -246,11 +250,9 @@ label{
     cursor: pointer;
 }
 
-
 #js--form-0{
     display: none;
 }
-
 #js--form-1{
     display: none;
 }

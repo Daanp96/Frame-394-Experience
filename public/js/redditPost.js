@@ -18,7 +18,7 @@ const openGifWindow = () => {
 
 
 const closeGifWindow = () => {
-    gif_file.addEventListener("click", (e) => {
+    gif_file.addEventListener("click", () => {
         popup.classList.add("scale-out-center");
         reddit_page.style.filter = "none";
         gif.style.display = "block";
