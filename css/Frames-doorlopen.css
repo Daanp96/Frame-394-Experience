@@ -27,7 +27,7 @@ width: 100vw;
 }
 
 /* Next & previous buttons */
-#prev, #next {
+.prev, .next {
 cursor: pointer;
 position: absolute;
 top: 50%;
@@ -42,19 +42,19 @@ border-radius: 0 3px 3px 0;
 user-select: none;
 }
 
-img{
+.img{
     width: 100vw;
     height: 100vh;
 }
 
 /* Position the "next button" to the right */
-#next {
+.next {
 right: 0;
 border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color */
-#prev:hover, #next:hover {
+.prev:hover, .next:hover {
 background-color: var(--bg-color);
 }
 
@@ -112,11 +112,11 @@ to {opacity: 1}
     font-family: 'Teko', sans-serif;
 }
 
-#end-button:hover{
+.end-button:hover{
     border: solid var(--highlight-color) 4px;
 }
 
-#end-button:active{
+.end-button:active{
     background-color: var(--highlight-color);
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
