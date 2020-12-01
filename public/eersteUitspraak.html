@@ -12,32 +12,26 @@
     </head>
     <body>
         <main>
-            <h1 class="title">...but first, what did you see in the video?</h1>
+            <h1 class="title">What did you see in the video?</h1>
             <section class="choices">
-                <label for="js--checkbox-1">
-                    <section class="choices__choice choice-1 disable-select">
-                        <h2>Option 1</h2>
-                        <p>The video showed a police officer murdering a fleeing, unarmed black male, which posed no threat to the officer. There was no reason for the officer to pull his gun and fire so many shots.</p>
-                        <input type="checkbox" id="js--checkbox-1" class="choices__choice__input1" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
-                <label for="js--checkbox-2">
-                    <section class="choices__choice choice-2 disable-select">
-                        <h2>Option 2</h2>
-                        <p>The video showed a suspect running from the cops. The police officer couldn't know what the intentions of the suspect were, therefore he felt like he was in danger and the suspect posed a threat.</p>
-                        <input type="checkbox" id="js--checkbox-2" class="choices__choice__input2" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
-                <label for="js--checkbox-3">
-                    <section class="choices__choice choice-3 disable-select">
-                        <h2>Not sure</h2>
-                        <p>The video didn't show enough context to determine whether who was right or who was wrong. A deeper analysis is needed to determine what exactly happened. Therefore there is no clear decision. <br><br> Or you haven't watched the video</p>
-                        <input type="checkbox" id="js--checkbox-3" class="choices__choice__input3" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
+                <section class="choices__choice choice-1 disable-select" id="js--choice-1">
+                    <h2>Option 1</h2>
+                    <p>The video showed a police officer murdering a fleeing, unarmed black male, which posed no threat to the officer. There was no reason for the officer to pull his gun and fire so many shots.</p>
+                    <input type="checkbox" id="js--checkbox-1" hidden>
+                    <section class="checkmark"></section>
+                </section>
+                <section class="choices__choice choice-2 disable-select" id="js--choice-2">
+                    <h2>Option 2</h2>
+                    <p>The video showed a suspect running from the cops. The police officer couldn't know what the intentions of the suspect were, therefore he felt like he was in danger and the suspect posed a threat.</p>
+                    <input type="checkbox" id="js--checkbox-2" hidden>
+                    <section class="checkmark"></section>
+                </section>
+                <section class="choices__choice choice-3 disable-select" id="js--choice-3">
+                    <h2>Not sure</h2>
+                    <p>The video didn't show enough context to determine whether who was right or who was wrong. A deeper analysis is needed to determine what exactly happened. Therefore there is no clear decision. <br><br> Or you haven't watched the video</p>
+                    <input type="checkbox" id="js--checkbox-3" hidden>
+                    <section class="checkmark"></section>
+                </section>
             </section>
             <button class="continueButton" id="js--continueButton" onclick="nextPage()">Continue</button>
             <section class="overlay" id="js--overlay"></section>
