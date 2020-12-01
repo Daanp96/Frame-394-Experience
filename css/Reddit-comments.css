@@ -25,7 +25,7 @@ p{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-columns: 15% 70% 15%;
     background-color: #030303;
 }
 
@@ -67,12 +67,12 @@ label{
 }
 
 .header_reddit{
-    width: 100vw;
+    width: 100%;
 }
 
 #post-gif{
-    max-height: 60vh;
-    width: 65vw;
+    max-height: 60%;
+    width: 65%;
 }
 
 
@@ -115,134 +115,134 @@ label{
 
 
 #js--like-button-0{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-1{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-2{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-3{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-4{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-5{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-6{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-7{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-8{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-9{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--like-button-10{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-0{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-1{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-2{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-3{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-4{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-5{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-6{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-7{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-8{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-9{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
 #js--respond-10{
-    height: 5vh;
-    width: 5vw;
+    height: 5%;
+    width: 5%;
     cursor: pointer;
 }
 
@@ -250,7 +250,6 @@ label{
 #js--form-0{
     display: none;
 }
-
 #js--form-1{
     display: none;
 }
@@ -280,4 +279,9 @@ label{
 }
 #js--form-10{
     display: none;
+}
+
+
+@supports (height: 100vh) and (width: 100vw){
+
 }
