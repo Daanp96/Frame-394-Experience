@@ -39,7 +39,13 @@
                     </section>
                 </label>
             </section>
-            <button class="continueButton" id="js--continueButton" onclick="result()">Continue</button>
+            <button class="continueButton" id="js--continueButton" onclick="result()">Final decision</button>
+            <section class="modal--bg" id="js--modal-bg"></section>
+            <section class="modal" id="js--modal">
+                <h1 class="modal__title">Final decision!</h1>
+                <p class="modal__text">You can decide what you do with the information that you found. Your decision can affect the future of Michael Slager. Are you on his side or are you not? That's up to you. <br><br> Once you make your decision, there is no going back.</p>
+                <button class="modal__button" onclick="hideModal()">I understand</button>
+            </section>
             <section class="news-wrapper disable-select" id="js--newspaper-wrapper">
                 <section class="news" id="js--newspaper">
                     <section class="newspaper">

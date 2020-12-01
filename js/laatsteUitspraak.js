@@ -3,6 +3,8 @@ const checkbox1 = document.getElementById("js--checkbox-1");
 const checkbox2 = document.getElementById("js--checkbox-2");
 const checkbox3 = document.getElementById("js--checkbox-3");
 const continueButton = document.getElementById("js--continueButton");
+const modalBg = document.getElementById("js--modal-bg");
+const modal = document.getElementById("js--modal");
 const newspaper = document.getElementById("js--newspaper");
 const newspaperWrapper = document.getElementById("js--newspaper-wrapper");
 const newspaperTitle = document.getElementById("js--newspaper-title");
@@ -47,6 +49,15 @@ checkbox3.addEventListener('change', function(){
         choice = 3;
     }
 });
+
+function hideModal() {
+    modalBg.style.opacity = "0";
+    modal.style.opacity = "0";
+    setTimeout(function(){
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+    }, 1500);
+}
 
 const overlay = document.getElementById("js--overlay");
 
