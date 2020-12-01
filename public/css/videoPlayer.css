@@ -175,7 +175,35 @@ main {
     text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
 }
 
-.videoStabilizer {
+.continue .continue__tooltip {
+    visibility: hidden;
+    position: absolute;
+    left: -10rem;
+    top: 0;
+    background-color: var(--bg-color);
+    padding: .2rem .7rem 0 .7rem;
+    border-radius: .5rem;
+    border: solid .2rem var(--accent-color);
+}
+
+.continue .continue__tooltip::after {
+    content: "";
+    position: absolute;
+    background-color: var(--bg-color);
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: -.7rem;
+    border-right: solid .2rem var(--accent-color);
+    border-top: solid .2rem var(--accent-color);
+}
+
+.continue:hover .continue__tooltip {
+    visibility: visible;
+}
+
+.exitVideo {
     position: absolute;
     z-index: 10;
     background-color: var(--bg-color);
@@ -201,18 +229,47 @@ main {
     }
 }
 
-.videoStabilizer > h1 {
+.exitVideo__close {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    border: solid .1rem var(--accent-color);
+    border-radius: 15rem;
+    padding: .2rem .6rem;
+    background-color: transparent;
+}
+
+.exitVideo__close > i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.exitVideo__close:hover {
+    cursor: pointer;
+    border: solid .1rem var(--highlight-color);
+}
+
+.exitVideo__close:hover > i {
+    color: var(--highlight-color);
+}
+
+.exitVideo__close:focus {
+    border: solid .1rem var(--highlight-color);
+    outline: none;
+}
+
+.exitVideo > h1 {
     color: var(--accent-color);
     font-size: 6rem;
 }
 
-.videoStabilizer > p {
+.exitVideo > p {
     color: var(--highlight-color);
     font-size: 2.4rem;
     font-weight: 300;
 }
 
-.videoStabilizer > button {
+.exitVideo__button {
     font-family: 'Teko', sans-serif;
     font-size: 2.6rem;
     background-color: var(--accent-color);
@@ -225,17 +282,17 @@ main {
     margin-top: 2rem;
 }
 
-.videoStabilizer > button:hover {
+.exitVideo__button:hover {
     cursor: pointer;
     box-shadow: 0 0 0 .2rem var(--highlight-color);
 }
 
-.videoStabilizer > button:focus {
+.exitVideo__button:focus {
     box-shadow: 0 0 0 .2rem var(--highlight-color);
     outline: none;
 }
 
-.videoStabilizer > button:active {
+.exitVideo__button:active {
     border: none;
     background-color: var(--highlight-color);
     box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
