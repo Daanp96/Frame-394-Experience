@@ -14,29 +14,29 @@
                 <picture>
                     <source media="(max-width: 500px)" srcset="img/header_reddit_mobile.webp">
                     <source media="(max-width: 501px)" srcset="img/header_reddit_desktop.webp">
-                    <img class="header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
+                    <img class="reddit_page__header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
                 </picture>
             </header>
-            <section class="reddit_post">
-                <h2 class="reddit_post__create">Create post</h2>
-                <img class="reddit_post__community" src="img/reddit_com.webp" alt="reddit_community">
-                <section class="reddit_post__inputs">
-                    <input id="js--title" class="reddit_post__inputs__title" placeholder="Title">
-                    <section class="reddit_post__inputs__gif">
-                        <section id="js--upload_group" class="reddit_post__inputs__group">
-                            <h3 class="reddit_post__inputss__gif__text">Drag and drop images or </h3> 
-                            <button id="js--gif_input" class="reddit_post__inputs__gif__button">UPLOAD</button>
+            <section class="reddit_page__reddit_post">
+                <h2 class="reddit_page__reddit_post__create">Create post</h2>
+                <img class="reddit_page__reddit_post__community" src="img/reddit_com.webp" alt="reddit_community">
+                <section class="reddit_page__reddit_post__inputs">
+                    <input id="js--title" class="reddit_page__reddit_post__inputs__title" placeholder="Title">
+                    <section class="reddit_page__reddit_post__inputs__gif">
+                        <section id="js--upload_group" class="reddit_page__reddit_post__inputs__gif__group">
+                            <h3 class="reddit_page__reddit_post__inputs__gif__group__text">Drag and drop images or </h3> 
+                            <button id="js--gif_input" class="reddit_page__reddit_post__inputs__gif__group__button">UPLOAD</button>
                         </section>
-                        <img id="js--gif" class="reddit_post__inputs__gif__img" src="./img/taser_plant.gif" alt="taser_gif">
+                        <img id="js--gif" class="reddit_page__reddit_post__inputs__gif__img" src="./img/taser_plant.gif" alt="taser_gif">
                     </section>
-                    <section class="reddit_post__buttons">
-                        <button id="js--cancel" class="reddit_post__inputs__cancel">CANCEL</button>
-                        <button id="js--post" class="reddit_post__inputs__post">POST</button>
+                    <section class="reddit_page__reddit_post__inputs__buttons">
+                        <button id="js--cancel" class="reddit_page__reddit_post__inputs__buttons__cancel">CANCEL</button>
+                        <button id="js--post" class="reddit_page__reddit_post__inputs__buttons__post">POST</button>
                     </section>
                 </section>
             </section>
             <footer>
-                <p class="school_project">THIS IS A SCHOOL PROJECT</p>
+                <p class="reddit_page__school_project">THIS IS A SCHOOL PROJECT</p>
             </footer>
         </main>
         <section id="js--popup" class="upload_popup scale-in-center">
@@ -45,7 +45,7 @@
                 <h2 class="upload_popup__group__title">taser.gif</h2>
             </section>
         </section>
-        <section class="overlay" id="js--overlay"></section>
+        <div class="overlay" id="js--overlay"></div>
         <script type="module" src="./js/redditMain.js"></script>
     </body>
 </html>
