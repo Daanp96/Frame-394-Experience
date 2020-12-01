@@ -50,7 +50,7 @@ main {
     margin-top: 30rem;
 }
 
-.screenBorder {
+.laptop__border {
     height: 30rem;
     width: 52rem;
     background-color: #2b2b2b;
@@ -62,13 +62,13 @@ main {
     justify-content: center;
 }
 
-.screenOff {
+.laptop__border__screenOff {
     height: 28rem;
     width: 50rem;
     background-color: black;
 }
 
-.screen {
+.laptop__border__screenOff__screen {
     position: relative;
     width: 100%;
     height: 100%;
@@ -80,7 +80,7 @@ main {
     transition: opacity 1.5s;
 }
 
-.screen__background {
+.laptop__border__screenOff__screen__background {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -100,7 +100,7 @@ main {
     }
 }
 
-.screen__login {
+.laptop__border__screenOff__screen__login {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -125,7 +125,7 @@ main {
   }
   
 
-.screen__userImage {
+.laptop__border__screenOff__screen__login__userImage {
     position: absolute;
     width: 7rem;
     height: 7rem;
@@ -138,18 +138,18 @@ main {
     align-items: center;
 }
 
-.screen__userImage > .fa-user {
+.laptop__border__screenOff__screen__login__userImage > .fa-user {
     color: white;
     font-size: 3rem;
 }
 
-.screen__username {
+.laptop__border__screenOff__screen__login__username {
     position: absolute;
     color: white;
     font-size: 1.6rem;
 }
 
-.screen__password {
+.laptop__border__screenOff__screen__login__password {
     position: absolute;
     margin-top: 7rem;
     border: solid .1rem white;
@@ -181,7 +181,7 @@ main {
   }
   
 
-.screen__password__input {
+.laptop__border__screenOff__screen__login__password__input {
     border-style: none;
     padding: .4rem .4rem;
     background-color: transparent;
@@ -190,27 +190,23 @@ main {
     font-size: 1.4rem;
 }
 
-.screen__password__button {
+.laptop__border__screenOff__screen__login__password__button {
     border-style: none;
     border-left: solid .1rem white;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.screen__password__button > i {
+.laptop__border__screenOff__screen__login__password__button > i {
     color: white;
     font-size: 1.6rem;
     padding: .5rem .5rem;
 }
 
-.screen__password__button:hover {
+.laptop__border__screenOff__screen__login__password__button:hover {
     cursor: pointer;
 }
 
-.screen__taskbar > img {
-    width: 100%;
-}
-
-.stickyNote {
+.laptop__border__stickyNote {
     position: absolute;
     height: 5.3rem;
     width: 10rem;
@@ -220,11 +216,11 @@ main {
     margin-bottom: 25rem;
 }
 
-.stickyNote:hover {
+.laptop__border__stickyNote:hover {
     cursor: pointer;
 }
 
-.stickyNote__top {
+.laptop__border__stickyNote__top {
     width: 100%;
     height: 5.3rem;
     background-color: var(--sticky-note);
@@ -234,13 +230,13 @@ main {
     align-items: center;
 }
 
-.stickyNote__top > p {
+.laptop__border__stickyNote__top > p {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 1.6rem;
     color: #16264C;
 }
 
-.stickyNote__bottom {
+.laptop__border__stickyNote__bottom {
     width: 100%;
     height: 4.7rem;
     background-color: var(--sticky-note);
@@ -275,7 +271,7 @@ main {
     }
 }
 
-.keyboard {
+.laptop__keyboard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,7 +286,7 @@ main {
     transform: perspective(100rem) rotateX(70deg);
 }
 
-.keyboard__onOffButton {
+.laptop__keyboard__onOffButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,21 +305,21 @@ main {
     }
 }
 
-.keyboard__onOffButton:hover {
+.laptop__keyboard__onOffButton:hover {
     cursor: pointer;
 }
 
-.keyboard__keys {
+.laptop__keyboard__keys {
     position: absolute;
     height: 20rem;
     width: 48rem;    
 }
 
-.keyboard__keys > img {
+.laptop__keyboard__keys > img {
     width: 48rem;
 }
 
-.keyboard__bottomSide {
+.laptop__keyboard__bottomSide {
     position: absolute;
     height: 1.5rem;   
     width: 52rem;
