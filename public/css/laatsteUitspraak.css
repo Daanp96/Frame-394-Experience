@@ -56,6 +56,9 @@ main {
 
 .choices__choice:hover {
     cursor: pointer;
+    outline: solid .3rem var(--highlight-color);
+    outline-offset: -.1rem;
+    z-index: 2;
 }
 
 .choice-1 {
@@ -96,7 +99,7 @@ main {
     cursor: pointer;
 }
 
-.checkmark {
+.choices__choice__checkmark {
     position: relative;
     background-color: transparent;
     margin-bottom: 2rem;
@@ -106,19 +109,19 @@ main {
     transition: background-color .2s;
 }
 
-.choices__choice__input1:checked ~ .checkmark{
+.choices__choice__input1:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.choices__choice__input2:checked ~ .checkmark{
+.choices__choice__input2:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.choices__choice__input3:checked ~ .checkmark{
+.choices__choice__input3:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.checkmark::after {
+.choices__choice__checkmark::after {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -159,6 +162,74 @@ main {
 }
 
 .continueButton:active {
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+}
+
+.modal--bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    transition: opacity 1.5s;
+}
+
+.modal {
+    position: absolute;
+    height: 30rem;
+    width: 55rem;
+    background-color: var(--bg-color);
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 1.5s;
+}
+
+.modal__title {
+    color: var(--highlight-color);
+    font-size: 4rem;
+    letter-spacing: .1rem;
+    padding-top: 1rem;
+}
+
+.modal__text {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--font-color);
+    font-size: 1.8rem;
+    padding: 0 5rem;
+}
+
+.modal__button {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    padding: .5rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+}
+
+.modal__button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+}
+
+.modal__button:focus {
+    box-shadow: none;
+    box-shadow: 0 0 0 .2rem var(--highlight-color);
+    outline: none;
+}
+
+.modal__button:active {
     border: none;
     background-color: var(--highlight-color);
     box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);

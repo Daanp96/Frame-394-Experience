@@ -2,51 +2,53 @@ const choices = document.getElementById("js--choices");
 const checkbox1 = document.getElementById("js--checkbox-1");
 const checkbox2 = document.getElementById("js--checkbox-2");
 const checkbox3 = document.getElementById("js--checkbox-3");
+const choice1 = document.getElementById("js--choice-1")
+const choice2 = document.getElementById("js--choice-2")
+const choice3 = document.getElementById("js--choice-3")
 const continueButton = document.getElementById("js--continueButton");
+const modalBg = document.getElementById("js--modal-bg");
+const modal = document.getElementById("js--modal");
 const newspaper = document.getElementById("js--newspaper");
 const newspaperWrapper = document.getElementById("js--newspaper-wrapper");
 const newspaperTitle = document.getElementById("js--newspaper-title");
 const newspaperArticle = document.getElementById("js--newspaper-article");
 let choice;
 
-checkbox1.addEventListener('change', function(){
+choice1.addEventListener('click', function(){
+    checkbox1.checked = true;
     checkbox2.checked = false;
     checkbox3.checked = false;
-    if (checkbox1.checked == false && checkbox2.checked == false && checkbox3.checked == false) {
-        continueButton.style.opacity = "0";
-        continueButton.style.pointerEvents = "none";
-    } else {
-        continueButton.style.opacity = "1";
-        continueButton.style.pointerEvents = "all";
-        choice = 1;
-    }
+    continueButton.style.opacity = "1";
+    continueButton.style.pointerEvents = "all";
+    choice = 1;
 });
 
-checkbox2.addEventListener('change', function(){
+choice2.addEventListener('click', function(){
+    checkbox2.checked = true;
     checkbox1.checked = false;
     checkbox3.checked = false;
-    if (checkbox1.checked == false && checkbox2.checked == false && checkbox3.checked == false) {
-        continueButton.style.opacity = "0";
-        continueButton.style.pointerEvents = "none";
-    } else {
-        continueButton.style.opacity = "1";
-        continueButton.style.pointerEvents = "all";
-        choice = 2;
-    }
+    continueButton.style.opacity = "1";
+    continueButton.style.pointerEvents = "all";
+    choice = 2;
 });
 
-checkbox3.addEventListener('change', function(){
+choice3.addEventListener('click', function(){
+    checkbox3.checked = true;
     checkbox1.checked = false;
     checkbox2.checked = false;
-    if (checkbox1.checked == false && checkbox2.checked == false && checkbox3.checked == false) {
-        continueButton.style.opacity = "0";
-        continueButton.style.pointerEvents = "none";
-    } else {
-        continueButton.style.opacity = "1";
-        continueButton.style.pointerEvents = "all";
-        choice = 3;
-    }
+    continueButton.style.opacity = "1";
+    continueButton.style.pointerEvents = "all";
+    choice = 3;
 });
+
+function hideModal() {
+    modalBg.style.opacity = "0";
+    modal.style.opacity = "0";
+    setTimeout(function(){
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+    }, 1500);
+}
 
 const overlay = document.getElementById("js--overlay");
 

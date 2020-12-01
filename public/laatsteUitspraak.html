@@ -14,32 +14,32 @@
         <main>
             <h1 class="title">Who was in the wrong?</h1>
             <section class="choices" id="js--choices">
-                <label for="js--checkbox-1">
-                    <section class="choices__choice choice-1 disable-select">
-                        <h2>Option 1</h2>
-                        <p>Michael Slager. He had no right to pull out his gun for an unarmed man who was running away from him and shoot him eight times. Emphasizing on the fact Walter Scott was unarmed. He posed no threat at all. Michael Slager deserves any punishment.</p>
-                        <input type="checkbox" id="js--checkbox-1" class="choices__choice__input1" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
-                <label for="js--checkbox-2">
-                    <section class="choices__choice choice-2 disable-select">
-                        <h2>Option 2</h2>
-                        <p>Walter Scott. He shouldn't have resisted from the officer in the first place, let alone trying to grab his taser. No matter if Scott dropped the taser or not, he posed a threat towards officer Slager and therefore Slager was authorized to use deadly force.</p>
-                        <input type="checkbox" id="js--checkbox-2" class="choices__choice__input2" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
-                <label for="js--checkbox-3">
-                    <section class="choices__choice choice-3 disable-select">
-                        <h2>Option 3</h2>
-                        <p>Neither. The answer isn't black or white. Yes, Michael Slager shot an unarmed man, but in his defence, he thought Scott took his taser. Slager felt threatened, but could've handled it better in this situation. You can't blame it one or the other.</p>
-                        <input type="checkbox" id="js--checkbox-3" class="choices__choice__input3" hidden>
-                        <section class="checkmark"></section>
-                    </section>
-                </label>
+                <section class="choices__choice choice-1 disable-select" id="js--choice-1">
+                    <h2>Option 1</h2>
+                    <p>Michael Slager. He had no right to pull out his gun for an unarmed man who was running away from him and shoot him eight times. Emphasizing on the fact Walter Scott was unarmed. He posed no threat at all. Michael Slager deserves any punishment.</p>
+                    <input class="choices__choice__input1" type="checkbox" id="js--checkbox-1" hidden>
+                    <section class="choices__choice__checkmark"></section>
+                </section>
+                <section class="choices__choice choice-2 disable-select" id="js--choice-2">
+                    <h2>Option 2</h2>
+                    <p>Walter Scott. He shouldn't have resisted from the officer in the first place, let alone trying to grab his taser. No matter if Scott dropped the taser or not, he posed a threat towards officer Slager and therefore Slager was authorized to use deadly force.</p>
+                    <input class="choices__choice__input2" type="checkbox" id="js--checkbox-2" hidden>
+                    <section class="choices__choice__checkmark"></section>
+                </section>
+                <section class="choices__choice choice-3 disable-select" id="js--choice-3">
+                    <h2>Option 3</h2>
+                    <p>Neither. The answer isn't black or white. Yes, Michael Slager shot an unarmed man, but in his defence, he thought Scott took his taser. Slager felt threatened, but could've handled it better in this situation. You can't blame it one or the other.</p>
+                    <input class="choices__choice__input3" type="checkbox" id="js--checkbox-3" hidden>
+                    <section class="choices__choice__checkmark"></section>
+                </section>
             </section>
-            <button class="continueButton" id="js--continueButton" onclick="result()">Continue</button>
+            <button class="continueButton" id="js--continueButton" onclick="result()">Final decision</button>
+            <section class="modal--bg" id="js--modal-bg"></section>
+            <section class="modal" id="js--modal">
+                <h1 class="modal__title">Final decision!</h1>
+                <p class="modal__text">You can decide what you do with the information that you found. Your decision can affect the future of Michael Slager. Are you on his side or are you not? That's up to you. <br><br> Once you make your decision, there is no going back.</p>
+                <button class="modal__button" onclick="hideModal()">I understand</button>
+            </section>
             <section class="news-wrapper disable-select" id="js--newspaper-wrapper">
                 <section class="news" id="js--newspaper">
                     <section class="newspaper">

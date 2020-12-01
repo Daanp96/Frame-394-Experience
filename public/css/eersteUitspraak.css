@@ -54,6 +54,9 @@ main {
 
 .choices__choice:hover {
     cursor: pointer;
+    outline: solid .3rem var(--highlight-color);
+    outline-offset: -.1rem;
+    z-index: 2;
 }
 
 .choice-1 {
@@ -94,7 +97,7 @@ main {
     cursor: pointer;
 }
 
-.checkmark {
+.choices__choice__checkmark {
     position: relative;
     background-color: transparent;
     margin-bottom: 2rem;
@@ -104,19 +107,19 @@ main {
     transition: background-color .2s;
 }
 
-.choices__choice__input1:checked ~ .checkmark{
+.choices__choice__input1:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.choices__choice__input2:checked ~ .checkmark{
+.choices__choice__input2:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.choices__choice__input3:checked ~ .checkmark{
+.choices__choice__input3:checked ~ .choices__choice__checkmark{
     background-color: var(--highlight-color);
 }
 
-.checkmark::after {
+.choices__choice__checkmark::after {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -236,7 +239,7 @@ main {
 
     .choices__choice > p {
         font-size: 1.6rem;
-        height: 15rem;
+        height: 20rem;
     }
 
     .continueButton {
@@ -258,7 +261,7 @@ main {
 
     .choices__choice > p {
         font-size: 2.4rem;
-        height: 25rem;
+        height: 35rem;
     }
 
     .continueButton {

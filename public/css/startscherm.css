@@ -82,6 +82,7 @@ main{
     padding: .5rem 2.5rem;
     margin-top: 3rem;
     border-radius: .3rem;
+    transition: opacity .2s;
 }
 
 .title__button:hover {
