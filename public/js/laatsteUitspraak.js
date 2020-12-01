@@ -9,7 +9,7 @@ const continueButton = document.getElementById("js--continueButton");
 const modalBg = document.getElementById("js--modal-bg");
 const modal = document.getElementById("js--modal");
 const newspaper = document.getElementById("js--newspaper");
-const newspaperWrapper = document.getElementById("js--newspaper-wrapper");
+const newspaperWrapper = document.getElementById("js--newspaper-bg");
 const newspaperTitle = document.getElementById("js--newspaper-title");
 const newspaperArticle = document.getElementById("js--newspaper-article");
 let choice;
