@@ -7,59 +7,74 @@ const popup = document.getElementById("js--popup");
 const reddit_page = document.getElementById("js--reddit_page");
 const gif = document.getElementById("js--gif");
 const upload_group = document.getElementById("js--upload_group");
+const error_window = document.getElementById("js--errorWindow");
+const error_title = document.getElementById("js--errorTitle");
+const error_text = document.getElementById("js--errorText");
+const error_button = document.getElementById("js--errorButton");
+const overlay = document.getElementById("js--overlay");
 let post_title = "";
 
 const openGifWindow = () => {
-    gif_upload.addEventListener("click", (e) => {
-        popup.style.display = "flex";
-        reddit_page.style.filter = "blur(3px)"
-      });
+  gif_upload.addEventListener("click", (e) => {
+    popup.style.display = "flex";
+    reddit_page.style.filter = "blur(3px)"
+  });
 }
 
-
 const closeGifWindow = () => {
-    gif_file.addEventListener("click", () => {
-        popup.classList.add("scale-out-center");
-        reddit_page.style.filter = "none";
-        gif.style.display = "block";
-        post.style.cursor = "pointer";
-        upload_group.style.display = "none";
-      });
+  gif_file.addEventListener("click", () => {
+    popup.classList.add("scale-out-center");
+    reddit_page.style.filter = "none";
+    gif.style.display = "block";
+    post.style.cursor = "pointer";
+    upload_group.style.display = "none";
+  });
 }
 
 const postToReddit = () => {
-    post.addEventListener("click", () => {
-        post_title = reddit_title.value;
-        if(window.getComputedStyle(gif).display === "none"){
-          alert("Not so fast, I'll have to upload the gif first!");
-        } else if (!reddit_title.value) {
-          alert("I'll have to add a title!");
-        } else {
-          let input = post_title;
-          localStorage.setItem("postTitle",input);
-          location.href = "Reddit-comments.html";
-        }
-      });
+  post.addEventListener("click", () => {
+    post_title = reddit_title.value;
+    if(window.getComputedStyle(gif).display === "none"){
+      error_window.style.display = "flex";
+      error_title.innerHTML = "Not so fast!";
+      error_text.innerHTML = "I'll have to upload the gif first!";
+
+    } else if (!reddit_title.value) {
+      error_window.style.display = "flex";
+      error_title.innerHTML = "Not so fast!";
+      error_text.innerHTML = "I'll have to add a title first!";
+
+    } else {
+      let input = post_title;
+      localStorage.setItem("postTitle",input);
+      location.href = "Reddit-comments.html";
+    }
+  });
 }
 
 const cancelPost = () => {
   cancel.addEventListener("click", () => {
-    alert("Wait, that is not what I want, I want to upload the gif!");
+    error_window.style.display = "flex";
+    error_title.innerHTML = "Wait, that isn't what I want!";
+    error_text.innerHTML = "I want to post the gif to Reddit!";
   });
+}
+
+const closeError = () => {
+  error_button.addEventListener("click", () => {
+    error_window.style.display = "none";
+  });
+}
+
+window.onload = function() {
+  overlay.style.opacity = "0";
+  setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
 }
 
 export {
     openGifWindow,
     closeGifWindow,
     postToReddit,
-    cancelPost
+    cancelPost, 
+    closeError
 };
-
-
-const overlay = document.getElementById("js--overlay");
-
-window.onload = function() {
-    overlay.style.opacity = "0";
-    setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
-}
-

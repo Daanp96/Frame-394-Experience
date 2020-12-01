@@ -4,3 +4,4 @@ Reddit.openGifWindow();
 Reddit.closeGifWindow();
 Reddit.postToReddit();
 Reddit.cancelPost();
+Reddit.closeError();

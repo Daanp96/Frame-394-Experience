@@ -117,7 +117,7 @@ button{
 }
 
 .reddit_page__reddit_post__inputs__buttons{
-    margin: 1rem 0;
+    margin: 0 0 30px;
 }
 
 .reddit_page__reddit_post__inputs__buttons__cancel{
@@ -146,8 +146,8 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -185,49 +185,78 @@ button{
 .reddit_page__school_project{
     color: white;
     text-align: center;
-    margin-top: 15px;
+    margin: 15px 0;
 }
 
 .error_window{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
 }
 
-.viewDiscr {
-    z-index: 2;
+.error_window__content{
+    position: absolute;
     background-color: var(--bg-color);
-    width: 60rem;
-    height: 30rem;
+    width: 50%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border-radius: 1.5rem;
-    animation: none;
-    box-shadow: .2rem .2rem .4rem black;
+    align-items: center;
+    border-radius: 1rem;
     font-family: 'Teko', sans-serif;
-    opacity: 0;
 }
 
-.viewDiscr > h1 {
-    color: var(--accent-color);
-    font-size: 6rem;
-}
-
-.viewDiscr > p {
+.error_window__content__title{
     color: var(--highlight-color);
+    font-size: 4rem;
+    display: block;
+}
+
+.error_window__content__text{
+    color: var(--accent-color);
     font-size: 2.4rem;
     font-weight: 300;
+    margin: 2rem 0;
 }
 
+.error_window__content__button{
+    font-size: 2.6rem;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .4rem black;
+    box-sizing: content-box;
+    padding: 0 15px;
+    font-family: 'Teko', sans-serif;
+}
 
+.error_window__content__button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    margin: 0;
+    border: solid .1rem var(--highlight-color);
+}
+
+.error_window__content__button:focus {
+    box-shadow: none;
+    margin: 0;
+    border: solid .2rem var(--highlight-color);
+    outline: none;
+}
+
+.error_window__content__button:active {
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+}
 
 .overlay {
     z-index: 10;
