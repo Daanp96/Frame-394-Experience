@@ -11,7 +11,7 @@ let post_title = "";
 
 const openGifWindow = () => {
     gif_upload.addEventListener("click", (e) => {
-        popup.style.display = "block";
+        popup.style.display = "flex";
         reddit_page.style.filter = "blur(3px)"
       });
 }

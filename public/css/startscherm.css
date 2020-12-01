@@ -168,3 +168,9 @@ main{
         padding: .5rem 5rem;
     }
 }
+
+@supports (overflow: hidden){
+    html, body{
+        overflow: -moz-hidden-unscrollable;
+    }
+}
