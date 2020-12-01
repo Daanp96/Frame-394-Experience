@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Frame 394</title>
         <link rel="stylesheet" href="./css/redditPost.css">
+        <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -39,10 +40,18 @@
                 <p class="reddit_page__school_project">THIS IS A SCHOOL PROJECT</p>
             </footer>
         </main>
-        <section id="js--popup" class="upload_popup scale-in-center">
-            <section id="js--gif_file" class="upload_popup__group">
-                <img class="upload_popup__group__gif" src="./img/gif.png" alt="upload_gif">
-                <h2 class="upload_popup__group__title">taser.gif</h2>
+        <section id="js--popup" class="popup">
+            <section class="popup__window scale-in-center">
+                <section id="js--gif_file" class="popup__window__group">
+                    <img class="popup__window__group__gif" src="./img/gif.png" alt="upload_gif">
+                    <h2 class="popup__window__group__title">taser.gif</h2>
+                </section>
+            </section>
+        </section>
+        <section class="error_window">
+            <section class="error_window__content">
+                <h2 class="error_window__content__title"></h2>
+                <p class="error_window__content__text"></p>
             </section>
         </section>
         <div class="overlay" id="js--overlay"></div>
