@@ -6,6 +6,11 @@ const continueButton = document.getElementById('js--continueButton');
 const modalBg = document.getElementById("js--modal-bg");
 const modal = document.getElementById("js--modal");
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.stabilizer = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 var frameCount = 0;
 const totalFrames = 5;
 

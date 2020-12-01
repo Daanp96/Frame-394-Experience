@@ -14,6 +14,11 @@ const error_button = document.getElementById("js--errorButton");
 const overlay = document.getElementById("js--overlay");
 let post_title = "";
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.reddit_post = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 const openGifWindow = () => {
   gif_upload.addEventListener("click", (e) => {
     popup.style.display = "flex";

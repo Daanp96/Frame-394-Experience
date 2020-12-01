@@ -16,6 +16,13 @@ const desktop = document.getElementById("js--desktop");
 const videoPlayerIcon = document.getElementById("js--videoPlayerIcon");
 const videoPlayer = document.getElementById("js--videoPlayer");
 
+// Hier laad je het object in, zet je de boolean voor die pagina op true
+// en zet je het object weer terug in localStorage.
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.computer = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 const overlay = document.getElementById("js--overlay");
 
 function onOff() {
@@ -59,7 +66,6 @@ stickyNote.onclick = function(){
 
 passwordButton.onclick = function() {
     if (passwordInput.value == password.textContent) {
-        console.log("Password correct!");
         loginField.style.animation = "slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
         setTimeout(function(){screenBackground.style.animation = "zoom-in .7s both"}, 800);
         setTimeout(function(){desktop.style.display = "block"}, 1600);

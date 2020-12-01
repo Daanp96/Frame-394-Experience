@@ -2,6 +2,11 @@ const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
 const button = document.getElementById("js--next-page");
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.reddit_comments = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
     let form = document.getElementById("js--form-"+n);

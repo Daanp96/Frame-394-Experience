@@ -4,6 +4,11 @@ const continueButton = document.getElementById("js--continue");
 const exitVideo = document.getElementById("js--exitVideo");
 const overlay = document.getElementById("js--overlay");
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.video = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 function playVideo() {
     viewDiscr.style.animation = "slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
     viewDiscrBg.style.opacity = "0";

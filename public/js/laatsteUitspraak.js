@@ -14,6 +14,10 @@ const newspaperTitle = document.getElementById("js--newspaper-title");
 const newspaperArticle = document.getElementById("js--newspaper-article");
 let choice;
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.final_choice = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+
 choice1.addEventListener('click', function(){
     checkbox1.checked = true;
     checkbox2.checked = false;

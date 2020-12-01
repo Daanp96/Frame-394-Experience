@@ -16,6 +16,11 @@ const taserTitle = document.getElementById("js--taser_title");
 const fence = document.getElementById("js--fence");
 const fenceTitle = document.getElementById("js--fence_title");
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+  visited.three_d = true;
+  localStorage.setItem('visited_pages', JSON.stringify(visited));
+  console.log(visited);
+
 const handleTools = () => {
     toolsBar.addEventListener('click', (e) => {
         // doet helaas niets :(

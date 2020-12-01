@@ -6,6 +6,11 @@ const choice2 = document.getElementById("js--choice-2")
 const choice3 = document.getElementById("js--choice-3")
 const continueButton = document.getElementById("js--continueButton");
 
+const visited = JSON.parse(localStorage.getItem("visited_pages"));
+visited.second_choice = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
+
 choice1.addEventListener('click', function(){
     checkbox1.checked = true;
     checkbox2.checked = false;

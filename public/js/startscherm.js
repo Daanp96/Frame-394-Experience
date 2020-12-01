@@ -63,3 +63,23 @@ function start() {
     overlay.style.opacity = "1";
     setTimeout(function(){window.location.href = "computerOpstarten.html"}, 3000)
 }
+
+// Dit object houd bij op welke pagina's je geweest bent.
+// Dit is om te voorkomen dat de gebruiker pagina's gaat skippen via navigatie.
+let visited = {
+    start: true,
+    computer: false,
+    video: false,
+    first_choice: false,
+    stabilizer: false,
+    reddit_post: false,
+    reddit_comments: false,
+    second_choice: false,
+    frames: false,
+    three_d: false,
+    final_choice: false
+}
+
+// Hiermee wordt het object in localStorage opgeslagen waarmee het object
+// over de hele website te bereiken zal zijn.
+localStorage.setItem('visited_pages', JSON.stringify(visited));

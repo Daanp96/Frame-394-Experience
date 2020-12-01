@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const next = document.getElementById("js--next");
   const button = document.getElementById("js--end-button");
   
-
+  const visited = JSON.parse(localStorage.getItem("visited_pages"));
+  visited.frames = true;
+  localStorage.setItem('visited_pages', JSON.stringify(visited));
+  console.log(visited);
 
 
   // maak de terugknop klikbaar
