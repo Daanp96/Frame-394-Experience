@@ -24,12 +24,16 @@
                 </section>
             </section>
             <iframe class="videoPlayer" src="https://www.youtube.com/embed/c6UzGIxQ_Qg"></iframe>
-            <button class="continue" id="js--continue" onclick="skipVideo()"><i class="fas fa-arrow-left"></i></button>
-            <section class="videoStabilizer" id="js--videoStabilizer">
-                <h1>Video Stabilizer</h1>
-                <p>The video is a bit too wonky.</p>
-                <p>Let's stabilize it using ultra advanced videography programs.</p>
-                <button onclick="nextPage()">Continue</button>
+            <button class="continue" id="js--continue" onclick="skipVideo()">
+                <i class="fas fa-arrow-right"></i>
+                <span class="continue__tooltip">Continue</span>
+            </button>
+            <section class="exitVideo" id="js--exitVideo">
+                <button class="exitVideo__close" onclick="closeExitVideo()"><i class="fas fa-times"></i></button>
+                <h1>Exit video</h1>
+                <p>By continueing you will exit the video player.</p>
+                <p>If you have seen enough, you can continue to the next part.</p>
+                <button class="exitVideo__button" onclick="nextPage()">Continue</button>
             </section>
             <section class="overlay" id="js--overlay"></section>
             <section class="turnScreen">

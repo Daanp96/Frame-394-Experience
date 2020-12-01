@@ -3,6 +3,8 @@ const movingFrameFrame = document.getElementById('js--movingFrame__frame');
 const movingFrameText = document.getElementById('js--movingFrame__text');
 const frameCounter = document.getElementById('js--frameCounter');
 const continueButton = document.getElementById('js--continueButton');
+const modalBg = document.getElementById("js--modal-bg");
+const modal = document.getElementById("js--modal");
 
 var frameCount = 0;
 const totalFrames = 5;
@@ -251,6 +253,15 @@ function random(number){
 }
 
 checkState();
+
+function hideModal() {
+    modalBg.style.opacity = "0";
+    modal.style.opacity = "0";
+    setTimeout(function(){
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+    }, 1500);
+}
 
 //Pagina transitie
 const overlay = document.getElementById("js--overlay");
