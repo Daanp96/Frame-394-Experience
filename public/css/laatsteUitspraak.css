@@ -238,7 +238,7 @@ main {
     text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
 }
 
-.news-wrapper {
+.newsBg {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -248,7 +248,7 @@ main {
     overflow: hidden;
 }
 
-.news {
+.newsBg__news {
     position: absolute;
     width: var(--np-width);
     height: var(--np-height);
@@ -270,12 +270,12 @@ main {
     }
 }
 
-.newspaper {
+.newsBg__news__newspaper {
     position: relative;
     width: var(--np-width);
 }
 
-.newspaper__bottom {
+.newsBg__news__newspaper__bottom {
     position: absolute;
     width: var(--np-width);
     height: var(--np-height);
@@ -285,7 +285,7 @@ main {
     box-shadow: -.4rem 1rem 1rem var(--shadow-color);
 }
 
-.newspaper__middle1 {
+.newsBg__news__newspaper__middle1 {
     position: absolute;
     width: var(--np-width);
     height: var(--np-height);
@@ -294,7 +294,7 @@ main {
     transform: translate(-.5rem, -.5rem);
 }
 
-.newspaper__middle2 {
+.newsBg__news__newspaper__middle2 {
     position: absolute;
     width: var(--np-width);
     height: var(--np-height);
@@ -303,7 +303,7 @@ main {
     transform: translate(-.7rem, 1rem);
 }
 
-.newspaper__main {
+.newsBg__news__newspaper__main {
     position: absolute;
     width: var(--np-width);
     height: var(--np-height);
@@ -316,7 +316,7 @@ main {
     src: url(../font/CloisterBlack.ttf)
 }
 
-.newspaper__main > h2 {
+.newsBg__news__newspaper__main > h2 {
     font-family: NYTimes;
     font-size: 2.4rem;
     font-weight: 300;
@@ -325,7 +325,7 @@ main {
     padding-top: .5rem;
 }
 
-.newspaper__main > h3 {
+.newsBg__news__newspaper__main > h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
     text-align: center;
@@ -333,14 +333,14 @@ main {
     padding-top: .5rem;
     font-weight: normal;
 }
-.newspaper__main > hr {
+.newsBg__news__newspaper__main > hr {
     border-color: black;
     width: 90%;
     margin-top: 1rem;
     margin-left: 5%;
 }
 
-.newspaper__main > h4 {
+.newsBg__news__newspaper__main > h4 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.3rem;
     padding-top: 1rem;
@@ -348,29 +348,29 @@ main {
     text-align: center;
 }
 
-.newspaper__main__article {
+.newsBg__news__newspaper__main__article {
     display: grid;
     grid-template-columns: repeat(2, minmax(0,1fr));
     margin: 1rem;
 }
 
-.newspaper__main__article > p {
+.newsBg__news__newspaper__main__article > p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
 }
 
-.newspaper__main__article > section > img {
+.newsBg__news__newspaper__main__article > section > img {
     width: 90%;
     margin: 0 10%;
 }
 
-.newspaper__main__article > section > p {
+.newsBg__news__newspaper__main__article > section > p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     padding-left: 10%;
 }
 
-.newspaper__main__article > section > p:nth-of-type(2) {
+.newsBg__news__newspaper__main__article > section > p:nth-of-type(2) {
     padding-top: .5rem;
 }
 
@@ -483,23 +483,23 @@ main {
         margin-top: 8rem;
     }
 
-    .newspaper__main > h2 {
+    .newsBg__news__newspaper__main > h2 {
         font-size: 3.6rem;
     }
     
-    .newspaper__main > h3 {
+    .newsBg__news__newspaper__main > h3 {
         font-size: 2.7rem;
     }
 
-    .newspaper__main > h4 {
+    .newsBg__news__newspaper__main > h4 {
         font-size: 1.95rem;
     }
     
-    .newspaper__main__article > p {
+    .newsBg__news__newspaper__main__article > p {
         font-size: 1.8rem;
     }   
     
-    .newspaper__main__article > section > p {
+    .newsBg__news__newspaper__main__article > section > p {
         font-size: 1.8rem;
     }
 }
