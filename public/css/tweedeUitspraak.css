@@ -104,15 +104,15 @@ main {
     transition: background-color .2s;
 }
 
-#js--checkbox-1:checked ~ .checkmark {
+.choices__choice__input1:checked ~ .checkmark{
     background-color: var(--highlight-color);
 }
 
-#js--checkbox-2:checked ~ .checkmark {
+.choices__choice__input2:checked ~ .checkmark{
     background-color: var(--highlight-color);
 }
 
-#js--checkbox-3:checked ~ .checkmark {
+.choices__choice__input3:checked ~ .checkmark{
     background-color: var(--highlight-color);
 }
 

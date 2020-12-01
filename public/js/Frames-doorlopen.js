@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     //maak de door en terug knop aan
-  const prev = document.getElementById("prev");
-  const next = document.getElementById("next");
-  const button = document.getElementById("end-button");
+  const prev = document.getElementById("js--prev");
+  const next = document.getElementById("js--next");
+  const button = document.getElementById("js--end-button");
   
 
 

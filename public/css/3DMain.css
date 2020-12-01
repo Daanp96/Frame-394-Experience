@@ -31,56 +31,49 @@ canvas {
     display:block;
     opacity: 1;
     color: white;
+    font-size: 2rem;
 }
 
-#js--tools_bar{
-    background-color: red;
+.toolsBar{
+    background-color: var(--accent-color);
     display: block;
-    width: 80px;
+    width: 100px;
     position: absolute;
     height: 100vh;
     transition: all 1s;
+    cursor: pointer;
 }
 
-#js--objects_bar{
-    background-color: red;
-    display: block;
-    width: 80px;
-    position: absolute;
-    height: 100vh;
-    right: 0;
-    transition: all 1s;
-}
-
-#c{
-    width: 90%;
-    height: 100vh;
-    display: block;
-    margin: 0 auto;
-}
-
-#container{
-    width: 100%;
-    margin: 0 25%;
-}
-
-.tool_title{
+.toolsBar__tool_title{
     transform: rotate(0.75turn);
     position: relative;
     font-size: 2rem;
     top: 50%;
     transition: all 1s;
+    color: white;
 }
 
-.obj_title{
+.objectsBar{
+    background-color: var(--accent-color);
+    display: block;
+    width: 100px;
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.objectsBar__obj_title{
     transform: rotate(0.25turn);
     position: relative;
     font-size: 2rem;
     top: 50%;
     transition: all 1s;
+    color: white;
 }
 
-#js--walter, #js--michael{
+.objectsBar__walter, .objectsBar__michael {
     display: block;
     opacity: 0;
     color: black;
@@ -89,7 +82,7 @@ canvas {
     transition: 1s all;
 }
 
-.walter_name, .michael_name{
+.objectsBar__walter_name, .objectsBar__michael_name{
     display: block;
     text-align: center;
     opacity: 0;
@@ -101,11 +94,7 @@ canvas {
     margin: 10px auto;
 }
 
-.objectBar{
-    cursor: pointer;
-}
-
-.taser{
+.objectsBar__taser{
     width: 40px;
     transform: scaleX(-1);
     display: block;
@@ -113,28 +102,28 @@ canvas {
     transition: 1s all;
 }
 
-.taser_title{
+.objectsBar__taser_title{
     text-align: center;
     opacity: 0;
 }
 
-.fence{
+.objectsBar__fence{
     width: 50px;
     display: block;
-    /* opacity: 0; */
+    opacity: 0;
     transition: 1s all;
 }
 
-.fence_title{
+.objectsBar__fence_title{
     text-align: center;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
-.walter_label{
-    color: #FFF;
-    font-family: sans-serif;
-    padding: 2px;
-    background: rgba( 0, 0, 0, .6 );
+.canvas{
+    width: 90%;
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
 }
 
 .continue_button{

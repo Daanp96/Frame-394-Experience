@@ -1,6 +1,6 @@
 const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
-const button = document.getElementById("next-page");
+const button = document.getElementById("js--next-page");
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
@@ -26,10 +26,10 @@ function enableComment(n){
 
 function changeColor(n){
     let m = document.getElementById("js--like-button-"+n);
-    if (m.getAttribute('src') == "/img/heart-grey.png"){
-        m.src = "/img/heart-red.png";
+    if (m.getAttribute('src') == "./img/heart-grey.png"){
+        m.src = "./img/heart-red.png";
     }else{
-        m.src = "/img/heart-grey.png";
+        m.src = "./img/heart-grey.png";
     }
 }
 

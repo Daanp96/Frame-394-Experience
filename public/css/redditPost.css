@@ -164,11 +164,7 @@ button{
     padding: 15px;
 }
 
-#js--gif{
-    display: none;
-}
-
-.buttons{
+.reddit_post__buttons{
     text-align: center;
 }
 

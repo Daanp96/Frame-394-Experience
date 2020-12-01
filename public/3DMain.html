@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>Frame 394</title>
+        <link rel="stylesheet" href="./css/3DMain.css">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <script src="./js/font-awesome/font-awesome.js"></script>
+        <script type="module" src="./js/3DMain.js"></script>
+    </head>
+    <body>
+        <section class="title">
+            <h1>3D Analyse</h1>
+        </section>
+        <section id="js--tools_bar" class="toolsBar">
+            <h2 id="js--tools_title" class="toolsBar__tool_title">Tools</h2>
+        </section>
+        <section id="js--objects_bar" class="objectsBar">
+            <h2 id="js--obj_title" class="objectsBar__obj_title">Objects</h2>
+
+            <i id="js--walter" class="objectsBar__walter fas fa-male object tool_object" data-object="walter"></i>
+            <h3 id="js--walter_title" class="objectsBar__walter_name">Walter Scott</h3>
+
+            <i id="js--michael" class="objectsBar__michael fas fa-male object tool_object" data-object="michael"></i>
+            <h3 id="js--michael_title" class="objectsBar__michael_name">Michael Slager</h3>
+
+            <img id="js--taser" class="objectsBar__taser object tool_object" src="img/taser.png" alt="taser" data-object="taser">
+            <h3 id="js--taser_title" class="objectsBar__taser_title">Taser</h3>
+
+            <img id="js--fence" class="objectsBar__fence object tool_object" src="img/fence.png" alt="fence" data-object="fence">
+            <h3 id="js--fence_title" class="objectsBar__fence_title">Fence</h3>
+        </section>
+        <canvas id="c" class="canvas"></canvas>
+        <button class="continue_button" id="continue_button" onclick="nextPage()">Continue</button>
+    </body>
+</html>

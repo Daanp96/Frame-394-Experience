@@ -25,8 +25,10 @@ const handleTools = () => {
 const objectsTools = () => {
     objectsBar.addEventListener('click', () => {
         walterScott.style.opacity = "1";
+        walterScott.style.display = "block";
         walterTitle.style.opacity = "1";
         michealSlager.style.opacity = "1";
+        michealSlager.style.display = "block";
         michaelTitle.style.opacity = "1";
         taser.style.opacity = "1";
         taserTitle.style.opacity = "1";
@@ -45,12 +47,12 @@ const objectsTools = () => {
         taserTitle.style.opacity = "0";
         fence.style.opacity = "0";
         fenceTitle.style.opacity = "0";
-        objectsBar.style.width = "80px";
+        objectsBar.style.width = "100px";
         objectsTitle.style.display = "block";
     });
 }
 
-handleTools();
+// handleTools();
 objectsTools();
 
 const continueButton = document.getElementById("continue_button");
