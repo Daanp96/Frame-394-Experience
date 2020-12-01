@@ -54,6 +54,9 @@ main {
 
 .choices__choice:hover {
     cursor: pointer;
+    outline: solid .3rem var(--highlight-color);
+    outline-offset: -.1rem;
+    z-index: 2;
 }
 
 .choice-1 {
