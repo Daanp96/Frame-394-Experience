@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let l = (n - 1);                                      // dit maakt een variable aan die het getal heeft van n -1. Als je de array ziet als een slideshow is dit dus de vorige slide.
       let m = (n + 1);                                      // dit maakt een variable aan die het getal heeft van n +1. Als je van rechts naar links door de array heen zou gaan, dan zou dit in de array de vorige slide zijn.
       let z = (slides.length - 1)                           // dit maakt een variabele aan voor de laatste slide in de array. er zijn 14 slides in de array, tellen begint bij 0 dus de index van de veertiende slide is nummer 13.
-      if (n > z) {                                         
+      if (n > 13) {                                         
        button.style.display = "flex";                     // toon knop als je bij de laatste index van de array bent.
       }
       if( n < slides.length){                             //zo lang als we in de array zitten
