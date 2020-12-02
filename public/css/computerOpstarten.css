@@ -16,6 +16,7 @@ html {
     --font-color: #F9F9F9;
     --shadow-color: #10152b;
     --sticky-note: #FFFF88;
+    --taskbar-color: #18222d;
 }
 
 body{
@@ -394,6 +395,27 @@ main {
     z-index: 5;
 }
 
+.desktop__taskbar__datetime {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--taskbar-color);
+    color: white;
+    width: 4.3%;
+    height: 5.2%;
+    bottom: 0;
+    right: 3.6%;
+    z-index: 6;
+    opacity: 1;
+    font-size: 1.4rem;
+}
+
+.desktop__taskbar__datetime:hover {
+    cursor: default;
+}
+
 .videoPlayer {
     position: absolute;
     width: 100vw;
@@ -401,6 +423,13 @@ main {
     background-color: black;
     z-index: 10;
     transform: scale(0);
+}
+
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
 }
 
 .overlay {
@@ -654,5 +683,11 @@ main {
     .desktop__videoPlayer > p {
         margin-top: .2rem;
         font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .desktop__taskbar__datetime {
+        display: flex;
     }
 }
