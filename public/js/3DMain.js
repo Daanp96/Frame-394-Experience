@@ -17,9 +17,9 @@ const fence = document.getElementById("js--fence");
 const fenceTitle = document.getElementById("js--fence_title");
 
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
-  visited.three_d = true;
-  localStorage.setItem('visited_pages', JSON.stringify(visited));
-  console.log(visited);
+visited.three_d = true;
+localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
 
 const handleTools = () => {
     toolsBar.addEventListener('click', (e) => {
@@ -27,8 +27,13 @@ const handleTools = () => {
     });
 }
 
-const objectsTools = () => {
-    objectsBar.addEventListener('click', () => {
+
+let counted = 0;
+
+objectsBar.addEventListener("click", () => {
+    counted++;
+
+    if(counted % 2){
         walterScott.style.opacity = "1";
         walterScott.style.display = "block";
         walterTitle.style.opacity = "1";
@@ -41,9 +46,7 @@ const objectsTools = () => {
         objectsTitle.style.display = "none";
         fence.style.opacity = "1";
         fenceTitle.style.opacity = "1";
-    });
-
-    objectsBar.addEventListener('dblclick', () => {
+    } else {
         walterScott.style.opacity = "0";
         walterTitle.style.opacity = "0";
         michealSlager.style.opacity = "0";
@@ -54,11 +57,8 @@ const objectsTools = () => {
         fenceTitle.style.opacity = "0";
         objectsBar.style.width = "100px";
         objectsTitle.style.display = "block";
-    });
-}
-
-// handleTools();
-objectsTools();
+    }
+});
 
 const continueButton = document.getElementById("continue_button");
 

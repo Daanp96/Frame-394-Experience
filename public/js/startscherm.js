@@ -7,6 +7,9 @@ const txt3 = "And you want to find out what really happened and why."
 const outputText = document.getElementById("js--text");
 const speed = 50;
 const startButton = document.getElementById("js--startButton");
+const hamburger = document.getElementById("js--hamburger");
+const navigation = document.getElementById("js--navigation");
+const list_items = document.getElementsByClassName("navigation__items__choice");
 
 function showText(){
     startButton.style.opacity = 0;
@@ -78,6 +81,39 @@ let visited = {
     frames: false,
     three_d: false,
     final_choice: false
+}
+
+let counter = 0;
+
+function showNavigation() {
+    counter++;
+    if(counter % 2){
+        navigation.style.opacity = 1;
+    } else {
+        navigation.style.opacity = 0;
+    }
+
+    for (const visit in visited) {
+        if(visited[visit] === true){
+            
+        } else {
+            
+        }
+    }
+
+    // for(const it in visited){
+    //     if(it === true){
+    //         console.log("ja is waar");
+    //     } else {
+    //         console.log("nee hoor");
+    //     }
+    // }
+
+    // for(let i = 0; i < list_items.length; i++){
+    //     if(list_items[i].dataset.visited === "false"){
+    //         list_items[i].style.color = "grey";
+    //     }
+    // }
 }
 
 // Hiermee wordt het object in localStorage opgeslagen waarmee het object
