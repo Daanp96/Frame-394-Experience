@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const prev = document.getElementById("js--prev");
   const next = document.getElementById("js--next");
   const button = document.getElementById("js--end-button");
+  const taser = document.getElementById("js--taser");
   
 
 
@@ -17,25 +18,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
     showNextSlides(1);
   });
 
-  
+  taser.addEventListener("click", function(){
+    console.log("test vangen click event taser");
+    showBorder();
+    
+  })
 
   function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let l = (n - 1);
-    let m = (n + 1);
-    let z = (slides.length - 1)
-    if (n > 13) {
-     button.style.display = "flex";
-    }
-    if( n < slides.length){
-      slides[n].style.display = 'block';
-      slides[l].style.display = "none";
-      slides[m].style.display = "none";
-      slides[z].style.display = "none";
-    } else{
-      reset(); 
-    }
-      
+      let slides = document.getElementsByClassName("mySlides");
+      let l = (n - 1);
+      let m = (n + 1);
+      let z = (slides.length - 1)
+      if (n > 13) {
+       button.style.display = "flex";
+      }
+      if( n < slides.length){
+        slides[n].style.display = 'block';
+        slides[l].style.display = "none";
+        slides[m].style.display = "none";
+        slides[z].style.display = "none";
+      } else{
+        reset(); 
+      }  
     }
 
   
@@ -49,15 +53,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function showPreviousSlide(n){
     slideIndex = slideIndex - n;
     showSlidesReversed(slideIndex);
-    
-    
   }
 
   // De doorknop zegt toon dia(1 verder dan nu)
   function showNextSlides(n) {
     slideIndex = slideIndex + n;
     showSlides(slideIndex);
-  
   }
 
   function showSlidesReversed(n){
@@ -73,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       slides[n].style.display = 'block';
       slides[m].style.display = "none";
      // slides[z].style.display = "none";
-      
     }    
   }
 
@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let z = (slides.length - 1)
     slides[z].style.display = 'none';
     showSlides(slideIndex);
-    
   }
 
   function reset2(){
@@ -92,6 +91,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slides[z].style.display = 'none';
     slideIndex = (slides.length -1);
     showSlidesReversed(slideIndex);
+  }
+
+  function showBorder(){
+    let higlight = document.getElementsByClassName("clickable-object");
+    for (let i = 0; i < higlight.length; i++) {
+      const square =   higlight[i];
+      square.style.opacity = "1";
+      
+    }
   }
 
 });

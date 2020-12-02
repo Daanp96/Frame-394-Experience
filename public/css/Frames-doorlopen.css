@@ -30,8 +30,8 @@ height: 100%;
 width: 100%;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+/* next-button & prev-button-buttonious buttons */
+.prev-button, .next-button {
 cursor: pointer;
 position: absolute;
 top: 50%;
@@ -51,14 +51,14 @@ user-select: none;
     height: 100%;
 }
 
-/* Position the "next button" to the right */
-.next {
+/* Position the "next-button button" to the right */
+.next-button {
 right: 0;
 border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color */
-.prev:hover, .next:hover {
+.prev-button:hover, .next-button:hover {
 background-color: var(--bg-color);
 }
 
@@ -136,6 +136,21 @@ to {opacity: 1}
     background-color: black;
     opacity: 1;
     transition: opacity 3s;
+}
+
+.clickable-object{
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    border: 3px solid var(--highlight-color);
+    cursor: pointer;
+    bottom: 13%;
+    right: 1%;
+    opacity: 0;
+    
+}
+.clickable-object:hover{
+   /* opacity: 1;*/
 }
 
 @supports (overflow: hidden){
