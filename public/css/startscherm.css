@@ -28,11 +28,13 @@ main{
     align-items: center;
 }
 
+/* Navigatie hamburger en list items */
 .navigation{
     position: absolute;
     top: 5rem;
     left: 5rem;
     display: inherit;
+    z-index: 2;
 }
 
 .navigation__menu{
@@ -53,6 +55,10 @@ main{
 }
 
 .navigation__hamburger:active{
+    color: var(--accent-color);
+}
+
+.navigation__hamburger:focus{
     color: var(--accent-color);
 }
 
@@ -81,14 +87,30 @@ main{
     width: 15rem;
 }
 
-.navigation__items__choice{
+.navigation__items__link{
     transition: 1s all;
     cursor: pointer;
     margin: 2px 0;
+    color: white;
 }
 
-.navigation__items__choice:hover{
+.navigation__items__link:hover{
     color: var(--accent-color);
+}
+
+.navigation__items__link:focus{
+    color: var(--accent-color);
+}
+
+@media(max-width: 992px){
+    .navigation{
+        top: 1.5rem;
+        left: 2rem;
+    }
+
+    .navigation__items{
+        top: 3rem;
+    }
 }
 
 .background__trailerVideo{

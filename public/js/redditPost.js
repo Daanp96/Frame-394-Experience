@@ -17,7 +17,6 @@ let post_title = "";
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.reddit_post = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
-console.log(visited);
 
 const openGifWindow = () => {
   gif_upload.addEventListener("click", (e) => {
