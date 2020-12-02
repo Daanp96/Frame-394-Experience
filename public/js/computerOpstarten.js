@@ -75,7 +75,33 @@ passwordButton.onclick = function() {
     }
 }
 
+const setHour = document.getElementById("js--hour");
+const setMin = document.getElementById("js--minute");
+const setDay = document.getElementById("js--day");
+const setMonth = document.getElementById("js--month");
+const setYear = document.getElementById("js--year");
+
+function updateClock(){
+    let now = new Date();
+    let hour = now.getHours(),
+        min = now.getMinutes(),
+        day = now.getDate(),
+        month = now.getMonth(),
+        year = now.getFullYear();
+    setHour.innerHTML = hour;
+    setMin.innerHTML = min;
+    setDay.innerHTML = day;
+    setMonth.innerHTML = month;
+    setYear.innerHTML = year;
+}
+
+function initClock(){
+    updateClock();
+    window.setInterval("updateClock()", 1000);
+}
+
 window.onload = function() {
+    initClock()
     overlay.style.opacity = "0";
     setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
     setTimeout(function(){
