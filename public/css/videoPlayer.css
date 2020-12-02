@@ -323,3 +323,35 @@ main {
         }
     }
 }
+
+@supports not (height: 100vh){
+    main{
+        height: 100%;
+        width: 100%;
+    }
+
+    .viewDiscr-bg{
+        height: 100%;
+        width: 100%;
+    }
+
+    .videoPlayer{
+        height: 90%;
+        width: 90%;
+    }
+
+    .overlay{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen__bg{
+        height: 100%;
+        width: 100%;
+    }
+}

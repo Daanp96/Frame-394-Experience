@@ -126,3 +126,29 @@ label{
 .grid-container__page-wrapper__comments-container__comments-item__form{
     display: none;
 }
+
+@supports not (height: 100vh){
+    .grid-container{
+        grid-template-columns: 15% 70%;
+    }
+
+    .grid-container__page-wrapper__posts-container__post-items__gif{
+        max-height: 60%;
+        width: 55%;
+    }
+
+    .grid-container__page-wrapper__comments-container__comments-item__like-button{
+        height: 5%;
+        width: 5%;
+    }
+
+    .grid-container__page-wrapper__comments-container__comments-item__respond{
+        height: 5%;
+        width: 5%;
+    }
+
+    .grid-container__page-wrapper__comments-container__comments-item__form{
+        height: 5%;
+        width: 5%;
+    }
+}
