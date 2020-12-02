@@ -25,7 +25,7 @@ html{
   
 /* Hide the images by default */
 .mySlides {
-display: none;
+display: block;
 height: 100%;
 width: 100%;
 }
@@ -44,6 +44,10 @@ font-size: 2rem;
 transition: 0.6s ease;
 border-radius: 0 3px 3px 0;
 user-select: none;
+}
+
+.prev-button { 
+    display: none;
 }
 
 .img{
@@ -139,6 +143,7 @@ to {opacity: 1}
 }
 
 .clickable-object{
+    display: none;
     position: absolute;
     height: 15%;
     width: 10%;
@@ -146,10 +151,32 @@ to {opacity: 1}
     cursor: pointer;
     bottom: 13%;
     right: 1%;
-    opacity: 0;
-    
 }
 
+.taserText {
+    display: none;
+    position: absolute;
+    top: -4.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    padding: .3rem 1rem 0 1rem;
+    border-radius: .5rem;
+}
+
+.taserText::after {
+    content: "";
+    background-color: var(--bg-color);
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 2.6rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
 
 @supports (overflow: hidden){
     html, body{
@@ -182,6 +209,4 @@ to {opacity: 1}
         height: 100vh;
         width: 100vw;
     }
-
-
 }

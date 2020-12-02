@@ -13,10 +13,13 @@
         <main>
             <section class="slideshow-container">
                 <section class="mySlides fade">
-                    <section class="frame-nummer"> Frame #392</section>
-                    <img class="img" src="./webp/frame-392.webp" alt="een afbeelding van het 392ste frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="frame-nummer" id="js--frame-number"> Frame #392</section>
+                    <img class="img" id="js--frame-picture" src="./webp/frame-392.webp" alt="een afbeelding van een frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="clickable-object" id="js--taser">
+                        <p class="taserText" id="js--taser-text">Taser</p>
+                    </section>
                 </section>
-
+<!-- 
                 <section class="mySlides fade">
                     <section class="frame-nummer"> Frame #393</section>
                     <img class="img" src="./webp/frame-393.webp" alt="een afbeelding van het 393ste frame van de video waarin Walter Scott wordt neergeschoten" >
@@ -86,9 +89,9 @@
                 <section class="mySlides fade">
                     <section class="frame-nummer"> Frame #406</section>
                     <img class="img" src="./webp/frame-406.webp" alt="een afbeelding van het 406ste frame van de video waarin Walter Scott wordt neergeschoten" >
-                    <button id="js--end-button" class="end-button" onclick="nextPage()">Continue</button>
-                </section>
+                </section> -->
 
+                <button id="js--end-button" class="end-button" onclick="nextPage()">Continue</button>
                 <a id="js--prev" class="prev-button">&#10094;</a>
                 <a id="js--next" class="next-button">&#10095;</a>
             </section>
