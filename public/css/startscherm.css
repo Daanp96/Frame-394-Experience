@@ -21,8 +21,8 @@ main{
     font-family: 'Teko', sans-serif;
     position: relative;
     background-color: var(--bg-color);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,20 +119,20 @@ main{
 }
 
 .background {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .background > img {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .background__shade {
     position: absolute;
     background-color: black;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     opacity: .5;
@@ -187,8 +187,8 @@ main{
 
 .overlay {
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -200,13 +200,13 @@ main{
 .turnScreen {
     display: none;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .turnScreen__bg {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -260,39 +260,39 @@ main{
     }
 }
 
-@supports not (height: 100vw){
+@supports (height: 100vh) and (width: 100vw){
     main{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .background{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .background > img{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .background__shade{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .overlay{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .turnScreen{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .turnScreen__bg{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 }

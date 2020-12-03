@@ -30,7 +30,7 @@ main {
 
 .title {
     color: var(--font-color);
-    width: 100vw;
+    width: 100%;
     text-align: center;
     font-size: 4rem;
     letter-spacing: .2rem;
@@ -169,8 +169,8 @@ main {
 .modal--bg {
     display: none;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: black;
     opacity: .1;
     transition: opacity 1s;
@@ -256,8 +256,8 @@ main {
 
 .overlay {
     z-index: 10;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -269,13 +269,13 @@ main {
 .turnScreen {
     display: none;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .turnScreen__bg {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -441,8 +441,8 @@ main {
 
 .overlay {
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -451,23 +451,23 @@ main {
     transition: opacity 3s;
 }
 
-@supports not (width: 100vw){
+@supports (width: 100vw) and (height: 100vh){
     .title{
-        width: 100%;
+        width: 100vw;
     }
 
     .overlay{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
 
     .turnScreen{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
 
     .turnScreen__bg{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
 }

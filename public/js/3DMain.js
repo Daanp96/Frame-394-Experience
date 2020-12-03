@@ -16,17 +16,29 @@ const taser = document.getElementById("js--taser");
 const taserTitle = document.getElementById("js--taser_title");
 const fence = document.getElementById("js--fence");
 const fenceTitle = document.getElementById("js--fence_title");
+const delete_objects = document.getElementById("js--tools_delete");
 
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.three_d = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
 
+let counted = 0;
+
 toolsBar.addEventListener('click', () => {
-    toolsBar.style.width = "15rem";
-    toolTitle.style.opacity = "0";
+    counted++;
+
+    if(counted % 2){
+        toolsBar.style.width = "15rem";
+        toolTitle.style.opacity = "0";
+    } else {
+        toolsBar.style.width = "10rem";
+        toolTitle.style.opacity = "1";
+    }
 });
 
-let counted = 0;
+// delete_objects.addEventListener("click", () => {
+
+// });
 
 objectsBar.addEventListener("click", () => {
     counted++;
@@ -53,7 +65,7 @@ objectsBar.addEventListener("click", () => {
         taserTitle.style.opacity = "0";
         fence.style.opacity = "0";
         fenceTitle.style.opacity = "0";
-        objectsBar.style.width = "100px";
+        objectsBar.style.width = "10rem";
         objectsTitle.style.display = "block";
     }
 });
