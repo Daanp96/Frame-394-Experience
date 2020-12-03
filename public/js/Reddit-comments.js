@@ -1,6 +1,8 @@
 const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
 const button = document.getElementById("js--next-page");
+const viewDiscr = document.getElementById("js--viewDiscr");
+const viewDiscrBg = document.getElementById("js--viewDiscr-bg");
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
@@ -40,6 +42,12 @@ function getTitle(){
 
 getTitle();
 
+
+function readComments() {
+    viewDiscr.style.display = "none";
+    viewDiscrBg.style.display = "none";
+    continueButton.style.display = "none";
+}
 function Continue(){
     window.location.href = "tweedeUitspraak.html"
 }

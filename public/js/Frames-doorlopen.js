@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+//document.addEventListener("DOMContentLoaded", function(event) { 
     //maak de door en terug knop aan
   const prev = document.getElementById("js--prev");
   const next = document.getElementById("js--next");
@@ -7,7 +7,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const taserText = document.getElementById("js--taser-text");
   const frameNumber = document.getElementById("js--frame-number")
   const framePic = document.getElementById("js--frame-picture")
+  const popupBg = document.getElementById("js--popup-bg");
+  const popup = document.getElementById("js--popup");
   let frame = 392;
+
+
+
+  function readComments() { 
+    popupBg.style.display = "none";
+    popup.style.display = "none";
+  }
   
   // maak de terugknop klikbaar
   prev.addEventListener("click", function(){
@@ -120,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 //       square.style.opacity = "1";                   //stop de onzichtbaarheid van de highlight van de taser.
 //     }
 //   }
-});
+//});
 
 const overlay = document.getElementById("js--overlay");
 

@@ -127,6 +127,79 @@ label{
     display: none;
 }
 
+.viewDiscr-bg {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    transition: opacity 1s;
+}
+
+.viewDiscr {
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    z-index: 2;
+    background-color: var(--bg-color);
+    width: 40vw;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    animation: none;
+    box-shadow: .2rem .2rem .4rem black;
+}
+
+.viewDiscr__text{
+    font-family: 'Teko','sans-serif';
+    color: var(--font-color);
+    padding: 0.1rem;
+}
+
+.viewDiscr__text__h1{
+    font-size: 2rem;
+    color: var(--highlight-color);
+}
+
+.viewDiscr__buttons{
+    font-family: 'Teko', sans-serif;
+    font-size: 2.6rem;
+    background-color: var(--accent--color);
+    color: var(--font-color);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .4rem black;
+    box-sizing: content-box;
+    margin: .3rem;
+    padding: .5rem;
+}
+
+.viewDiscr__buttons:hover{
+    cursor: pointer;
+    box-shadow: none;
+    margin: 0;
+    border: solid .2rem var(--highlight-color);
+}
+
+.viewDiscr__buttons:focus{
+    box-shadow: none;
+    margin: 0;
+    border: solid .2rem var(--highlight-color);
+    outline: none;
+}
+
+.viewDiscr__buttons:active{
+    padding: .7rem;
+    border: none;
+    background-color: var(--highlight-color);
+    box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+}
+
 @supports not (height: 100vh){
     .grid-container{
         grid-template-columns: 15% 70%;
@@ -151,4 +224,10 @@ label{
         height: 5%;
         width: 5%;
     }
+
+    .viewDiscr-bg{
+        height: 100%;
+        width: 100%;
+    }
+
 }
