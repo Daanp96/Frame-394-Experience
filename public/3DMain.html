@@ -44,13 +44,22 @@
                 <button id="js--modalButton" class="modal__content__button">Let's get to it!</button>
             </section>
         </section>
+        <section class="modal2--bg" id="js--modal2-bg"></section>
+        <section class="modal2" id="js--modal2">
+            <h1 class="modal2__title">Warning!</h1>
+            <p class="modal2__text">By going back to start, all your progress wil be lost. Meaning you have to go through the pages all over again. <br><br> Are you sure?</p>
+            <section class="modal2__buttons">
+                <button class="modal2__buttons__button" id="js--backToStart">Go back to start</button>
+                <button class="modal2__buttons__button" id="js--hideModal2">Stay on this page</button>
+            </section>
+        </section>
         <section class="navigation">
             <section id="js--hamburger" class="navigation__menu">
                 <i class="navigation__hamburger fa fa-bars"></i>
                 <p id="js--navigationText" class="navigation__text">Navigation</p>
             </section>
             <ul id="js--navigation" class="navigation__items">
-                <a href="index.html" class="navigation__items__link">
+                <a class="navigation__items__link" id="js--resetWarning">
                     <li class="navigation__items__link__choice">Start</li>
                 </a>
                 <a href="computerOpstarten.html" class="navigation__items__link">

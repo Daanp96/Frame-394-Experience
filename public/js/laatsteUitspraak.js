@@ -114,3 +114,26 @@ function showNavigation() {
         }, 3000);
     }
 }
+
+const modal2 = document.getElementById("js--modal2");
+const modalBg2 = document.getElementById("js--modal2-bg");
+
+function resetWarning(){
+    modalBg2.style.display = "block";
+    modal2.style.display = "flex";
+    modalBg2.style.opacity = ".5";
+    modal2.style.opacity = "1";
+}
+
+function hideModal2() {
+    modalBg2.style.opacity = "0";
+    modal2.style.opacity = "0";
+    setTimeout(function(){
+        modalBg2.style.display = "none";
+        modal2.style.display = "none";
+    }, 1000);
+}
+
+function backToStart(){
+    document.location.href = "index.html";
+}

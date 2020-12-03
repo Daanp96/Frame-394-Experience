@@ -100,3 +100,26 @@ window.onload = function() {
         page++;
     }
 }
+
+const modal = document.getElementById("js--modal");
+const modalBg = document.getElementById("js--modal-bg");
+
+function resetWarning(){
+    modalBg.style.display = "block";
+    modal.style.display = "flex";
+    modalBg.style.opacity = ".5";
+    modal.style.opacity = "1";
+}
+
+function hideModal() {
+    modalBg.style.opacity = "0";
+    modal.style.opacity = "0";
+    setTimeout(function(){
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+    }, 1000);
+}
+
+function backToStart(){
+    document.location.href = "index.html";
+}

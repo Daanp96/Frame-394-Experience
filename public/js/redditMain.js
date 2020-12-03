@@ -34,3 +34,29 @@ hamburger.addEventListener("click", () => {
         }, 1000);
     }
 });
+
+const modal = document.getElementById("js--modal");
+const modalBg = document.getElementById("js--modal-bg");
+const resetWarning = document.getElementById("js--resetWarning");
+const backToStart = document.getElementById("js--backToStart");
+const hideModal = document.getElementById("js--hideModal");
+
+resetWarning.addEventListener("click", function resetWarning(){
+    modalBg.style.display = "block";
+    modal.style.display = "flex";
+    modalBg.style.opacity = ".5";
+    modal.style.opacity = "1";
+})
+
+hideModal.addEventListener("click", function hideModal() {
+    modalBg.style.opacity = "0";
+    modal.style.opacity = "0";
+    setTimeout(function(){
+        modalBg.style.display = "none";
+        modal.style.display = "none";
+    }, 1000);
+})
+
+backToStart.addEventListener("click", function backToStart(){
+    document.location.href = "index.html";
+})

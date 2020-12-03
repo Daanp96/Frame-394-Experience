@@ -58,13 +58,22 @@
                 <button class="error_window__content__button" id="js--errorButton">Go back</button>
             </section>
         </section>
+        <section class="modal--bg" id="js--modal-bg"></section>
+        <section class="modal" id="js--modal">
+            <h1 class="modal__title">Warning!</h1>
+            <p class="modal__text">By going back to start, all your progress wil be lost. Meaning you have to go through the pages all over again. <br><br> Are you sure?</p>
+            <section class="modal__buttons">
+                <button class="modal__buttons__button" id="js--backToStart">Go back to start</button>
+                <button class="modal__buttons__button" id="js--hideModal">Stay on this page</button>
+            </section>
+        </section>
         <section class="navigation">
             <section id="js--hamburger" class="navigation__menu">
                 <i class="navigation__hamburger fa fa-bars"></i>
                 <p id="js--navigationText" class="navigation__text">Navigation</p>
             </section>
             <ul id="js--navigation" class="navigation__items">
-                <a href="index.html" class="navigation__items__link">
+                <a class="navigation__items__link" id="js--resetWarning">
                     <li class="navigation__items__link__choice">Start</li>
                 </a>
                 <a href="computerOpstarten.html" class="navigation__items__link">

@@ -120,3 +120,29 @@ modal_button.addEventListener("click", () => {
         modalBg.style.display = "none";
     }, 1500);
 });
+
+const modal2 = document.getElementById("js--modal2");
+const modalBg2 = document.getElementById("js--modal2-bg");
+const resetWarning = document.getElementById("js--resetWarning");
+const backToStart = document.getElementById("js--backToStart");
+const hideModal2 = document.getElementById("js--hideModal2");
+
+resetWarning.addEventListener("click", function resetWarning(){
+    modalBg2.style.display = "block";
+    modal2.style.display = "flex";
+    modalBg2.style.opacity = ".5";
+    modal2.style.opacity = "1";
+})
+
+hideModal2.addEventListener("click", function hideModal2() {
+    modalBg2.style.opacity = "0";
+    modal2.style.opacity = "0";
+    setTimeout(function(){
+        modalBg2.style.display = "none";
+        modal2.style.display = "none";
+    }, 1000);
+})
+
+backToStart.addEventListener("click", function backToStart(){
+    document.location.href = "index.html";
+})

@@ -18,6 +18,15 @@
                 <p class="modal__text">This program is used to stabilize video footage. Drag the moving frame to the middle in order to stabilize the video and make it easier to look at. <br><br> This way you make it easier for yourself to spot certain details you would've missed otherwise.</p>
                 <button class="modal__button" onclick="hideModal()">Let's go!</button>
             </section>
+            <section class="modal2--bg" id="js--modal2-bg"></section>
+            <section class="modal2" id="js--modal2">
+                <h1 class="modal2__title">Warning!</h1>
+                <p class="modal2__text">By going back to start, all your progress wil be lost. Meaning you have to go through the pages all over again. <br><br> Are you sure?</p>
+                <section class="modal2__buttons">
+                    <button class="modal2__buttons__button" onclick="backToStart()">Go back to start</button>
+                    <button class="modal2__buttons__button" onclick="hideModal2()">Stay on this page</button>
+                </section>
+            </section>
             <h1 class="title disable-select">Video Stabilizer</h1>
             <h2 class="frameCounter disable-select" id="js--frameCounter">Frames 0/5</h2>
             <section class="staticFrame">
@@ -41,7 +50,7 @@
                     <p id="js--navigationText" class="navigation__text">Navigation</p>
                 </section>
                 <ul id="js--navigation" class="navigation__items">
-                    <a href="index.html" class="navigation__items__link">
+                    <a class="navigation__items__link" onclick="resetWarning()">
                         <li class="navigation__items__link__choice">Start</li>
                     </a>
                     <a href="computerOpstarten.html" class="navigation__items__link">
