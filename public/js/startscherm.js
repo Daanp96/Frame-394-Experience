@@ -71,19 +71,6 @@ function start() {
 
 // Dit object houd bij op welke pagina's je geweest bent.
 // Dit is om te voorkomen dat de gebruiker pagina's gaat skippen via navigatie.
-let visited = {
-    start: true,
-    computer: false,
-    video: false,
-    first_choice: false,
-    stabilizer: false,
-    reddit_post: false,
-    reddit_comments: false,
-    second_choice: false,
-    frames: false,
-    three_d: false,
-    final_choice: false
-}
 
 let counter = 0;
 
@@ -98,8 +85,24 @@ function showNavigation() {
     }
 }
 
-let page = 0;
+let visited = {
+    start: true,
+    computer: false,
+    video: false,
+    first_choice: false,
+    stabilizer: false,
+    reddit_post: false,
+    reddit_comments: false,
+    second_choice: false,
+    frames: false,
+    three_d: false,
+    final_choice: false
+}
 
+visited = JSON.parse(localStorage.getItem("visited_pages"));
+
+let page = 0;
+ 
 window.onload = function() {
     for(const it in visited){
         if (visited[it] == false){
