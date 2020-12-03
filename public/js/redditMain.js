@@ -60,3 +60,11 @@ hideModal.addEventListener("click", function hideModal() {
 backToStart.addEventListener("click", function backToStart(){
     document.location.href = "index.html";
 })
+
+window.addEventListener("orientationchange", function(event) {
+    if(event.target.screen.orientation.angle == 0 || event.target.screen.orientation.angle == 180){
+        modal.style.display = "none";
+    } else {
+        modal.style.display = "flex";
+    }
+});
