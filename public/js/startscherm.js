@@ -9,7 +9,9 @@ const speed = 50;
 const startButton = document.getElementById("js--startButton");
 const hamburger = document.getElementById("js--hamburger");
 const navigation = document.getElementById("js--navigation");
-const list_items = document.getElementsByClassName("navigation__items__choice");
+const navi_text = document.getElementById("js--navigationText");
+const list_links = document.getElementsByClassName("navigation__items__link");
+const list_items = document.getElementsByClassName("navigation__items__link__choice");
 
 function showText(){
     startButton.style.opacity = 0;
@@ -69,6 +71,20 @@ function start() {
 
 // Dit object houd bij op welke pagina's je geweest bent.
 // Dit is om te voorkomen dat de gebruiker pagina's gaat skippen via navigatie.
+
+let counter = 0;
+
+function showNavigation() {
+    counter++;
+    if(counter % 2){
+        navigation.style.opacity = 1;
+        navi_text.style.opacity = 0;
+    } else {
+        navigation.style.opacity = 0;
+        navi_text.style.opacity = 1;
+    }
+}
+
 let visited = {
     start: true,
     computer: false,
@@ -83,37 +99,19 @@ let visited = {
     final_choice: false
 }
 
-let counter = 0;
+visited = JSON.parse(localStorage.getItem("visited_pages"));
 
-function showNavigation() {
-    counter++;
-    if(counter % 2){
-        navigation.style.opacity = 1;
-    } else {
-        navigation.style.opacity = 0;
-    }
-
-    for (const visit in visited) {
-        if(visited[visit] === true){
-            
-        } else {
-            
+let page = 0;
+ 
+window.onload = function() {
+    for(const it in visited){
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
         }
+        page++;
     }
-
-    // for(const it in visited){
-    //     if(it === true){
-    //         console.log("ja is waar");
-    //     } else {
-    //         console.log("nee hoor");
-    //     }
-    // }
-
-    // for(let i = 0; i < list_items.length; i++){
-    //     if(list_items[i].dataset.visited === "false"){
-    //         list_items[i].style.color = "grey";
-    //     }
-    // }
 }
 
 // Hiermee wordt het object in localStorage opgeslagen waarmee het object

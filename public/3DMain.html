@@ -10,29 +10,81 @@
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <section class="title">
-            <h1>3D Analyse</h1>
+        <main>
+            <section class="title">
+                <h1>3D Investigation</h1>
+            </section>
+            <section id="js--tools_bar" class="toolsBar">
+                <h2 id="js--tools_title" class="toolsBar__tool_title">Tools</h2>
+            </section>
+            <section id="js--objects_bar" class="objectsBar">
+                <h2 id="js--obj_title" class="objectsBar__obj_title">Objects</h2>
+    
+                <i id="js--walter" class="objectsBar__walter fas fa-male object tool_object" data-object="walter"></i>
+                <h3 id="js--walter_title" class="objectsBar__walter_name">Walter Scott</h3>
+    
+                <i id="js--michael" class="objectsBar__michael fas fa-male object tool_object" data-object="michael"></i>
+                <h3 id="js--michael_title" class="objectsBar__michael_name">Michael Slager</h3>
+    
+                <img id="js--taser" class="objectsBar__taser object tool_object" src="img/taser.png" alt="taser" data-object="taser">
+                <h3 id="js--taser_title" class="objectsBar__taser_title">Taser</h3>
+    
+                <img id="js--fence" class="objectsBar__fence object tool_object" src="img/fence.png" alt="fence" data-object="fence">
+                <h3 id="js--fence_title" class="objectsBar__fence_title">Fence</h3>
+            </section>
+            <canvas id="c" class="canvas"></canvas>
+            <button class="continue_button" id="continue_button" onclick="nextPage()">Continue</button>
+        </main>
+        <section class="overlay" id="js--overlay"></section>
+        <section class="modal--bg" id="js--modal-bg"></section>
+        <section id="js--modal" class="modal">
+            <section class="modal__content">
+                <h1 class="modal__content__title">The 3D Investigation</h1>
+                <p class="modal__content__text">Now that I looked through the frames, I should recreate the crime scene in 3D and see if I find anything unusual about the case...</p>
+                <button id="js--modalButton" class="modal__content__button">Let's get to it!</button>
+            </section>
         </section>
-        <section id="js--tools_bar" class="toolsBar">
-            <h2 id="js--tools_title" class="toolsBar__tool_title">Tools</h2>
+        <section class="navigation">
+            <section id="js--hamburger" class="navigation__menu">
+                <i class="navigation__hamburger fa fa-bars"></i>
+                <p id="js--navigationText" class="navigation__text">Navigation</p>
+            </section>
+            <ul id="js--navigation" class="navigation__items">
+                <a href="index.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Start</li>
+                </a>
+                <a href="computerOpstarten.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Start Computer</li>
+                </a>
+                <a href="videoPlayer.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Play Video</li>
+                </a>
+                <a href="eersteUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">First Choice</li>
+                </a>
+                <a href="videoStabilizer.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Stabilizing Video</li>
+                </a>
+                <a href="redditPost.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Post to Reddit</li>
+                </a>
+                <a href="Reddit-comments.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Read Reddit Comments</li>
+                </a>
+                <a href="tweedeUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Second Choice</li>
+                </a>
+                <a href="Frames-doorlopen.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Analyze Frames</li>
+                </a>
+                <a href="3DMain.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">3D Research</li>
+                </a>
+                <a href="laatsteUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Final Choice</li>
+                </a>
+            </ul> 
         </section>
-        <section id="js--objects_bar" class="objectsBar">
-            <h2 id="js--obj_title" class="objectsBar__obj_title">Objects</h2>
-
-            <i id="js--walter" class="objectsBar__walter fas fa-male object tool_object" data-object="walter"></i>
-            <h3 id="js--walter_title" class="objectsBar__walter_name">Walter Scott</h3>
-
-            <i id="js--michael" class="objectsBar__michael fas fa-male object tool_object" data-object="michael"></i>
-            <h3 id="js--michael_title" class="objectsBar__michael_name">Michael Slager</h3>
-
-            <img id="js--taser" class="objectsBar__taser object tool_object" src="img/taser.png" alt="taser" data-object="taser">
-            <h3 id="js--taser_title" class="objectsBar__taser_title">Taser</h3>
-
-            <img id="js--fence" class="objectsBar__fence object tool_object" src="img/fence.png" alt="fence" data-object="fence">
-            <h3 id="js--fence_title" class="objectsBar__fence_title">Fence</h3>
-        </section>
-        <canvas id="c" class="canvas"></canvas>
-        <button class="continue_button" id="continue_button" onclick="nextPage()">Continue</button>
         <script type="module" src="./js/3DMain.js"></script>
         <script src="./js/font-awesome/font-awesome.js"></script>
     </body>

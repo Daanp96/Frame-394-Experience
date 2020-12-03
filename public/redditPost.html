@@ -8,38 +8,41 @@
         <link rel="stylesheet" href="./css/redditPost.css">
         <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a0fb268ae6.js"></script>
     </head>
     <body>
-        <main id="js--reddit_page" class="reddit_page">
-            <header>
-                <picture>
-                    <source media="(max-width: 500px)" srcset="img/header_reddit_mobile.webp">
-                    <source media="(max-width: 501px)" srcset="img/header_reddit_desktop.webp">
-                    <img class="reddit_page__header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
-                </picture>
-            </header>
-            <section class="reddit_page__reddit_post">
-                <h2 class="reddit_page__reddit_post__create">Create post</h2>
-                <img class="reddit_page__reddit_post__community" src="img/reddit_com.webp" alt="reddit_community">
-                <section class="reddit_page__reddit_post__inputs">
-                    <input id="js--title" class="reddit_page__reddit_post__inputs__title" placeholder="Title">
-                    <section class="reddit_page__reddit_post__inputs__gif">
-                        <section id="js--upload_group" class="reddit_page__reddit_post__inputs__gif__group">
-                            <h3 class="reddit_page__reddit_post__inputs__gif__group__text">Drag and drop images or </h3> 
-                            <button id="js--gif_input" class="reddit_page__reddit_post__inputs__gif__group__button">UPLOAD</button>
+        <main class="border">
+            <section id="js--reddit_page" class="reddit_page">
+                <header>
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="img/header_reddit_mobile.webp">
+                        <source media="(max-width: 501px)" srcset="img/header_reddit_desktop.webp">
+                        <img class="reddit_page__header_reddit" src="img/header_reddit_desktop.png" alt="reddit_header">
+                    </picture>
+                </header>
+                <section class="reddit_page__reddit_post">
+                    <h2 class="reddit_page__reddit_post__create">Create post</h2>
+                    <img class="reddit_page__reddit_post__community" src="img/reddit_com.webp" alt="reddit_community">
+                    <section class="reddit_page__reddit_post__inputs">
+                        <input id="js--title" class="reddit_page__reddit_post__inputs__title" placeholder="Title">
+                        <section class="reddit_page__reddit_post__inputs__gif">
+                            <section id="js--upload_group" class="reddit_page__reddit_post__inputs__gif__group">
+                                <h3 class="reddit_page__reddit_post__inputs__gif__group__text">Drag and drop images or </h3> 
+                                <button id="js--gif_input" class="reddit_page__reddit_post__inputs__gif__group__button">UPLOAD</button>
+                            </section>
+                            <img id="js--gif" class="reddit_page__reddit_post__inputs__gif__img" src="./img/taser_plant.gif" alt="taser_gif">
                         </section>
-                        <img id="js--gif" class="reddit_page__reddit_post__inputs__gif__img" src="./img/taser_plant.gif" alt="taser_gif">
-                    </section>
-                    <section class="reddit_page__reddit_post__inputs__buttons">
-                        <button id="js--cancel" class="reddit_page__reddit_post__inputs__buttons__cancel">CANCEL</button>
-                        <button id="js--post" class="reddit_page__reddit_post__inputs__buttons__post">POST</button>
+                        <section class="reddit_page__reddit_post__inputs__buttons">
+                            <button id="js--cancel" class="reddit_page__reddit_post__inputs__buttons__cancel">CANCEL</button>
+                            <button id="js--post" class="reddit_page__reddit_post__inputs__buttons__post">POST</button>
+                        </section>
                     </section>
                 </section>
-            </section>
+            </main>
             <footer>
                 <p class="reddit_page__school_project">THIS IS A SCHOOL PROJECT</p>
             </footer>
-        </main>
+        </section>
         <section id="js--popup" class="popup">
             <section class="popup__window scale-in-center">
                 <section id="js--gif_file" class="popup__window__group">
@@ -54,6 +57,47 @@
                 <p class="error_window__content__text" id="js--errorText"></p>
                 <button class="error_window__content__button" id="js--errorButton">Go back</button>
             </section>
+        </section>
+        <section class="navigation">
+            <section id="js--hamburger" class="navigation__menu">
+                <i class="navigation__hamburger fa fa-bars"></i>
+                <p id="js--navigationText" class="navigation__text">Navigation</p>
+            </section>
+            <ul id="js--navigation" class="navigation__items">
+                <a href="index.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Start</li>
+                </a>
+                <a href="computerOpstarten.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Start Computer</li>
+                </a>
+                <a href="videoPlayer.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Play Video</li>
+                </a>
+                <a href="eersteUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">First Choice</li>
+                </a>
+                <a href="videoStabilizer.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Stabilizing Video</li>
+                </a>
+                <a href="redditPost.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Post to Reddit</li>
+                </a>
+                <a href="Reddit-comments.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Read Reddit Comments</li>
+                </a>
+                <a href="tweedeUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Second Choice</li>
+                </a>
+                <a href="Frames-doorlopen.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Analyze Frames</li>
+                </a>
+                <a href="3DMain.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">3D Research</li>
+                </a>
+                <a href="laatsteUitspraak.html" class="navigation__items__link">
+                    <li class="navigation__items__link__choice" data-visited="true">Final Choice</li>
+                </a>
+            </ul> 
         </section>
         <div class="overlay" id="js--overlay"></div>
         <script type="module" src="./js/redditMain.js"></script>

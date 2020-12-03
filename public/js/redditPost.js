@@ -17,7 +17,6 @@ let post_title = "";
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.reddit_post = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
-console.log(visited);
 
 const openGifWindow = () => {
   gif_upload.addEventListener("click", (e) => {
@@ -71,9 +70,21 @@ const closeError = () => {
   });
 }
 
+const list_links = document.getElementsByClassName("navigation__items__link");
+const list_items = document.getElementsByClassName("navigation__items__link__choice");
+let page = 0;
+
 window.onload = function() {
   overlay.style.opacity = "0";
   setTimeout(function(){overlay.style.zIndex = "-10";}, 2500);
+  for(const it in visited){
+    if (visited[it] == false){
+        list_items[page].style.color = "grey";
+        list_items[page].style.cursor = "default";
+        list_links[page].removeAttribute("href");
+    }
+    page++;
+  }
 }
 
 export {

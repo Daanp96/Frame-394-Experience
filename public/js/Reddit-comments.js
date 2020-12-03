@@ -5,7 +5,6 @@ const button = document.getElementById("js--next-page");
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.reddit_comments = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
-console.log(visited);
 
 function respond(n){
     let p = document.getElementById("js--respond-"+n);
@@ -47,4 +46,47 @@ getTitle();
 
 function Continue(){
     window.location.href = "tweedeUitspraak.html"
+}
+
+const hamburger = document.getElementById("js--hamburger");
+const navigation = document.getElementById("js--navigation");
+const navi_text = document.getElementById("js--navigationText");
+const list_links = document.getElementsByClassName("navigation__items__link");
+const list_items = document.getElementsByClassName("navigation__items__link__choice");
+const overlay = document.getElementById("js--overlay");
+let counter = 0;
+let page = 0;
+
+hamburger.addEventListener("click", () => {
+    counter++;
+    if(counter % 2){
+        navigation.style.opacity = 1;
+        navi_text.style.opacity = 0;
+        overlay.style.zIndex = 1;
+        overlay.style.opacity = 0.8;
+        setTimeout(() => {
+            navigation.style.display = "block";
+        });
+    } else {
+        navigation.style.opacity = 0;
+        navi_text.style.opacity = 1;
+        overlay.style.opacity = 0;
+        hamburger.style.pointerEvents = "none";
+        setTimeout(() => {
+            overlay.style.zIndex = -1;
+            navigation.style.display = "none";
+            hamburger.style.pointerEvents = "auto";
+        }, 1000);
+    }
+});
+
+window.onload = function() {
+    for(const it in visited){
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
+        }
+        page++;
+    }
 }
