@@ -9,7 +9,6 @@ Reddit.closeError();
 const hamburger = document.getElementById("js--hamburger");
 const navigation = document.getElementById("js--navigation");
 const navi_text = document.getElementById("js--navigationText");
-const list_items = document.getElementsByClassName("navigation__items__link__choice");
 const overlay = document.getElementById("js--overlay");
 let counter = 0;
 
@@ -27,16 +26,11 @@ hamburger.addEventListener("click", () => {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
         overlay.style.opacity = 0;
+        hamburger.style.pointerEvents = "none";
         setTimeout(() => {
             overlay.style.zIndex = -1;
             navigation.style.display = "none";
+            hamburger.style.pointerEvents = "auto";
         }, 1000);
-    }
-
-    for(let i = 0; i < list_items.length; i++){
-        if(list_items[i].dataset.visited === "false"){
-            list_items[i].style.color = "grey";
-            list_items[i].style.cursor = "default";
-        }
     }
 });

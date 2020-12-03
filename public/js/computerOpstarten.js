@@ -110,7 +110,6 @@ window.onload = function() {
     }, 5000)
 
     for(const it in visited){
-        console.log(it + ": " + visited[it]);
         if (visited[it] == false){
             list_items[page].style.color = "grey";
             list_items[page].style.cursor = "default";

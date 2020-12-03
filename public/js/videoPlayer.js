@@ -7,7 +7,6 @@ const overlay = document.getElementById("js--overlay");
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.video = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
-console.log(visited);
 
 function playVideo() {
     viewDiscr.style.animation = "slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
@@ -44,8 +43,10 @@ function nextPage() {
 const hamburger = document.getElementById("js--hamburger");
 const navigation = document.getElementById("js--navigation");
 const navi_text = document.getElementById("js--navigationText");
+const list_links = document.getElementsByClassName("navigation__items__link");
 const list_items = document.getElementsByClassName("navigation__items__link__choice");
 let counter = 0;
+let page = 0;
 
 function showNavigation() {
     counter++;
@@ -58,15 +59,21 @@ function showNavigation() {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
         overlay.style.opacity = 0;
+        hamburger.style.pointerEvents = "none";
         setTimeout(() => {
             overlay.style.zIndex = -1;
+            hamburger.style.pointerEvents = "auto";
         }, 1000);
     }
+}
 
-    for(let i = 0; i < list_items.length; i++){
-        if(list_items[i].dataset.visited === "false"){
-            list_items[i].style.color = "grey";
-            list_items[i].style.cursor = "default";
+window.onload = function() {
+    for(const it in visited){
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
         }
+        page++;
     }
 }

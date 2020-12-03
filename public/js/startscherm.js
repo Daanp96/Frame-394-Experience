@@ -10,6 +10,7 @@ const startButton = document.getElementById("js--startButton");
 const hamburger = document.getElementById("js--hamburger");
 const navigation = document.getElementById("js--navigation");
 const navi_text = document.getElementById("js--navigationText");
+const list_links = document.getElementsByClassName("navigation__items__link");
 const list_items = document.getElementsByClassName("navigation__items__link__choice");
 
 function showText(){
@@ -95,28 +96,18 @@ function showNavigation() {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
     }
+}
 
-    for(let i = 0; i < list_items.length; i++){
-        if(list_items[i].dataset.visited === "false"){
-            list_items[i].style.color = "grey";
-            list_items[i].style.cursor = "default";
-        }
-    }
+let page = 0;
 
-    // for (const visit in visited) {
-    //     if( === true){
-            
-    //     } else {
-            
-    //     }
-    // }
-
+window.onload = function() {
     for(const it in visited){
-        if(it == true){
-            console.log(it);
-        } else {
-            console.log(visited[it]);
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
         }
+        page++;
     }
 }
 

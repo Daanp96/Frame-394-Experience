@@ -20,7 +20,6 @@ const fenceTitle = document.getElementById("js--fence_title");
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.three_d = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
-console.log(visited);
 
 toolsBar.addEventListener('click', () => {
     toolsBar.style.width = "15rem";
@@ -68,9 +67,11 @@ continueButton.addEventListener('click', () => {
 const hamburger = document.getElementById("js--hamburger");
 const navigation = document.getElementById("js--navigation");
 const navi_text = document.getElementById("js--navigationText");
+const list_links = document.getElementsByClassName("navigation__items__link");
 const list_items = document.getElementsByClassName("navigation__items__link__choice");
 const overlay = document.getElementById("js--overlay");
 let counter = 0;
+let page = 0;
 
 hamburger.addEventListener("click", () => {
     
@@ -87,19 +88,25 @@ hamburger.addEventListener("click", () => {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
         overlay.style.opacity = 0;
+        hamburger.style.pointerEvents = "none";
         setTimeout(() => {
             overlay.style.zIndex = -1;
             navigation.style.display = "none";
+            hamburger.style.pointerEvents = "auto";
         }, 1500);
     }
-
-    for(let i = 0; i < list_items.length; i++){
-        if(list_items[i].dataset.visited === "false"){
-            list_items[i].style.color = "grey";
-            list_items[i].style.cursor = "default";
-        }
-    }
 });
+
+window.onload = function() {
+    for(const it in visited){
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
+        }
+        page++;
+    }
+}
 
 const modal_button = document.getElementById("js--modalButton");
 const modal = document.getElementById("js--modal");
