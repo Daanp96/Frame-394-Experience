@@ -55,6 +55,9 @@ function showNavigation() {
         navi_text.style.opacity = 0;
         overlay.style.zIndex = 1;
         overlay.style.opacity = 0.8;
+        setTimeout(() => {
+            navigation.style.display = "block";
+        });
     } else {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
@@ -62,6 +65,7 @@ function showNavigation() {
         hamburger.style.pointerEvents = "none";
         setTimeout(() => {
             overlay.style.zIndex = -1;
+            navigation.style.display = "none";
             hamburger.style.pointerEvents = "auto";
         }, 1000);
     }

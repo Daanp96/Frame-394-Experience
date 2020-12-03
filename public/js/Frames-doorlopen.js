@@ -90,26 +90,26 @@ let counter = 0;
 let page = 0;
 
 hamburger.addEventListener("click", () => {
-    counter++;
-    if(counter % 2){
-        navigation.style.opacity = 1;
-        navi_text.style.opacity = 0;
-        overlay.style.zIndex = 1;
-        overlay.style.opacity = 0.8;
-        setTimeout(() => {
-            navigation.style.display = "block";
-        }, 1000);
-    } else {
-        navigation.style.opacity = 0;
-        navi_text.style.opacity = 1;
-        overlay.style.opacity = 0;
-        hamburger.style.pointerEvents = "none";
-        setTimeout(() => {
-            overlay.style.zIndex = -1;
-            navigation.style.display = "none";
-            hamburger.style.pointerEvents = "auto";
-        }, 1000);
-    }
+  counter++;
+  if(counter % 2){
+      navigation.style.display = "block";
+      navi_text.style.opacity = 0;
+      overlay.style.zIndex = 1;
+      overlay.style.opacity = 0.8;
+      setTimeout(() => {
+          navigation.style.opacity = 1;
+      }, 100);
+  } else {
+      navigation.style.opacity = 0;
+      navi_text.style.opacity = 1;
+      overlay.style.opacity = 0;
+      hamburger.style.pointerEvents = "none";
+      setTimeout(() => {
+          overlay.style.zIndex = -1;
+          navigation.style.display = "none";
+          hamburger.style.pointerEvents = "auto";
+      }, 1000);
+  }
 });
 
 const modal = document.getElementById("js--modal");

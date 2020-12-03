@@ -98,6 +98,9 @@ hamburger.addEventListener("click", () => {
 });
 
 window.onload = function() {
+    overlay.style.opacity = "0";
+    setTimeout(function(){overlay.style.zIndex = "-10";}, 1500);
+
     for(const it in visited){
         if (visited[it] == false){
             list_items[page].style.color = "grey";
