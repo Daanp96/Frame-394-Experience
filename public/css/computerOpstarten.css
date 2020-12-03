@@ -336,7 +336,7 @@ main {
 
 .desk {
     position: absolute;
-    z-index: -5;
+    z-index: -1;
     overflow: hidden;
     height: 10rem;
     width: 100vw;
@@ -363,8 +363,9 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: 1rem;
-    left: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     border: none;
     background-color: transparent;
     padding: .4rem .2rem;
@@ -665,7 +666,7 @@ main {
     left: 5rem;
     display: inherit;
     font-family: 'Teko', sans-serif;
-    z-index: 2;
+    z-index: 20;
 }
 
 .navigation__menu{

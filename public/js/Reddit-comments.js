@@ -79,6 +79,7 @@ hamburger.addEventListener("click", () => {
     for(let i = 0; i < list_items.length; i++){
         if(list_items[i].dataset.visited === "false"){
             list_items[i].style.color = "grey";
+            list_items[i].style.cursor = "default";
         }
     }
 });
