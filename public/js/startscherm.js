@@ -85,44 +85,30 @@ function showNavigation() {
     }
 }
 
-let visited = JSON.parse(localStorage.getItem("visited_pages"));
+let visited = {
+    start: true,
+    computer: false,
+    video: false,
+    first_choice: false,
+    stabilizer: false,
+    reddit_post: false,
+    reddit_comments: false,
+    second_choice: false,
+    frames: false,
+    three_d: false,
+    final_choice: false
+}
 
 let page = 0;
  
 window.onload = function() {
-    console.log(visited);
-    if(visited){
-        for(const it in visited){
-            if (visited[it] == false){
-                list_items[page].style.color = "grey";
-                list_items[page].style.cursor = "default";
-                list_links[page].removeAttribute("href");
-            }
-            page++;
+    for(const it in visited){
+        if (visited[it] == false){
+            list_items[page].style.color = "grey";
+            list_items[page].style.cursor = "default";
+            list_links[page].removeAttribute("href");
         }
-    } else {
-        visited = {
-            start: true,
-            computer: false,
-            video: false,
-            first_choice: false,
-            stabilizer: false,
-            reddit_post: false,
-            reddit_comments: false,
-            second_choice: false,
-            frames: false,
-            three_d: false,
-            final_choice: false
-        }
-        
-        for(const it in visited){
-            if (visited[it] == false){
-                list_items[page].style.color = "grey";
-                list_items[page].style.cursor = "default";
-                list_links[page].removeAttribute("href");
-            }
-            page++;
-        }
+        page++;
     }
 }
 
