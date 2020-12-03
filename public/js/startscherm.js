@@ -115,7 +115,7 @@ function showNavigation() {
         if(it == true){
             console.log(it);
         } else {
-            console.log("bic");
+            console.log(visited[it]);
         }
     }
 }
