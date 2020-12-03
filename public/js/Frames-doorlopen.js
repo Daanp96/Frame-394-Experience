@@ -1,97 +1,59 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+//document.addEventListener("DOMContentLoaded", function(event) { 
     //maak de door en terug knop aan
   const prev = document.getElementById("js--prev");
   const next = document.getElementById("js--next");
   const button = document.getElementById("js--end-button");
+  const taser = document.getElementById("js--taser");
+  const taserText = document.getElementById("js--taser-text");
+  const frameNumber = document.getElementById("js--frame-number")
+  const framePic = document.getElementById("js--frame-picture")
+  const popupBg = document.getElementById("js--popup-bg");
+  const popup = document.getElementById("js--popup");
+  let frame = 392;
 
+  function readComments() { 
+    popupBg.style.display = "none";
+    popup.style.display = "none";
+  }
+  
   // maak de terugknop klikbaar
   prev.addEventListener("click", function(){
-    showPreviousSlide(1);
+    // showPreviousSlide(1);
+    frame -= 1;
+    if (frame < 392) {
+      frame = 406;
+    }
+    if (frame == 394) {
+      taser.style.display = "block";
+    } else {taser.style.display = "none";}
+    frameNumber.innerHTML = "Frame #" + frame;
+    framePic.setAttribute("src", "./webp/frame-" + frame + ".webp")
+    taserText.style.display = "none";
   });
 
   // maak de doorknop klikbaaar
   next.addEventListener("click", function(){
-    showNextSlides(1);
+    // showNextSlides(1);
+    prev.style.display = "block";
+    frame += 1;
+    if (frame > 406) {
+      frame = 392;
+    }
+    frameNumber.innerHTML = "Frame #" + frame;
+    framePic.setAttribute("src", "./webp/frame-" + frame + ".webp")
+    if (frame == 394) {
+      taser.style.display = "block";
+    } else {taser.style.display = "none";}
+    if (frame == 406) {
+      button.style.display = "flex";
+    }
+    taserText.style.display = "none";
   });
 
-  
-
-  function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let l = (n - 1);
-    let m = (n + 1);
-    let z = (slides.length - 1)
-    if (n > 13) {
-     button.style.display = "flex";
-    }
-    if( n < slides.length){
-      slides[n].style.display = 'block';
-      slides[l].style.display = "none";
-      slides[m].style.display = "none";
-      slides[z].style.display = "none";
-    } else{
-      reset(); 
-    }
-      
-    }
-
-  
-
-  
-  let slideIndex = 0;
-  showSlides(slideIndex);
-
-  
-// De doorknop zegt toon dia(1 terug)
-  function showPreviousSlide(n){
-    slideIndex = slideIndex - n;
-    showSlidesReversed(slideIndex);
-    
-    
-  }
-
-  // De doorknop zegt toon dia(1 verder dan nu)
-  function showNextSlides(n) {
-    slideIndex = slideIndex + n;
-    showSlides(slideIndex);
-  
-  }
-
-  function showSlidesReversed(n){
-    let slides = document.getElementsByClassName("mySlides");
-    let l = (n -1);
-    let m = (n + 1);
-    let z = (0)
-    
-    //var dots = document.getElementsByClassName("dot");
-    if( n < 0){
-      reset2(); 
-    } else{
-      slides[n].style.display = 'block';
-      slides[m].style.display = "none";
-     // slides[z].style.display = "none";
-      
-    }    
-  }
-
-  function reset(){
-    slideIndex = 0;
-    let slides = document.getElementsByClassName("mySlides");
-    let z = (slides.length - 1)
-    slides[z].style.display = 'none';
-    showSlides(slideIndex);
-    
-  }
-
-  function reset2(){
-    let slides = document.getElementsByClassName("mySlides");
-    let z = 0;
-    slides[z].style.display = 'none';
-    slideIndex = (slides.length -1);
-    showSlidesReversed(slideIndex);
-  }
-
-});
+  //maakt de taser in frame 394 klikbaar
+  taser.addEventListener("click", function(){
+    taserText.style.display = "block";
+  })
 
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.frames = true;

@@ -586,3 +586,29 @@ main {
         top: 3rem;
     }
 }
+
+@supports not (width: 100vw){
+    .title{
+        width: 100%;
+    }
+
+    .news-wrapper{
+        width: 100%;
+        height: 100%;
+    }
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+    }
+
+    .turnScreen{
+        width: 100%;
+        height: 100%;
+    }
+
+    .turnScreen__bg{
+        width: 100%;
+        height: 100%;
+    }
+}

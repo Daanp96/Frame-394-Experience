@@ -259,3 +259,40 @@ main{
         overflow: -moz-hidden-unscrollable;
     }
 }
+
+@supports not (height: 100vw){
+    main{
+        height: 100%;
+        width: 100%;
+    }
+
+    .background{
+        height: 100%;
+        width: 100%;
+    }
+
+    .background > img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .background__shade{
+        height: 100%;
+        width: 100%;
+    }
+
+    .overlay{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen__bg{
+        height: 100%;
+        width: 100%;
+    }
+}

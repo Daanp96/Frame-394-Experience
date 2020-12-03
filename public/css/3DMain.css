@@ -348,3 +348,17 @@ canvas {
     box-shadow: inset .2rem .2rem .2rem rgba(0, 0, 0, .5);
     text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
 }
+
+@supports not (height: 100vh){
+    .toolsBar{
+        height: 100%;
+    }
+
+    .objectsBar{
+        height: 100%;
+    }
+
+    .canvas{
+        height: 100%;
+    }
+}

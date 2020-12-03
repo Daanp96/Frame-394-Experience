@@ -1,6 +1,8 @@
 const gif = document.getElementById("js--gif");
 let titleReddit = document.getElementById("js--title_post");
 const button = document.getElementById("js--next-page");
+const viewDiscr = document.getElementById("js--viewDiscr");
+const viewDiscrBg = document.getElementById("js--viewDiscr-bg");
 
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.reddit_comments = true;
@@ -17,10 +19,12 @@ function enableComment(n){
     let input = document.getElementById("input-comment-"+n).value;
     let result = document.getElementById("result-"+n);
     let form = document.getElementById("js--form-"+n);
+    
 
     if (input.length < 1) {
         result.textContent = 'Your answer is empty';
     } else {
+        result.style.display = "block";
         result.textContent = "VideoAnalyser420: " + input;
     }
     form.style.display = "none";
@@ -43,6 +47,12 @@ function getTitle(){
 }
 
 getTitle();
+
+
+function readComments() {
+    viewDiscr.style.display = "none";
+    viewDiscrBg.style.display = "none";
+}
 
 function Continue(){
     window.location.href = "tweedeUitspraak.html"

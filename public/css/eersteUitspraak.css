@@ -353,3 +353,19 @@ main {
         top: 3rem;
     }
 }
+
+@supports not (height: 100vh){
+    .title{
+        height: 100%;
+    }
+
+    .turnScreen{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen__bg{
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -365,3 +365,24 @@ main {
     opacity: 0;
     transition: opacity 3s;
 }
+
+@supports not (width: 100vw){
+    .title{
+        width: 100%;
+    }
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+    }
+
+    .turnScreen{
+        width: 100%;
+        height: 100%;
+    }
+
+    .turnScreen__bg{
+        width: 100%;
+        height: 100%;
+    }
+}

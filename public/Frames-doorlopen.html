@@ -11,12 +11,26 @@
     </head>
     <body>
         <main>
+            <section class="popup__bg" id="js--popup-bg"></section>
+            <section class="popup" id="js--popup">
+                <h1 class="popup__text__h1">Frames Selection</h1>
+                <p class="popup__text">There has to be a reason that cop acted the way he did.</p>
+                <p class="popup__text">Perhaps if I took another look at the video.</p>
+                <p class="popup__text">Maybe if I went frame-by-frame?</p>
+                <section >
+                    <button class="popup__buttons" onclick="readComments()">Continue</button>
+                </section>
+            </section>
+
             <section class="slideshow-container">
                 <section class="mySlides fade">
-                    <section class="frame-nummer"> Frame #392</section>
-                    <img class="img" src="./webp/frame-392.webp" alt="een afbeelding van het 392ste frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="frame-nummer" id="js--frame-number"> Frame #392</section>
+                    <img class="img" id="js--frame-picture" src="./webp/frame-392.webp" alt="een afbeelding van een frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="clickable-object" id="js--taser">
+                        <p class="taserText" id="js--taser-text">Taser</p>
+                    </section>
                 </section>
-
+<!-- 
                 <section class="mySlides fade">
                     <section class="frame-nummer"> Frame #393</section>
                     <img class="img" src="./webp/frame-393.webp" alt="een afbeelding van het 393ste frame van de video waarin Walter Scott wordt neergeschoten" >
@@ -25,6 +39,7 @@
                 <section class="mySlides fade">
                     <section class="frame-nummer"> Frame #394</section>
                     <img class="img" src="./webp/frame-394.webp" alt="een afbeelding van het 394ste frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="clickable-object" id="js--taser"></section>
                 </section>
 
                 <section class="mySlides fade">
@@ -85,9 +100,9 @@
                 <section class="mySlides fade">
                     <section class="frame-nummer"> Frame #406</section>
                     <img class="img" src="./webp/frame-406.webp" alt="een afbeelding van het 406ste frame van de video waarin Walter Scott wordt neergeschoten" >
-                    <button id="js--end-button" class="end-button" onclick="nextPage()">Continue</button>
-                </section>
+                </section> -->
 
+                <button id="js--end-button" class="end-button" onclick="nextPage()">Continue</button>
                 <a id="js--prev" class="prev-button">&#10094;</a>
                 <a id="js--next" class="next-button">&#10095;</a>
             </section>
@@ -136,6 +151,6 @@
                 </ul> 
             </section>
         </main>
-        <script src="./js/Frames-doorlopen.js"></script>
+        <script type="text/javascript" src="./js/Frames-doorlopen.js"></script>
     </body>
 </html>

@@ -444,3 +444,19 @@ button{
         top: 3rem;
     }
 }
+  
+@supports not (width: 100vw){
+    .reddit_post__community{
+        width: 40%;
+    }
+
+    .upload_popup{
+        width: 90%;
+        height: 50%;
+    }
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+    }
+}

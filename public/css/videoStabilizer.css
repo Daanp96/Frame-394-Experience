@@ -361,3 +361,24 @@ main{
         top: 3rem;
     }
 }
+
+@supports not (width: 100vw){
+    main{
+        height: 100%;
+    }
+
+    .overlay{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen{
+        height: 100%;
+        width: 100%;
+    }
+
+    .turnScreen__bg{
+        height: 100%;
+        width: 100%;
+    }
+}
