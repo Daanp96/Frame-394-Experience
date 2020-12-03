@@ -103,20 +103,20 @@ function showNavigation() {
     }
 
     // for (const visit in visited) {
-    //     if(visited[visit] === true){
+    //     if( === true){
             
     //     } else {
             
     //     }
     // }
 
-    // for(const it in visited){
-    //     if(it === true){
-    //         console.log("ja is waar");
-    //     } else {
-    //         console.log("nee hoor");
-    //     }
-    // }
+    for(const it in visited){
+        if(it == true){
+            console.log(it);
+        } else {
+            console.log("bic");
+        }
+    }
 }
 
 // Hiermee wordt het object in localStorage opgeslagen waarmee het object

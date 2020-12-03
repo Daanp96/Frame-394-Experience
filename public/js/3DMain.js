@@ -5,6 +5,7 @@ import * as ThreeD from "./3D_analyse.js";
 ThreeD.main();
 
 const toolsBar = document.getElementById("js--tools_bar");
+const toolTitle = document.getElementById("js--tools_title");
 const objectsBar = document.getElementById("js--objects_bar");
 const walterScott = document.getElementById("js--walter");
 const walterTitle = document.getElementById("js--walter_title");
@@ -19,13 +20,12 @@ const fenceTitle = document.getElementById("js--fence_title");
 const visited = JSON.parse(localStorage.getItem("visited_pages"));
 visited.three_d = true;
 localStorage.setItem('visited_pages', JSON.stringify(visited));
+console.log(visited);
 
-const handleTools = () => {
-    toolsBar.addEventListener('click', (e) => {
-        // doet helaas niets :(
-    });
-}
-
+toolsBar.addEventListener('click', () => {
+    toolsBar.style.width = "15rem";
+    toolTitle.style.opacity = "0";
+});
 
 let counted = 0;
 
@@ -73,15 +73,16 @@ const overlay = document.getElementById("js--overlay");
 let counter = 0;
 
 hamburger.addEventListener("click", () => {
+    
     counter++;
     if(counter % 2){
-        navigation.style.opacity = 1;
         navi_text.style.opacity = 0;
+        navigation.style.display = "block";
         overlay.style.zIndex = 1;
         overlay.style.opacity = 0.8;
         setTimeout(() => {
-            navigation.style.display = "block";
-        });
+            navigation.style.opacity = 1;
+        }, 100);
     } else {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
