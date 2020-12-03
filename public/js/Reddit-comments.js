@@ -15,10 +15,12 @@ function enableComment(n){
     let input = document.getElementById("input-comment-"+n).value;
     let result = document.getElementById("result-"+n);
     let form = document.getElementById("js--form-"+n);
+    
 
     if (input.length < 1) {
         result.textContent = 'Your answer is empty';
     } else {
+        result.style.display = "block";
         result.textContent = "VideoAnalyser420: " + input;
     }
     form.style.display = "none";
@@ -46,8 +48,8 @@ getTitle();
 function readComments() {
     viewDiscr.style.display = "none";
     viewDiscrBg.style.display = "none";
-    continueButton.style.display = "none";
 }
+
 function Continue(){
     window.location.href = "tweedeUitspraak.html"
 }

@@ -34,6 +34,17 @@ p{
     color: var(--reddit_white);
 }
 
+.grid-container__page-wrapper__comments-container__comments-item__username{
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    
+}
+
+.grid-container__page-wrapper__comments-container__comments-item__comment{
+    padding-bottom: 0.2rem;
+    font-size: 1.1rem;
+}
+
 label{
     color: var(--reddit_white);
     font-size: 0.7rem;
@@ -66,6 +77,7 @@ label{
 
 .grid-container__page-wrapper__posts-container__post-items{
     background-color: var(--reddit_input_border);
+    position: relative;
 }
 
 .grid-container__page-wrapper__posts-container__post-items__gif{
@@ -112,26 +124,69 @@ label{
 
 
 .grid-container__page-wrapper__comments-container__comments-item__like-button{
-    height: 5vh;
-    width: 5vw;
+    height: 1rem;
+    width: 1rem;
     cursor: pointer;
 }
 
 .grid-container__page-wrapper__comments-container__comments-item__respond{
-    height: 5vh;
-    width: 5vw;
+    height: 1rem;
+    width: 2rem;
     cursor: pointer;
+}
+
+.sub-button{
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_white);
+    color: var(--reddit_white);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: "Verdana", sans-serif;
+}
+
+.grid-container__page-wrapper__comments-container__comments-item__form__recomment__input{
+    font-family: "Verdana", sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_input_border);
+    color: var(--reddit_white);
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.grid-container__page-wrapper__comments-container__comments-item__form__recomment__output{
+    font-family: "Verdana", sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_input_border);
+    color: var(--reddit_white);
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 90%;
+    display: none;
 }
 
 .grid-container__page-wrapper__comments-container__comments-item__form{
     display: none;
+    font-family: "Verdana", sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--reddit_background);
+    border: 1px solid var(--reddit_input_border);
+    color: var(--reddit_white);
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 90%;
 }
 
 .viewDiscr-bg {
     position: absolute;
     z-index: 1;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: black;
     opacity: .8;
     transition: opacity 1s;
@@ -139,12 +194,12 @@ label{
 
 .viewDiscr {
     position: absolute;
-    left: 30%;
-    top: 35%;
+    left: 10%;
+    top: 15%;
     z-index: 2;
     background-color: var(--bg-color);
-    width: 40vw;
-    height: 30%;
+    width: 80vw;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,12 +212,13 @@ label{
 .viewDiscr__text{
     font-family: 'Teko','sans-serif';
     color: var(--font-color);
-    padding: 0.1rem;
+    margin: 0.5rem;
 }
 
 .viewDiscr__text__h1{
     font-size: 2rem;
     color: var(--highlight-color);
+    margin: 1rem;
 }
 
 .viewDiscr__buttons{
