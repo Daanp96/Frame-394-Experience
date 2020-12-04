@@ -88,7 +88,7 @@ position: absolute;
 top: 0;
 }
 
-.frame-nummer > p {
+.slideshow__slide__number > p {
     font-size: 2rem;
     font-family: 'Teko', sans-serif;
 }
@@ -363,12 +363,13 @@ animation-duration: 1.5s;
 
 .popup {
     position: absolute;
-    left: 10%;
-    top: 15%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
     background-color: var(--bg-color);
-    width: 80vw;
-    height: 70%;
+    width: 50rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,8 +401,8 @@ animation-duration: 1.5s;
     border-radius: .5rem;
     box-shadow: .2rem .2rem .4rem black;
     box-sizing: content-box;
-    margin: .3rem;
-    padding: .5rem;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
 }
 
 .popup__buttons:hover{
