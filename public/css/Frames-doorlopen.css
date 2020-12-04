@@ -110,18 +110,19 @@ animation-duration: 1.5s;
 }
 
 .slideshow__slide__end{
-    width: 20%;
-    height: 10%;
+    width: 15rem;
+    height: 5rem;
     position: absolute;
     color: var(--font-color);
     background-color: var(--accent--color);
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 5%;
     cursor: pointer;
     display: none;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 1rem;
     font-size: 2rem;
     border: none;
     font-family: 'Teko', sans-serif;
@@ -447,11 +448,6 @@ animation-duration: 1.5s;
     .slideshow__slide__img{
         height: 100vh;
         width: 100vw;
-    }
-
-    .slideshow__slide__end{
-        height: 10vh;
-        width: 20vw;
     }
 
     .overlay{
