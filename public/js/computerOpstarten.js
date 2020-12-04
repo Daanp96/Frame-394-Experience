@@ -88,7 +88,11 @@ function updateClock(){
         month = now.getMonth(),
         year = now.getFullYear();
     setHour.innerHTML = hour;
-    setMin.innerHTML = min;
+    if (min < 10) {
+        setMin.innerHTML = "0" + min;
+    } else {
+        setMin.innerHTML = min;
+    }
     setDay.innerHTML = day;
     setMonth.innerHTML = month;
     setYear.innerHTML = year;
