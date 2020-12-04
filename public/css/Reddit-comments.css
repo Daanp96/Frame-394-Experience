@@ -351,7 +351,7 @@ label{
 }
 
 .navigation__items__link__choice {
-    text-decoration: none; 
+    text-decoration: underline; 
     color: white;
     transition: 1s all;
     cursor: pointer;

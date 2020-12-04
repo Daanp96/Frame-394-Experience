@@ -47,6 +47,7 @@ window.onload = function() {
         if (visited[it] == false){
             list_items[page].style.color = "grey";
             list_items[page].style.cursor = "default";
+            list_items[page].style.textDecoration = "none";
             list_links[page].removeAttribute("href");
         }
         page++;

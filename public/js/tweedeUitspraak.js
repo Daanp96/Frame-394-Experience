@@ -48,6 +48,7 @@ window.onload = function() {
         if (visited[it] == false){
             list_items[page].style.color = "grey";
             list_items[page].style.cursor = "default";
+            list_items[page].style.textDecoration = "none";
             list_links[page].removeAttribute("href");
         }
         page++;
@@ -88,13 +89,6 @@ function showNavigation() {
             navigation.style.display = "none";
             hamburger.style.pointerEvents = "auto";
         }, 1000);
-    }
-
-    for(let i = 0; i < list_items.length; i++){
-        if(list_items[i].dataset.visited === "false"){
-            list_items[i].style.color = "grey";
-            list_items[i].style.cursor = "default";
-        }
     }
 }
 
