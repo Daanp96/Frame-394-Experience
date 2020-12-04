@@ -89,17 +89,21 @@ main{
 }
 
 .navigation__items__link{
-    transition: 1s all;
-    cursor: pointer;
     margin: 2px 0;
-    color: white;
 }
 
-.navigation__items__link:hover{
+.navigation__items__link__choice {
+    text-decoration: none; 
+    color: white;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.navigation__items__link__choice:hover{
     color: var(--accent-color);
 }
 
-.navigation__items__link:focus{
+.navigation__items__link__choice:focus{
     color: var(--accent-color);
 }
 

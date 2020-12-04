@@ -428,17 +428,21 @@ main{
 }
 
 .navigation__items__link{
+    margin: 2px 0;
+}
+
+.navigation__items__link__choice {
+    text-decoration: none; 
+    color: white;
     transition: 1s all;
     cursor: pointer;
-    margin: 2px 0;
-    color: white;
 }
 
-.navigation__items__link:nth-child(1){
-    text-decoration: underline;
+.navigation__items__link__choice:hover{
+    color: var(--accent-color);
 }
 
-.navigation__items__link:hover{
+.navigation__items__link__choice:focus{
     color: var(--accent-color);
 }
 

@@ -45,16 +45,16 @@ objectsBar.addEventListener("click", () => {
     counted++;
     
     if(counted % 2){
-        // walterScott.style.opacity = "1";
-        // walterScott.style.display = "block";
-        // walterTitle.style.opacity = "1";
-        // michealSlager.style.opacity = "1";
-        // michealSlager.style.display = "block";
-        // michaelTitle.style.opacity = "1";
-        // taser.style.opacity = "1";
-        // taserTitle.style.opacity = "1";
-        // fence.style.opacity = "1";
-        // fenceTitle.style.opacity = "1";
+        walterScott.style.opacity = "1";
+        walterScott.style.display = "block";
+        walterTitle.style.opacity = "1";
+        michealSlager.style.opacity = "1";
+        michealSlager.style.display = "block";
+        michaelTitle.style.opacity = "1";
+        taser.style.opacity = "1";
+        taserTitle.style.opacity = "1";
+        fence.style.opacity = "1";
+        fenceTitle.style.opacity = "1";
         objectsBar.style.width = "15rem";
         objectsTitle.style.display = "none";
 
@@ -63,14 +63,14 @@ objectsBar.addEventListener("click", () => {
         }
 
     } else {
-        // walterScott.style.opacity = "0";
-        // walterTitle.style.opacity = "0";
-        // michealSlager.style.opacity = "0";
-        // michaelTitle.style.opacity = "0";
-        // taser.style.opacity = "0";
-        // taserTitle.style.opacity = "0";
-        // fence.style.opacity = "0";
-        // fenceTitle.style.opacity = "0";
+        walterScott.style.opacity = "0";
+        walterTitle.style.opacity = "0";
+        michealSlager.style.opacity = "0";
+        michaelTitle.style.opacity = "0";
+        taser.style.opacity = "0";
+        taserTitle.style.opacity = "0";
+        fence.style.opacity = "0";
+        fenceTitle.style.opacity = "0";
         objectsBar.style.width = "10rem";
         objectsTitle.style.display = "block";
 

@@ -87,6 +87,7 @@ function showNavigation() {
         navi_text.style.opacity = 1;
         hamburger.style.pointerEvents = "none";
         setTimeout(() => {
+            overlay.style.zIndex = -1;
             navigation.style.display = "none";
             hamburger.style.pointerEvents = "auto";
         }, 1500);
