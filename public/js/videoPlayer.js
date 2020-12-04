@@ -84,12 +84,14 @@ window.onload = function() {
 
 const modal = document.getElementById("js--modal");
 const modalBg = document.getElementById("js--modal-bg");
+let modalOpen = false;
 
 function resetWarning(){
     modalBg.style.display = "block";
     modal.style.display = "flex";
     modalBg.style.opacity = ".5";
     modal.style.opacity = "1";
+    modalOpen = true;
 }
 
 function hideModal() {
@@ -99,6 +101,7 @@ function hideModal() {
         modalBg.style.display = "none";
         modal.style.display = "none";
     }, 1000);
+    modalOpen = false;
 }
 
 function backToStart(){
@@ -108,7 +111,7 @@ function backToStart(){
 window.addEventListener("orientationchange", function(event) {
     if(event.target.screen.orientation.angle == 0 || event.target.screen.orientation.angle == 180){
         modal.style.display = "none";
-    } else {
+    } else if(modalOpen == true) {
         modal.style.display = "flex";
     }
 });

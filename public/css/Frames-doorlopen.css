@@ -11,27 +11,27 @@
     --font-color: #F9F9F9;
 }
 
-.slideshow-container {
+html{
+    font-size: 62.5%;
+}
+
+.slideshow {
     width: 100%;
     height: 100%;
     position: relative;
     margin: 0 auto;
     background-color: var(--bg-color);
 }
-
-html{
-    font-size: 62.5%;
-}
   
 /* Hide the images by default */
-.mySlides {
+.slideshow__slide {
 display: block;
 height: 100%;
 width: 100%;
 }
 
-/* next-button & prev-button-buttonious buttons */
-.prev-button, .next-button {
+/* slideshow__slide__next & slideshow__slide__prev buttons */
+.slideshow__slide__prev, .slideshow__slide__next {
 cursor: pointer;
 position: absolute;
 top: 50%;
@@ -46,23 +46,23 @@ border-radius: 0 3px 3px 0;
 user-select: none;
 }
 
-.prev-button { 
+.slideshow__slide__prev { 
     display: none;
 }
 
-.img{
+.slideshow__slide__img{
     width: 100%;
     height: 100%;
 }
 
-/* Position the "next-button button" to the right */
-.next-button {
+/* Position the "slideshow__slide__next button" to the right */
+.slideshow__slide__next {
 right: 0;
 border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color */
-.prev-button:hover, .next-button:hover {
+.slideshow__slide__prev:hover, .slideshow__slide__next:hover {
 background-color: var(--bg-color);
 }
 
@@ -78,7 +78,7 @@ text-align: center;
 }
 
 /* Number text (1/3 etc) */
-.frame-nummer {
+.slideshow__slide__number {
 color: #f2f2f2;
 background-color: var(--bg-color);
 font-size: 12px;
@@ -99,11 +99,11 @@ animation-duration: 1.5s;
 }
 
 @keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
-.end-button{
+.slideshow__slide__end{
     width: 20%;
     height: 10%;
     position: absolute;
@@ -121,11 +121,11 @@ to {opacity: 1}
     font-family: 'Teko', sans-serif;
 }
 
-.end-button:hover{
+.slideshow__slide__end:hover{
     border: solid var(--highlight-color) 4px;
 }
 
-.end-button:active{
+.slideshow__slide__end:active{
     background-color: var(--highlight-color);
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -309,7 +309,7 @@ to {opacity: 1}
     }
 }
 
-.clickable-object{
+.slideshow__slide__object{
     display: none;
     position: absolute;
     height: 15%;
@@ -320,7 +320,7 @@ to {opacity: 1}
     right: 1%;
 }
 
-.taserText {
+.slideshow__slide__object__text {
     display: none;
     position: absolute;
     top: -4.2rem;
@@ -334,7 +334,7 @@ to {opacity: 1}
     border-radius: .5rem;
 }
 
-.taserText::after {
+.slideshow__slide__object__text::after {
     content: "";
     background-color: var(--bg-color);
     width: 1rem;
@@ -426,23 +426,23 @@ to {opacity: 1}
     }
 }
 
-@supports (height: 100vh) and (width: 100vw){
-    .slideshow-container{
+@supports (height: 100vh) and (height: 100vw){
+    .slideshow{
         height: 100vh;
         width: 100vw;
     }
 
-    .mySlides{
+    .slideshow__slide{
         height: 100vh;
         width: 100vw;
     }
 
-    .img{
+    .slideshow__slide__img{
         height: 100vh;
         width: 100vw;
     }
 
-    .end-button{
+    .slideshow__slide__end{
         height: 10vh;
         width: 20vw;
     }
