@@ -86,6 +86,10 @@ canvas {
     flex-direction: column;
 }
 
+.objectsBar__item{
+    display: none;
+}
+
 .objectsBar__item:hover{
     border: 1px solid black;
 }
@@ -98,14 +102,12 @@ canvas {
     transform: rotate(0.25turn);
     position: relative;
     font-size: 2rem;
-    top: 25%;
     transition: all 1s;
     color: white;
 }
 
 .objectsBar__walter, .objectsBar__michael {
     display: block;
-    opacity: 0;
     color: black;
     font-size: 3rem;
     text-align: center;
