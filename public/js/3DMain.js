@@ -126,12 +126,14 @@ const modalBg2 = document.getElementById("js--modal2-bg");
 const resetWarning = document.getElementById("js--resetWarning");
 const backToStart = document.getElementById("js--backToStart");
 const hideModal2 = document.getElementById("js--hideModal2");
+let modal2Open = false;
 
 resetWarning.addEventListener("click", function resetWarning(){
     modalBg2.style.display = "block";
     modal2.style.display = "flex";
     modalBg2.style.opacity = ".5";
     modal2.style.opacity = "1";
+    modal2Open = true;
 })
 
 hideModal2.addEventListener("click", function hideModal2() {
@@ -141,6 +143,7 @@ hideModal2.addEventListener("click", function hideModal2() {
         modalBg2.style.display = "none";
         modal2.style.display = "none";
     }, 1000);
+    modal2Open = false;
 })
 
 backToStart.addEventListener("click", function backToStart(){
@@ -150,7 +153,7 @@ backToStart.addEventListener("click", function backToStart(){
 window.addEventListener("orientationchange", function(event) {
     if(event.target.screen.orientation.angle == 0 || event.target.screen.orientation.angle == 180){
         modal2.style.display = "none";
-    } else {
+    } else if(modal2Open == true) {
         modal2.style.display = "flex";
     }
 });

@@ -40,12 +40,14 @@ const modalBg = document.getElementById("js--modal-bg");
 const resetWarning = document.getElementById("js--resetWarning");
 const backToStart = document.getElementById("js--backToStart");
 const hideModal = document.getElementById("js--hideModal");
+let modalOpen = false;
 
 resetWarning.addEventListener("click", function resetWarning(){
     modalBg.style.display = "block";
     modal.style.display = "flex";
     modalBg.style.opacity = ".5";
     modal.style.opacity = "1";
+    modalOpen = true;
 })
 
 hideModal.addEventListener("click", function hideModal() {
@@ -55,6 +57,7 @@ hideModal.addEventListener("click", function hideModal() {
         modalBg.style.display = "none";
         modal.style.display = "none";
     }, 1000);
+    modalOpen = false;
 })
 
 backToStart.addEventListener("click", function backToStart(){
@@ -64,7 +67,7 @@ backToStart.addEventListener("click", function backToStart(){
 window.addEventListener("orientationchange", function(event) {
     if(event.target.screen.orientation.angle == 0 || event.target.screen.orientation.angle == 180){
         modal.style.display = "none";
-    } else {
+    } else if(modalOpen == true) {
         modal.style.display = "flex";
     }
 });

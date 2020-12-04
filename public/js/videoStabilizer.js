@@ -325,12 +325,14 @@ function showNavigation() {
 
 const modal2 = document.getElementById("js--modal2");
 const modalBg2 = document.getElementById("js--modal2-bg");
+let modal2Open = false;
 
 function resetWarning(){
     modalBg2.style.display = "block";
     modal2.style.display = "flex";
     modalBg2.style.opacity = ".5";
     modal2.style.opacity = "1";
+    modal2Open = true;
 }
 
 function hideModal2() {
@@ -340,6 +342,7 @@ function hideModal2() {
         modalBg2.style.display = "none";
         modal2.style.display = "none";
     }, 1000);
+    modal2Open = false;
 }
 
 function backToStart(){
@@ -349,7 +352,7 @@ function backToStart(){
 window.addEventListener("orientationchange", function(event) {
     if(event.target.screen.orientation.angle == 0 || event.target.screen.orientation.angle == 180){
         modal2.style.display = "none";
-    } else {
+    } else if(modal2Open == true) {
         modal2.style.display = "flex";
     }
 });
