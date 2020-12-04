@@ -23,19 +23,19 @@
                 </section>
             </section>
 
-            <section class="slideshow-container">
-                <section class="mySlides fade">
-                    <section class="frame-nummer" id="js--frame-number">
+            <section class="slideshow">
+                <section class="slideshow__slide fade">
+                    <section class="slideshow__slide__number" id="js--frame-number">
                         <p id="js--frame_text">Frame #392</p>
                     </section>
-                    <img class="img" id="js--frame-picture" src="./webp/frame-392.webp" alt="een afbeelding van een frame van de video waarin Walter Scott wordt neergeschoten" >
-                    <section class="clickable-object" id="js--taser">
-                        <p class="taserText" id="js--taser-text">Taser</p>
+                    <img class="slideshow__slide__img" id="js--frame-picture" src="./webp/frame-392.webp" alt="een afbeelding van een frame van de video waarin Walter Scott wordt neergeschoten" >
+                    <section class="slideshow__slide__object" id="js--taser">
+                        <p class="slideshow__slide__object__text" id="js--taser-text">Taser</p>
                     </section>
                 </section>
-                <button id="js--end-button" class="end-button" onclick="nextPage()">Continue</button>
-                <a id="js--prev" class="prev-button">&#10094;</a>
-                <a id="js--next" class="next-button">&#10095;</a>
+                <button id="js--end-button" class="slideshow__slide__end" onclick="nextPage()">Continue</button>
+                <a id="js--prev" class="slideshow__slide__prev">&#10094;</a>
+                <a id="js--next" class="slideshow__slide__next">&#10095;</a>
             </section>
             
             <section class="overlay" id="js--overlay"></section>
