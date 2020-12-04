@@ -34,19 +34,20 @@ h3{
     color: var(--reddit_white);
     background-color: var(--reddit_background);
 }
+
 p{
     color: var(--reddit_white);
 }
 
 .grid-container__page-wrapper__comments-container__comments-item__username{
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     padding-bottom: 0.4rem;
     
 }
 
 .grid-container__page-wrapper__comments-container__comments-item__comment{
     padding-bottom: 0.2rem;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
 }
 
 label{
@@ -79,6 +80,11 @@ label{
     justify-content: center;
 }
 
+.grid-container__page-wrapper__posts-container__post-items__text{
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
 .grid-container__page-wrapper__posts-container__post-items{
     background-color: var(--reddit_input_border);
     position: relative;
@@ -106,7 +112,7 @@ label{
     color: var(--font-color);
     background-color: var(--accent--color);
     border-radius: 15px;
-    
+    margin: 3rem;
 }
 
 .grid-container__page-wrapper__next-page:hover{
@@ -391,16 +397,20 @@ label{
     border-radius: 1.5rem;
     animation: none;
     box-shadow: .2rem .2rem .4rem black;
+    font-family: 'Teko','sans-serif';
 }
+
 
 .viewDiscr__text{
     font-family: 'Teko','sans-serif';
     color: var(--font-color);
-    margin: 0.5rem;
+    padding-bottom: 0.2rem;
+    letter-spacing: 0.05rem;
+    font-size: 2.5rem;
 }
 
 .viewDiscr__text__h1{
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--highlight-color);
     margin: 1rem;
 }

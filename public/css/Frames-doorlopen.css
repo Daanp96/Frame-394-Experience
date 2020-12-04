@@ -374,7 +374,7 @@ to {opacity: 1}
 
 .popup__text{
     font-family: 'Teko','sans-serif';
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--font-color);
     padding: 0.1rem;
 }
@@ -382,6 +382,7 @@ to {opacity: 1}
 .popup__text__h1{
     font-size: 3rem;
     color: var(--highlight-color);
+    font-family: 'Teko',"sans-serif";
 }
 
 .popup__buttons{
