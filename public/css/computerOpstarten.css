@@ -824,6 +824,7 @@ main {
 
 .navigation__items{
     opacity: 0;
+    display: none;
     transition: 1s all;
     color: var(--accent-color);
     font-size: 2rem;

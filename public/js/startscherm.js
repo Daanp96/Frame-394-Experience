@@ -77,11 +77,19 @@ let counter = 0;
 function showNavigation() {
     counter++;
     if(counter % 2){
-        navigation.style.opacity = 1;
         navi_text.style.opacity = 0;
+        navigation.style.display = "block";
+        setTimeout(() => {
+            navigation.style.opacity = 1;
+        }, 100);
     } else {
         navigation.style.opacity = 0;
         navi_text.style.opacity = 1;
+        hamburger.style.pointerEvents = "none";
+        setTimeout(() => {
+            navigation.style.display = "none";
+            hamburger.style.pointerEvents = "auto";
+        }, 1500);
     }
 }
 

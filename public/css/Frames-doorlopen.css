@@ -25,9 +25,10 @@ html{
   
 /* Hide the images by default */
 .mySlides {
-display: block;
-height: 100%;
-width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 /* next-button & prev-button-buttonious buttons */
@@ -85,6 +86,11 @@ font-size: 12px;
 padding: 8px 12px;
 position: absolute;
 top: 0;
+}
+
+.frame-nummer > p {
+    font-size: 2rem;
+    font-family: 'Teko', sans-serif;
 }
 
 

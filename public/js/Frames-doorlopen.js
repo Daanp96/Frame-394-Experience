@@ -9,6 +9,7 @@
   const framePic = document.getElementById("js--frame-picture")
   const popupBg = document.getElementById("js--popup-bg");
   const popup = document.getElementById("js--popup");
+  const frameText = document.getElementById("js--frame_text");
   let frame = 392;
 
   function readComments() { 
@@ -26,7 +27,7 @@
     if (frame == 394) {
       taser.style.display = "block";
     } else {taser.style.display = "none";}
-    frameNumber.innerHTML = "Frame #" + frame;
+    frameText.innerHTML = "Frame #" + frame;
     framePic.setAttribute("src", "./webp/frame-" + frame + ".webp")
     taserText.style.display = "none";
   });
@@ -39,7 +40,7 @@
     if (frame > 406) {
       frame = 392;
     }
-    frameNumber.innerHTML = "Frame #" + frame;
+    frameText.innerHTML = "Frame #" + frame;
     framePic.setAttribute("src", "./webp/frame-" + frame + ".webp")
     if (frame == 394) {
       taser.style.display = "block";

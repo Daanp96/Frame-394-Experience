@@ -439,9 +439,6 @@ main {
 }
 
 @supports (height: 100vh){
-    .title{
-        height: 100vh;
-    }
 
     .turnScreen{
         height: 100vh;
