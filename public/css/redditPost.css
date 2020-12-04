@@ -206,8 +206,9 @@ button{
 .error_window__content{
     position: absolute;
     background-color: var(--bg-color);
-    width: 50%;
-    height: 50%;
+    width: 35rem;
+    height: 25rem;
+    box-shadow: .2rem .2rem .4rem black;
     display: flex;
     flex-direction: column;
     justify-content: center;
